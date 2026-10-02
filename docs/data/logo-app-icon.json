@@ -1,0 +1,8 @@
+{
+  "original_master_sha256": {
+    "mltf-logo.svg": "995a395371cf222728a9bd47b2c55034a88238a40feb7cc0a6ad06b7720063a1",
+    "mltf-logo.png": "fb4ce897c930822151a600df434303ad5e3e3b59c2724618f36c68e4f2e25217"
+  },
+  "app_icon": "rounded248px tile/radius56 with2px inset rim; original symbol paths andcolor unchanged, scaled. SeparateSVG/1024PNG.",
+  "no_GPU_or_benchmark_rerun": true
+}

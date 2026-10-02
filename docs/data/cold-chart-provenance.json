@@ -1,0 +1,10 @@
+{
+  "source": "docs/data/measured-metrics.json",
+  "source_sha256": "7d01a00923518bf97b27534918ba878380a299c390ca4986268a76ea5eb20905",
+  "cohort": "natural_serving S;cached_tokens0",
+  "PP_s": "prefill_native_tps.median;aggregate inputtokens/nativebatchwall seconds",
+  "TTFT_s": "ttft_seconds.median;perrequestHTTPsubmittofirstcontent, including queue/prefill",
+  "TTFT_plot_scale": "log10;table retains seconds",
+  "new_measurements": 0,
+  "conditions": "T0/reasoningOFF/recordingOFF/cap512;separatefromON/xhigh/T1demo"
+}

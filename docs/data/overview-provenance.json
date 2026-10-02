@@ -1,0 +1,10 @@
+{
+  "source": "docs/data/measured-metrics.json",
+  "source_sha256": "7d01a00923518bf97b27534918ba878380a299c390ca4986268a76ea5eb20905",
+  "style_reference": "https://github.com/snflkd/fluent-korean/blob/main/plugins/fluent-korean/output-styles/fluent-korean.md",
+  "style_reference_commit": "ce8683f0eba8cddb91de4dcd151425ff73e60498",
+  "graph": "one6-panel overview;C1C2C3C4colorsconsistent;TTFTlog;otherslinear",
+  "table": "one24rowtable,allmetricsfromunchangedledger;S_PP/TTFT,D_decode/acceptance,S_DlifetimeMetalmaxGiB",
+  "new_measurements": 0,
+  "quickstart": "onecodeblock installation/modelpreparation/serving;allCLIflags verified againstinstalled008help;no commands executed excepthelp"
+}

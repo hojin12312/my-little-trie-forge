@@ -1,0 +1,1042 @@
+{
+  "mode": "terminal_event_replay",
+  "not_screen_capture": true,
+  "playback_speed": 1.0,
+  "idleCompression": false,
+  "source_duration_seconds": 98.01231375004863,
+  "media_duration_seconds": 98.166667,
+  "fps": 12,
+  "frames": 1178,
+  "resolution": [
+    1320,
+    1228
+  ],
+  "video_codec": "H.264 software offline encoding after inference",
+  "sources": [
+    {
+      "path": "public-replay/lane0/recording.cast",
+      "sha256": "1836c515c346ba301ee3cc775110596efb3fa28a1b94fc035b7e783b5f79f913",
+      "offset_seconds": 0.0
+    },
+    {
+      "path": "public-replay/lane1/recording.cast",
+      "sha256": "4ff2240e68df1f74a69f3450f466ec79d785b4ba104f4f06e431b6663cc60972",
+      "offset_seconds": 0.07237829104997218
+    },
+    {
+      "path": "public-replay/lane2/recording.cast",
+      "sha256": "e5a7ebbd19de9c77a9fcb147a5515839f85b3d7b1bfc1c04ea4d3a4ab2947036",
+      "offset_seconds": 0.15146216604625806
+    },
+    {
+      "path": "public-replay/lane3/recording.cast",
+      "sha256": "7f1519f7c5843534eccc8be61d9645909f0ce79956194fedc87c85c7a643700b",
+      "offset_seconds": 0.22983349999412894
+    }
+  ],
+  "telemetry": "latest prior 1Hz sample; native confirmed counter delta/native batch-wall delta; same-window accepted/drafted; B is latest actual dispatch, not a whole-window width guarantee",
+  "video_sha256": "2b70ff8327f1147c87297092b93120640580d7ba4280cb596099efece21548fb",
+  "renderer_sha256": "74a5f2de045ac7ee58dadfc592d4fa1be833e393674018e3895e10899e3ed641",
+  "privacy_projection": {
+    "lanes": [
+      {
+        "lane": "lane0",
+        "render_projection_sha256": "1836c515c346ba301ee3cc775110596efb3fa28a1b94fc035b7e783b5f79f913",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 5,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      },
+      {
+        "lane": "lane1",
+        "render_projection_sha256": "4ff2240e68df1f74a69f3450f466ec79d785b4ba104f4f06e431b6663cc60972",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 5,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      },
+      {
+        "lane": "lane2",
+        "render_projection_sha256": "e5a7ebbd19de9c77a9fcb147a5515839f85b3d7b1bfc1c04ea4d3a4ab2947036",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 5,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      },
+      {
+        "lane": "lane3",
+        "render_projection_sha256": "7f1519f7c5843534eccc8be61d9645909f0ce79956194fedc87c85c7a643700b",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 5,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      }
+    ],
+    "raw_masters_unchanged": true
+  },
+  "Pi_version": "0.87.1",
+  "extensions": 0,
+  "default_tools": [
+    "read",
+    "bash",
+    "edit",
+    "write"
+  ],
+  "audio": false,
+  "camera": false,
+  "model_artifact": {
+    "native_binary_sha256": "0d3d56f7a8133b01d9bcf6ea8414a3e05bfb50ee248aaa8b8695a3db9f06a7bb",
+    "metallib_sha256": "7d8388c89c7a8bdac1cfc065b9daa1e1b02653cb5b7a78020cb9cb4bc0efa3e3",
+    "server_py_sha256": "746fbf6fc7f0a20a2f26dfa675516c2fd02e677640e6b94d642e84ea1df4f4c0",
+    "all_ready_binary_sha256": "413b05a383662ce7b5834aa74155fc4ec19b68fb1d3a066ecc48066b847e1ee7",
+    "all_ready_source_sha256": "ac351ab966d992e7b5ee6a29cdf7b54b4b503dcb6474530f12e92ba188eaab57",
+    "model_manifest_sha256": "e2c7919947a1784b18bf67323de786e500e53d1e47798aede1c38667c388760e",
+    "qualified_static_library_sha256": "788b30bbab4cf053327b115b777827b5aa3253df6ad055719482ee304bcc12ba",
+    "harness_sha256": "036df64250e240dc1ae74eaa9d00f229b9866664f1e8f27b97ed85b22f594008"
+  },
+  "task_outcomes": [
+    {
+      "lane": 0,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v 2>&1 | tail -20",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1 | tail -20",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1 | tail -20",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1 | tail -20",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.006000041961669922,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.006000041961669922,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.007999897003173828,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03800010681152344,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.04200005531311035,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.05200004577636719,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03900003433227539,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    },
+    {
+      "lane": 1,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 1,
+          "tool_error": true
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.010999917984008789,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0019998550415039062,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.04500007629394531,
+          "is_error": true
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.039999961853027344,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.0409998893737793,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    },
+    {
+      "lane": 2,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 1,
+          "tool_error": true
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.011999845504760742,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.0409998893737793,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.04199981689453125,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03900003433227539,
+          "is_error": true
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0019998550415039062,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.0409998893737793,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    },
+    {
+      "lane": 3,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 1,
+          "tool_error": true
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.010999917984008789,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.05099987983703613,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.04199981689453125,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0019998550415039062,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.051999807357788086,
+          "is_error": true
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.04999995231628418,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    }
+  ],
+  "cache_and_ttft_per_model_turn": [
+    {
+      "request_id": 1,
+      "lane": 1,
+      "model_turn": 1,
+      "prompt_tokens": 1134,
+      "completion_tokens": 52,
+      "cached_tokens": 0,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.1896311250166036
+    },
+    {
+      "request_id": 2,
+      "lane": 0,
+      "model_turn": 1,
+      "prompt_tokens": 1134,
+      "completion_tokens": 52,
+      "cached_tokens": 0,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 2.3667962909676135
+    },
+    {
+      "request_id": 3,
+      "lane": 2,
+      "model_turn": 1,
+      "prompt_tokens": 1134,
+      "completion_tokens": 52,
+      "cached_tokens": 1024,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.1262976250145584
+    },
+    {
+      "request_id": 4,
+      "lane": 3,
+      "model_turn": 1,
+      "prompt_tokens": 1134,
+      "completion_tokens": 52,
+      "cached_tokens": 1024,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.0496876669931225
+    },
+    {
+      "request_id": 5,
+      "lane": 0,
+      "model_turn": 2,
+      "prompt_tokens": 1823,
+      "completion_tokens": 28,
+      "cached_tokens": 1120,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.6484734999830835
+    },
+    {
+      "request_id": 6,
+      "lane": 2,
+      "model_turn": 2,
+      "prompt_tokens": 1823,
+      "completion_tokens": 28,
+      "cached_tokens": 1120,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 2.9089987079496495
+    },
+    {
+      "request_id": 7,
+      "lane": 3,
+      "model_turn": 2,
+      "prompt_tokens": 1823,
+      "completion_tokens": 28,
+      "cached_tokens": 1120,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.556197958008852
+    },
+    {
+      "request_id": 8,
+      "lane": 1,
+      "model_turn": 2,
+      "prompt_tokens": 1823,
+      "completion_tokens": 28,
+      "cached_tokens": 1120,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.5556914579938166
+    },
+    {
+      "request_id": 9,
+      "lane": 0,
+      "model_turn": 3,
+      "prompt_tokens": 2187,
+      "completion_tokens": 50,
+      "cached_tokens": 1792,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.9206726669799536
+    },
+    {
+      "request_id": 10,
+      "lane": 2,
+      "model_turn": 3,
+      "prompt_tokens": 2187,
+      "completion_tokens": 50,
+      "cached_tokens": 1792,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.7472839590045623
+    },
+    {
+      "request_id": 11,
+      "lane": 3,
+      "model_turn": 3,
+      "prompt_tokens": 2187,
+      "completion_tokens": 50,
+      "cached_tokens": 1792,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 2.209624083014205
+    },
+    {
+      "request_id": 12,
+      "lane": 1,
+      "model_turn": 3,
+      "prompt_tokens": 2187,
+      "completion_tokens": 50,
+      "cached_tokens": 1792,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 2.207678458013106
+    },
+    {
+      "request_id": 13,
+      "lane": 0,
+      "model_turn": 4,
+      "prompt_tokens": 2511,
+      "completion_tokens": 41,
+      "cached_tokens": 2176,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.9704727079952136
+    },
+    {
+      "request_id": 14,
+      "lane": 2,
+      "model_turn": 4,
+      "prompt_tokens": 2511,
+      "completion_tokens": 36,
+      "cached_tokens": 2176,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.6300740420119837
+    },
+    {
+      "request_id": 15,
+      "lane": 1,
+      "model_turn": 4,
+      "prompt_tokens": 2511,
+      "completion_tokens": 187,
+      "cached_tokens": 2176,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.8264328329823911
+    },
+    {
+      "request_id": 16,
+      "lane": 3,
+      "model_turn": 4,
+      "prompt_tokens": 2511,
+      "completion_tokens": 36,
+      "cached_tokens": 2176,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.8262510420172475
+    },
+    {
+      "request_id": 17,
+      "lane": 0,
+      "model_turn": 5,
+      "prompt_tokens": 2644,
+      "completion_tokens": 187,
+      "cached_tokens": 2496,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.6453559169895016
+    },
+    {
+      "request_id": 18,
+      "lane": 2,
+      "model_turn": 5,
+      "prompt_tokens": 2639,
+      "completion_tokens": 174,
+      "cached_tokens": 2496,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.9106015409925021
+    },
+    {
+      "request_id": 19,
+      "lane": 3,
+      "model_turn": 5,
+      "prompt_tokens": 2639,
+      "completion_tokens": 174,
+      "cached_tokens": 2496,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.824161583033856
+    },
+    {
+      "request_id": 20,
+      "lane": 0,
+      "model_turn": 6,
+      "prompt_tokens": 2860,
+      "completion_tokens": 258,
+      "cached_tokens": 2624,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.1460939579992555
+    },
+    {
+      "request_id": 21,
+      "lane": 1,
+      "model_turn": 5,
+      "prompt_tokens": 2727,
+      "completion_tokens": 258,
+      "cached_tokens": 2496,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.0695331660099328
+    },
+    {
+      "request_id": 22,
+      "lane": 3,
+      "model_turn": 6,
+      "prompt_tokens": 2842,
+      "completion_tokens": 317,
+      "cached_tokens": 2624,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.0638603330007754
+    },
+    {
+      "request_id": 23,
+      "lane": 2,
+      "model_turn": 6,
+      "prompt_tokens": 2842,
+      "completion_tokens": 317,
+      "cached_tokens": 2624,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.0636425830307417
+    },
+    {
+      "request_id": 24,
+      "lane": 1,
+      "model_turn": 6,
+      "prompt_tokens": 3014,
+      "completion_tokens": 32,
+      "cached_tokens": 2720,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.2166184170055203
+    },
+    {
+      "request_id": 25,
+      "lane": 0,
+      "model_turn": 7,
+      "prompt_tokens": 3147,
+      "completion_tokens": 41,
+      "cached_tokens": 2848,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.2805933329509571
+    },
+    {
+      "request_id": 26,
+      "lane": 1,
+      "model_turn": 7,
+      "prompt_tokens": 3393,
+      "completion_tokens": 75,
+      "cached_tokens": 3008,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.3951882909750566
+    },
+    {
+      "request_id": 27,
+      "lane": 0,
+      "model_turn": 8,
+      "prompt_tokens": 3474,
+      "completion_tokens": 75,
+      "cached_tokens": 3136,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.292775000038091
+    },
+    {
+      "request_id": 28,
+      "lane": 3,
+      "model_turn": 7,
+      "prompt_tokens": 3188,
+      "completion_tokens": 36,
+      "cached_tokens": 2816,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.469377874978818
+    },
+    {
+      "request_id": 29,
+      "lane": 2,
+      "model_turn": 7,
+      "prompt_tokens": 3188,
+      "completion_tokens": 36,
+      "cached_tokens": 2816,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.4690542080206797
+    },
+    {
+      "request_id": 30,
+      "lane": 1,
+      "model_turn": 8,
+      "prompt_tokens": 3497,
+      "completion_tokens": 32,
+      "cached_tokens": 3392,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.272027250030078
+    },
+    {
+      "request_id": 31,
+      "lane": 0,
+      "model_turn": 9,
+      "prompt_tokens": 3578,
+      "completion_tokens": 41,
+      "cached_tokens": 3456,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.271772084000986
+    },
+    {
+      "request_id": 32,
+      "lane": 2,
+      "model_turn": 8,
+      "prompt_tokens": 3378,
+      "completion_tokens": 248,
+      "cached_tokens": 3168,
+      "TTFT_content_seconds": 1.0561643329565413,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 33,
+      "lane": 3,
+      "model_turn": 8,
+      "prompt_tokens": 3378,
+      "completion_tokens": 255,
+      "cached_tokens": 3168,
+      "TTFT_content_seconds": 0.9914993749698624,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 34,
+      "lane": 1,
+      "model_turn": 9,
+      "prompt_tokens": 3671,
+      "completion_tokens": 226,
+      "cached_tokens": 3488,
+      "TTFT_content_seconds": 0.9138481250265613,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 35,
+      "lane": 0,
+      "model_turn": 10,
+      "prompt_tokens": 3761,
+      "completion_tokens": 247,
+      "cached_tokens": 3552,
+      "TTFT_content_seconds": 0.8900274579646066,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 36,
+      "lane": 1,
+      "model_turn": 10,
+      "prompt_tokens": 3945,
+      "completion_tokens": 184,
+      "cached_tokens": 3648,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.8315262499963865
+    },
+    {
+      "request_id": 37,
+      "lane": 2,
+      "model_turn": 9,
+      "prompt_tokens": 3674,
+      "completion_tokens": 245,
+      "cached_tokens": 3360,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 2.0142355410498567
+    },
+    {
+      "request_id": 38,
+      "lane": 3,
+      "model_turn": 9,
+      "prompt_tokens": 3681,
+      "completion_tokens": 245,
+      "cached_tokens": 3360,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.9341837920364924
+    },
+    {
+      "request_id": 39,
+      "lane": 0,
+      "model_turn": 11,
+      "prompt_tokens": 4056,
+      "completion_tokens": 184,
+      "cached_tokens": 3744,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.6069011249928735
+    },
+    {
+      "request_id": 40,
+      "lane": 1,
+      "model_turn": 11,
+      "prompt_tokens": 4158,
+      "completion_tokens": 32,
+      "cached_tokens": 3936,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.1372508329804987
+    },
+    {
+      "request_id": 41,
+      "lane": 0,
+      "model_turn": 12,
+      "prompt_tokens": 4269,
+      "completion_tokens": 41,
+      "cached_tokens": 4032,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.2031760410172865
+    },
+    {
+      "request_id": 42,
+      "lane": 1,
+      "model_turn": 12,
+      "prompt_tokens": 4360,
+      "completion_tokens": 116,
+      "cached_tokens": 4128,
+      "TTFT_content_seconds": 1.0104969579842873,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 43,
+      "lane": 0,
+      "model_turn": 13,
+      "prompt_tokens": 4480,
+      "completion_tokens": 138,
+      "cached_tokens": 4256,
+      "TTFT_content_seconds": 0.9132466669543646,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 44,
+      "lane": 2,
+      "model_turn": 10,
+      "prompt_tokens": 3948,
+      "completion_tokens": 36,
+      "cached_tokens": 3648,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.233537082967814
+    },
+    {
+      "request_id": 45,
+      "lane": 3,
+      "model_turn": 10,
+      "prompt_tokens": 3955,
+      "completion_tokens": 36,
+      "cached_tokens": 3680,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.9382055419846438
+    },
+    {
+      "request_id": 46,
+      "lane": 2,
+      "model_turn": 11,
+      "prompt_tokens": 4382,
+      "completion_tokens": 75,
+      "cached_tokens": 3936,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.6705141249694861
+    },
+    {
+      "request_id": 47,
+      "lane": 3,
+      "model_turn": 11,
+      "prompt_tokens": 4389,
+      "completion_tokens": 75,
+      "cached_tokens": 3936,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.7257483749999665
+    },
+    {
+      "request_id": 48,
+      "lane": 2,
+      "model_turn": 12,
+      "prompt_tokens": 4486,
+      "completion_tokens": 36,
+      "cached_tokens": 4352,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.7584223339799792
+    },
+    {
+      "request_id": 49,
+      "lane": 3,
+      "model_turn": 12,
+      "prompt_tokens": 4493,
+      "completion_tokens": 36,
+      "cached_tokens": 4384,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.6248190000187606
+    },
+    {
+      "request_id": 50,
+      "lane": 2,
+      "model_turn": 13,
+      "prompt_tokens": 4706,
+      "completion_tokens": 221,
+      "cached_tokens": 4480,
+      "TTFT_content_seconds": 0.7847748330095783,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 51,
+      "lane": 3,
+      "model_turn": 13,
+      "prompt_tokens": 4713,
+      "completion_tokens": 197,
+      "cached_tokens": 4480,
+      "TTFT_content_seconds": 0.777461374993436,
+      "TTFT_tool_seconds": null
+    }
+  ],
+  "privacy_review": "PASS",
+  "preview": {
+    "continuous_excerpt_seconds": 20,
+    "media_duration_seconds": 20.01,
+    "fps": 8,
+    "speed": 1,
+    "idleCompression": false,
+    "sha256": "f9c5ef7c74154d0aff1eddb82788d08eb81e232b9aa9d33f7356c3af19a1c09b"
+  }
+}

@@ -1,0 +1,2085 @@
+{
+  "pairs": [
+    {
+      "C": 1,
+      "pair": 0,
+      "OFF_tps": 62.41868878785913,
+      "ON_tps": 63.653279063813216,
+      "slowdown_pct": -1.9779176716608893,
+      "same_model_inputs": true,
+      "OFF_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "ON_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "attribution": "T1stochastic generation; native rate differences do not isolate recorder effect",
+      "OFF": {
+        "durations": [
+          45.75063179200515
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 3159,
+          "prefill_wall_ms": 2988.311334,
+          "decode_output_tokens": 1816,
+          "decode_wall_ms": 29093.8505,
+          "drafted_tokens": 3276,
+          "accepted_draft_tokens": 1347
+        },
+        "native_PP_tps": 1057.1187694059724,
+        "native_decode_tps": 62.41868878785913,
+        "accepted_draft_tokens": 1347,
+        "drafted_tokens": 3276,
+        "actual_b_counts": {
+          "1": 469,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "peak_metal_bytes": 33430503424,
+        "task_wall_seconds": 45.75063179200515,
+        "sampled_rss_tree_peak_bytes": 1279377408,
+        "sampled_native_footprint_peak_bytes": 2090863352,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "a7a046dca58774b54559098d8a48197999ee1f6c00b4c3d8d9f0d2dfad854294"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "42abb3934f96eceafe4ef4904e49debb5ba37f1c5f6b13fb70e1938dc7270a87"
+        ],
+        "raw_result_sha256": "a4e6c20016a3f920f57efa9c3cb5dfa2b3af845a72c007a1415dcea43a1bb696",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1816,
+              "total_tokens": 4975,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1267
+              }
+            },
+            "wall_seconds": 32.352710417006165,
+            "client_full_request_tps": 56.131309451137106,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 1
+      },
+      "ON": {
+        "durations": [
+          35.38758912496269
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 3159,
+          "prefill_wall_ms": 2998.867167,
+          "decode_output_tokens": 1197,
+          "decode_wall_ms": 18805.00137,
+          "drafted_tokens": 2121,
+          "accepted_draft_tokens": 893
+        },
+        "native_PP_tps": 1053.3977745870598,
+        "native_decode_tps": 63.653279063813216,
+        "accepted_draft_tokens": 893,
+        "drafted_tokens": 2121,
+        "actual_b_counts": {
+          "1": 304,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "peak_metal_bytes": 33430503424,
+        "task_wall_seconds": 35.38758912496269,
+        "sampled_rss_tree_peak_bytes": 1286963200,
+        "sampled_native_footprint_peak_bytes": 2090552008,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "a7a046dca58774b54559098d8a48197999ee1f6c00b4c3d8d9f0d2dfad854294"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "6814062b79c229af214b8e541a290a62aa119b10949202475225786d7060de7f"
+        ],
+        "raw_result_sha256": "2bc866a71a9318a1d6fce9b08cd1e01b1503ab0c97b73b6cfd5e96048c46c599",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1197,
+              "total_tokens": 4356,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 641
+              }
+            },
+            "wall_seconds": 21.99242916604271,
+            "client_full_request_tps": 54.42782109073341,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 1
+      },
+      "equal_reasoning_and_content_outputs": false
+    },
+    {
+      "C": 1,
+      "pair": 1,
+      "OFF_tps": 63.610703619191135,
+      "ON_tps": 66.0404724714638,
+      "slowdown_pct": -3.8197484291615513,
+      "same_model_inputs": true,
+      "OFF_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "ON_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "attribution": "T1stochastic generation; native rate differences do not isolate recorder effect",
+      "OFF": {
+        "durations": [
+          35.911646000051405
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 3159,
+          "prefill_wall_ms": 2988.233376,
+          "decode_output_tokens": 1230,
+          "decode_wall_ms": 19336.36841,
+          "drafted_tokens": 2177,
+          "accepted_draft_tokens": 918
+        },
+        "native_PP_tps": 1057.1463478627581,
+        "native_decode_tps": 63.610703619191135,
+        "accepted_draft_tokens": 918,
+        "drafted_tokens": 2177,
+        "actual_b_counts": {
+          "1": 312,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "peak_metal_bytes": 33430503424,
+        "task_wall_seconds": 35.911646000051405,
+        "sampled_rss_tree_peak_bytes": 1283555328,
+        "sampled_native_footprint_peak_bytes": 2090551984,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "a7a046dca58774b54559098d8a48197999ee1f6c00b4c3d8d9f0d2dfad854294"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "b3bfe6f4a98450f142756eac234f84870a56c26a038809edfa88024797cba318"
+        ],
+        "raw_result_sha256": "aa1daa6b708b38c065d3a789d0634c75c592cd715c4bd091b204e52b8ed456d4",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1230,
+              "total_tokens": 4389,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 640
+              }
+            },
+            "wall_seconds": 22.513528167037293,
+            "client_full_request_tps": 54.63381798153159,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 1
+      },
+      "ON": {
+        "durations": [
+          35.32942187500885
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 3159,
+          "prefill_wall_ms": 2983.993583,
+          "decode_output_tokens": 1238,
+          "decode_wall_ms": 18746.0803,
+          "drafted_tokens": 2107,
+          "accepted_draft_tokens": 936
+        },
+        "native_PP_tps": 1058.648389191258,
+        "native_decode_tps": 66.0404724714638,
+        "accepted_draft_tokens": 936,
+        "drafted_tokens": 2107,
+        "actual_b_counts": {
+          "1": 302,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "peak_metal_bytes": 33430503424,
+        "task_wall_seconds": 35.32942187500885,
+        "sampled_rss_tree_peak_bytes": 1283932160,
+        "sampled_native_footprint_peak_bytes": 2090928912,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "a7a046dca58774b54559098d8a48197999ee1f6c00b4c3d8d9f0d2dfad854294"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "752f888152d426848aa0cc975547657496e982745007135d898ab2cf59eaf397"
+        ],
+        "raw_result_sha256": "6cc87edf25a11053eb1a903e357fc86defc200909707adda2a0b8e902e7cfe00",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1238,
+              "total_tokens": 4397,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 612
+              }
+            },
+            "wall_seconds": 21.91245262499433,
+            "client_full_request_tps": 56.497555120227915,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 1
+      },
+      "equal_reasoning_and_content_outputs": false
+    },
+    {
+      "C": 1,
+      "pair": 2,
+      "OFF_tps": 70.0345782585832,
+      "ON_tps": 64.9131830469787,
+      "slowdown_pct": 7.312666598341133,
+      "same_model_inputs": true,
+      "OFF_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "ON_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "attribution": "T1stochastic generation; native rate differences do not isolate recorder effect",
+      "OFF": {
+        "durations": [
+          45.87768637499539
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 3159,
+          "prefill_wall_ms": 2990.51671,
+          "decode_output_tokens": 2046,
+          "decode_wall_ms": 29214.14037,
+          "drafted_tokens": 3290,
+          "accepted_draft_tokens": 1575
+        },
+        "native_PP_tps": 1056.3391902933056,
+        "native_decode_tps": 70.0345782585832,
+        "accepted_draft_tokens": 1575,
+        "drafted_tokens": 3290,
+        "actual_b_counts": {
+          "1": 471,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "peak_metal_bytes": 33430503424,
+        "task_wall_seconds": 45.87768637499539,
+        "sampled_rss_tree_peak_bytes": 1287028736,
+        "sampled_native_footprint_peak_bytes": 2090732232,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "a7a046dca58774b54559098d8a48197999ee1f6c00b4c3d8d9f0d2dfad854294"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "bbd1752e66480051775ed172c736edad343f035dd57407ea81190c95d2237b4b"
+        ],
+        "raw_result_sha256": "c3aee8d21743d94dba36f9e69a19f3054925537efa3a8ad5d2a2c9f00af38811",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2046,
+              "total_tokens": 5205,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1479
+              }
+            },
+            "wall_seconds": 32.46969779202482,
+            "client_full_request_tps": 63.012597564198366,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 1
+      },
+      "ON": {
+        "durations": [
+          43.35961316700559
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 3159,
+          "prefill_wall_ms": 2989.735542,
+          "decode_output_tokens": 1733,
+          "decode_wall_ms": 26697.19645,
+          "drafted_tokens": 3010,
+          "accepted_draft_tokens": 1302
+        },
+        "native_PP_tps": 1056.6151940939799,
+        "native_decode_tps": 64.9131830469787,
+        "accepted_draft_tokens": 1302,
+        "drafted_tokens": 3010,
+        "actual_b_counts": {
+          "1": 431,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "peak_metal_bytes": 33430503424,
+        "task_wall_seconds": 43.35961316700559,
+        "sampled_rss_tree_peak_bytes": 1287307264,
+        "sampled_native_footprint_peak_bytes": 2090584824,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "a7a046dca58774b54559098d8a48197999ee1f6c00b4c3d8d9f0d2dfad854294"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "bf032f13cafda71f9d783b1f85b1e736a98e477bf59825a826f122a285b45d21"
+        ],
+        "raw_result_sha256": "d27efdd94e72d5aa71be7047dcf9e8bc03d1a4809bebd990dc911b70c4586a25",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1733,
+              "total_tokens": 4892,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1189
+              }
+            },
+            "wall_seconds": 29.940535375033505,
+            "client_full_request_tps": 57.88139651788243,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 1
+      },
+      "equal_reasoning_and_content_outputs": false
+    },
+    {
+      "C": 4,
+      "pair": 0,
+      "OFF_tps": 171.5885364470013,
+      "ON_tps": 165.92854873365545,
+      "slowdown_pct": 3.298581496494124,
+      "same_model_inputs": true,
+      "OFF_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "ON_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "attribution": "T1stochastic generation; native rate differences do not isolate recorder effect",
+      "OFF": {
+        "durations": [
+          75.16734529100358,
+          86.12482425000053,
+          97.08761395898182,
+          108.04501512501156
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 10524,
+          "prefill_wall_ms": 9974.038081,
+          "decode_output_tokens": 8780,
+          "decode_wall_ms": 51168.91945,
+          "drafted_tokens": 15407,
+          "accepted_draft_tokens": 6575
+        },
+        "native_PP_tps": 1055.1393442188323,
+        "native_decode_tps": 171.5885364470013,
+        "accepted_draft_tokens": 6575,
+        "drafted_tokens": 15407,
+        "actual_b_counts": {
+          "1": 61,
+          "2": 110,
+          "3": 20,
+          "4": 466
+        },
+        "peak_metal_bytes": 34957230080,
+        "task_wall_seconds": 108.04501512501156,
+        "sampled_rss_tree_peak_bytes": 3118432256,
+        "sampled_native_footprint_peak_bytes": 4337995880,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "32914487fec00316a0d4ce0c9c6f38b95d6a49dfdedc9b16a933eb7723711cce",
+          "5b7289ad11fbb0e261fe98706dd4742e9bcc5df72eb4b77b5324e92b1f9d0812",
+          "6a9bafb506d320a720a80e9f799fd0b539d4d09d8cb9bb16230f88734cb1bed1",
+          "dc8674659463592ab079e971428be71f9045456192ee88871649c6e35cce8337"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "c9e7992b668af6a7bea5e20264960a1c41d45c3ddfa919a6ddcbe029665dcd52",
+          "7489dbadadd83f50527449812e9978290f7d21942b24c4d7aeb9d674eabdf68d",
+          "a348214883a4609ff82ba75de9808cdbd7a1d4f14f86dfc0c45ab37fc02185d1",
+          "14fd0603ea0b601ab32596dc8798a3717f1120c8a02b7b13fb7f9602c90afd42"
+        ],
+        "raw_result_sha256": "46b58afd04934fb5e7f90737b7d371a869da2b654c564437065fc7a7b5343eff",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 3,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1948,
+              "total_tokens": 5107,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1431
+              }
+            },
+            "wall_seconds": 49.6506367920083,
+            "client_full_request_tps": 39.23413929534026,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 2,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1947,
+              "total_tokens": 5106,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1355
+              }
+            },
+            "wall_seconds": 51.14632083300967,
+            "client_full_request_tps": 38.06725426755256,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2441,
+              "total_tokens": 5600,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1897
+              }
+            },
+            "wall_seconds": 58.54776116699213,
+            "client_full_request_tps": 41.692456745488315,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 4,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2444,
+              "total_tokens": 5603,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1896
+              }
+            },
+            "wall_seconds": 61.52909500000533,
+            "client_full_request_tps": 39.721045791422554,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 4
+      },
+      "ON": {
+        "durations": [
+          64.71867675002431,
+          75.67845154099632,
+          86.62664279202,
+          97.58925087499665
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 10524,
+          "prefill_wall_ms": 9896.339666,
+          "decode_output_tokens": 6781,
+          "decode_wall_ms": 40866.98794,
+          "drafted_tokens": 11634,
+          "accepted_draft_tokens": 5115
+        },
+        "native_PP_tps": 1063.4234833467165,
+        "native_decode_tps": 165.92854873365545,
+        "accepted_draft_tokens": 5115,
+        "drafted_tokens": 11634,
+        "actual_b_counts": {
+          "1": 52,
+          "2": 108,
+          "3": 102,
+          "4": 273
+        },
+        "peak_metal_bytes": 34820915200,
+        "task_wall_seconds": 97.58925087499665,
+        "sampled_rss_tree_peak_bytes": 2972729344,
+        "sampled_native_footprint_peak_bytes": 4200976248,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "32914487fec00316a0d4ce0c9c6f38b95d6a49dfdedc9b16a933eb7723711cce",
+          "5b7289ad11fbb0e261fe98706dd4742e9bcc5df72eb4b77b5324e92b1f9d0812",
+          "6a9bafb506d320a720a80e9f799fd0b539d4d09d8cb9bb16230f88734cb1bed1",
+          "dc8674659463592ab079e971428be71f9045456192ee88871649c6e35cce8337"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "7ec1a5185593095bf12aa9d4d9f977ea1b072aa5d87606ed4bd6c08e0532ec7b",
+          "75314500ede37f6d49c2db586052ebb29b1dd806c57f62b6e1cf8810d50607c1",
+          "bb7aebc2c0c33c4ee577e8113eaa3d8ad42fa19976e19f6d742eef2f3388a999",
+          "435ce7ad4fac084ca4cedd5c4c4001bf2dc28f818e738ec6b6917bb4c5a87e25"
+        ],
+        "raw_result_sha256": "5608dd5980adf835dc1bf27fec2f809e7c2686801a63687d7e16defb9ba51c34",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 3,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1180,
+              "total_tokens": 4339,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 695
+              }
+            },
+            "wall_seconds": 33.50133704202017,
+            "client_full_request_tps": 35.22247480809335,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 4,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1521,
+              "total_tokens": 4680,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1036
+              }
+            },
+            "wall_seconds": 41.36208379204618,
+            "client_full_request_tps": 36.77280882769461,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 2,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2002,
+              "total_tokens": 5161,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1440
+              }
+            },
+            "wall_seconds": 48.769958209013566,
+            "client_full_request_tps": 41.049860888131626,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2078,
+              "total_tokens": 5237,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1586
+              }
+            },
+            "wall_seconds": 51.20854350004811,
+            "client_full_request_tps": 40.57916624787518,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 4
+      },
+      "equal_reasoning_and_content_outputs": false
+    },
+    {
+      "C": 4,
+      "pair": 1,
+      "OFF_tps": 137.67680282923325,
+      "ON_tps": 164.13326865633553,
+      "slowdown_pct": -19.216356919558496,
+      "same_model_inputs": true,
+      "OFF_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "ON_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "attribution": "T1stochastic generation; native rate differences do not isolate recorder effect",
+      "OFF": {
+        "durations": [
+          80.28218358301092,
+          91.24209208303364,
+          102.19548549997853,
+          113.15104795800289
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 10524,
+          "prefill_wall_ms": 9967.454083,
+          "decode_output_tokens": 7744,
+          "decode_wall_ms": 56247.67456,
+          "drafted_tokens": 13489,
+          "accepted_draft_tokens": 5813
+        },
+        "native_PP_tps": 1055.8363161109735,
+        "native_decode_tps": 137.67680282923325,
+        "accepted_draft_tokens": 5813,
+        "drafted_tokens": 13489,
+        "actual_b_counts": {
+          "1": 375,
+          "2": 7,
+          "3": 42,
+          "4": 354
+        },
+        "peak_metal_bytes": 34957230080,
+        "task_wall_seconds": 113.15104795800289,
+        "sampled_rss_tree_peak_bytes": 3119251456,
+        "sampled_native_footprint_peak_bytes": 4338094112,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "32914487fec00316a0d4ce0c9c6f38b95d6a49dfdedc9b16a933eb7723711cce",
+          "5b7289ad11fbb0e261fe98706dd4742e9bcc5df72eb4b77b5324e92b1f9d0812",
+          "6a9bafb506d320a720a80e9f799fd0b539d4d09d8cb9bb16230f88734cb1bed1",
+          "dc8674659463592ab079e971428be71f9045456192ee88871649c6e35cce8337"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "f60c9cfc413d608ef9289c080642c2a31f588a869e1cae43a3366f5662a0de40",
+          "26eb418a160f76c7d95b851642990796c8006bc8be7abde54fe6306645b59195",
+          "52c8214e5a0ed3930cf45e4354ccdce9bfee73f9173ebd46938bf8778da25553",
+          "de1bf6d6b7bbb5dfd62703866ad15521ac00fd329112592ef963c62ff1f2c27b"
+        ],
+        "raw_result_sha256": "231160564604772a4bc84ddf0a425ac277fb336502c593415f65e3574065cb47",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 4,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1358,
+              "total_tokens": 4517,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 751
+              }
+            },
+            "wall_seconds": 40.11046462500235,
+            "client_full_request_tps": 33.85650135684312,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 3,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1641,
+              "total_tokens": 4800,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1225
+              }
+            },
+            "wall_seconds": 43.369212625024375,
+            "client_full_request_tps": 37.837901605184555,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 2,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1642,
+              "total_tokens": 4801,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1172
+              }
+            },
+            "wall_seconds": 43.77641054202104,
+            "client_full_request_tps": 37.5087856603465,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 3103,
+              "total_tokens": 6262,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2623
+              }
+            },
+            "wall_seconds": 66.7928614160046,
+            "client_full_request_tps": 46.45706044353526,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 4
+      },
+      "ON": {
+        "durations": [
+          61.91452150000259,
+          72.87799233297119,
+          83.83194966695737,
+          94.79043041699333
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 10524,
+          "prefill_wall_ms": 9959.980958,
+          "decode_output_tokens": 6238,
+          "decode_wall_ms": 38005.70141,
+          "drafted_tokens": 10416,
+          "accepted_draft_tokens": 4746
+        },
+        "native_PP_tps": 1056.6285261365856,
+        "native_decode_tps": 164.13326865633553,
+        "accepted_draft_tokens": 4746,
+        "drafted_tokens": 10416,
+        "actual_b_counts": {
+          "1": 92,
+          "2": 125,
+          "3": 26,
+          "4": 268
+        },
+        "peak_metal_bytes": 34820915200,
+        "task_wall_seconds": 94.79043041699333,
+        "sampled_rss_tree_peak_bytes": 2972729344,
+        "sampled_native_footprint_peak_bytes": 4200763304,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "32914487fec00316a0d4ce0c9c6f38b95d6a49dfdedc9b16a933eb7723711cce",
+          "5b7289ad11fbb0e261fe98706dd4742e9bcc5df72eb4b77b5324e92b1f9d0812",
+          "6a9bafb506d320a720a80e9f799fd0b539d4d09d8cb9bb16230f88734cb1bed1",
+          "dc8674659463592ab079e971428be71f9045456192ee88871649c6e35cce8337"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "b1bfae0f25b8122234d933f67d1a4d630af0f7ecb0c98a00351dda72cad2b72e",
+          "4f155f6862180b9fdb3f6ced099f90ffde08cb972a940a383afaa6ab4200aa23",
+          "a4c00f8199a28964f7897f3e8e443789f2959294d1f1f3c80e3ca9f55b218dc4",
+          "afbc985517515c39bda388df6dfaa51495c6535507285ce8657c60bae1a93d55"
+        ],
+        "raw_result_sha256": "f3b324ab36e3719fec405a083600ec1015ead7124fbc652cc9c1b9d5d3aaee30",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 3,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1067,
+              "total_tokens": 4226,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 412
+              }
+            },
+            "wall_seconds": 33.062896500050556,
+            "client_full_request_tps": 32.271824702302425,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 4,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1316,
+              "total_tokens": 4475,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 873
+              }
+            },
+            "wall_seconds": 34.88242924999213,
+            "client_full_request_tps": 37.72673028499863,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1801,
+              "total_tokens": 4960,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1181
+              }
+            },
+            "wall_seconds": 43.423234374960884,
+            "client_full_request_tps": 41.47549177125575,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 2,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2054,
+              "total_tokens": 5213,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1530
+              }
+            },
+            "wall_seconds": 48.39466041600099,
+            "client_full_request_tps": 42.442698891650345,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 4
+      },
+      "equal_reasoning_and_content_outputs": false
+    },
+    {
+      "C": 4,
+      "pair": 2,
+      "OFF_tps": 163.0058432230151,
+      "ON_tps": 144.5271691566226,
+      "slowdown_pct": 11.336203476528784,
+      "same_model_inputs": true,
+      "OFF_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "ON_profile": {
+        "thinking": "xhigh",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "reasoning_effort": "xhigh",
+          "preserve_thinking": true
+        },
+        "coding_cap": 131072,
+        "control_cap": 131072,
+        "context": 262144,
+        "fps": 30,
+        "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+        "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "video_crf": 16,
+        "terminal_C1": {
+          "columns": 110,
+          "rows": 48
+        },
+        "terminal_C4": {
+          "columns": 100,
+          "rows": 30
+        }
+      },
+      "attribution": "T1stochastic generation; native rate differences do not isolate recorder effect",
+      "OFF": {
+        "durations": [
+          72.41555458301445,
+          83.38165225001285,
+          94.3366862910334,
+          105.31134691700572
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 10524,
+          "prefill_wall_ms": 9989.09542,
+          "decode_output_tokens": 7888,
+          "decode_wall_ms": 48390.90332,
+          "drafted_tokens": 13741,
+          "accepted_draft_tokens": 5921
+        },
+        "native_PP_tps": 1053.548850772716,
+        "native_decode_tps": 163.0058432230151,
+        "accepted_draft_tokens": 5921,
+        "drafted_tokens": 13741,
+        "actual_b_counts": {
+          "1": 90,
+          "2": 160,
+          "3": 11,
+          "4": 381
+        },
+        "peak_metal_bytes": 34957230080,
+        "task_wall_seconds": 105.31134691700572,
+        "sampled_rss_tree_peak_bytes": 3126984704,
+        "sampled_native_footprint_peak_bytes": 4337831968,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "32914487fec00316a0d4ce0c9c6f38b95d6a49dfdedc9b16a933eb7723711cce",
+          "5b7289ad11fbb0e261fe98706dd4742e9bcc5df72eb4b77b5324e92b1f9d0812",
+          "6a9bafb506d320a720a80e9f799fd0b539d4d09d8cb9bb16230f88734cb1bed1",
+          "dc8674659463592ab079e971428be71f9045456192ee88871649c6e35cce8337"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "68f54fc8a685927328118b52a6736a50f120b656c010a718dec6af9a63967f30",
+          "34e6de11f8d1396e5b9edd437303d35d1084885d566f90cf1160ad6663b31d5d",
+          "2bf4b7094c0cf7a8165f9521ffda4c024513a8dbbbfb8ad93dea5e995b7b1932",
+          "626d474918b70c15b8ca6909c124904716eeb202136fa0fa36f23cfc49f60fed"
+        ],
+        "raw_result_sha256": "79c9e2c5efd6302a5dafa849fd8ce25ec2fb38070fb10b1e21b33a417b1cc8c6",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1637,
+              "total_tokens": 4796,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1013
+              }
+            },
+            "wall_seconds": 42.439304583997,
+            "client_full_request_tps": 38.57273383827499,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 3,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1581,
+              "total_tokens": 4740,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1086
+              }
+            },
+            "wall_seconds": 43.09491608303506,
+            "client_full_request_tps": 36.686461970450004,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 4,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2192,
+              "total_tokens": 5351,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1629
+              }
+            },
+            "wall_seconds": 53.820973374997266,
+            "client_full_request_tps": 40.72761718238083,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 2,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2478,
+              "total_tokens": 5637,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1974
+              }
+            },
+            "wall_seconds": 58.89339604100678,
+            "client_full_request_tps": 42.07602492942668,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 4
+      },
+      "ON": {
+        "durations": [
+          80.41244366700994,
+          91.38591020804597,
+          102.34009170799982,
+          113.29904333403101
+        ],
+        "phase_delta": {
+          "prefill_input_tokens": 10524,
+          "prefill_wall_ms": 9962.541622,
+          "decode_output_tokens": 8149,
+          "decode_wall_ms": 56383.86227,
+          "drafted_tokens": 14070,
+          "accepted_draft_tokens": 6135
+        },
+        "native_PP_tps": 1056.3569417627473,
+        "native_decode_tps": 144.5271691566226,
+        "accepted_draft_tokens": 6135,
+        "drafted_tokens": 14070,
+        "actual_b_counts": {
+          "1": 269,
+          "2": 60,
+          "3": 135,
+          "4": 305
+        },
+        "peak_metal_bytes": 34957230080,
+        "task_wall_seconds": 113.29904333403101,
+        "sampled_rss_tree_peak_bytes": 3126804480,
+        "sampled_native_footprint_peak_bytes": 4337438824,
+        "pressure_states": [
+          "normal"
+        ],
+        "model_request_body_hashes": [
+          "32914487fec00316a0d4ce0c9c6f38b95d6a49dfdedc9b16a933eb7723711cce",
+          "5b7289ad11fbb0e261fe98706dd4742e9bcc5df72eb4b77b5324e92b1f9d0812",
+          "6a9bafb506d320a720a80e9f799fd0b539d4d09d8cb9bb16230f88734cb1bed1",
+          "dc8674659463592ab079e971428be71f9045456192ee88871649c6e35cce8337"
+        ],
+        "reasoning_and_content_output_sha256": [
+          "78eaad7d3878f523a9148480352c8a6f6b477b82baacead238dc9866cef818d4",
+          "f4f14193a0af1e73797f7b98fb8e6d5e28cbb0f99f7b75b3d47699fae68e0d0b",
+          "e0e8d936edc0e505ec5134518a6308184fe7c57e8036c0fa1c5f91888adffcbe",
+          "50de3d63674884799b9091995f57fd7057a1876f450e0fdff5fe0e55a9b39e6c"
+        ],
+        "raw_result_sha256": "c2beb61e437da8151205bed632bcca206e8244e5506e19beb9127ba9f86ed032",
+        "result_fields": [
+          "status",
+          "C",
+          "control",
+          "recording_on",
+          "mode",
+          "durations",
+          "playback_speed",
+          "idle_compression",
+          "phase_delta",
+          "native_PP_tps",
+          "native_decode_tps",
+          "accepted_draft_tokens",
+          "drafted_tokens",
+          "actual_b_counts",
+          "outcomes",
+          "requests_count",
+          "ttft_content_seconds",
+          "ttft_tool_seconds",
+          "peak_metal_bytes",
+          "artifact",
+          "extensions",
+          "basic_tools",
+          "confirmed_tokens_per_cycle_per_lane",
+          "request_usage_and_client_rates",
+          "task_wall_seconds",
+          "task_wall_scope",
+          "sampled_rss_tree_peak_bytes",
+          "sampled_native_footprint_peak_bytes",
+          "sampled_server_footprint_peak_bytes",
+          "sampled_demo_tree_rss_peak_bytes",
+          "sampled_recorder_proxy_footprint_peak_bytes",
+          "pressure_states",
+          "memory_scope",
+          "control_status",
+          "model_request_body_hashes",
+          "Pi_before",
+          "Pi_after",
+          "Pi_installation_and_global_snapshot_equal",
+          "run_profile",
+          "task_bounds"
+        ],
+        "request_usage_and_client_rates": [
+          {
+            "request_id": 1,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1369,
+              "total_tokens": 4528,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 781
+              }
+            },
+            "wall_seconds": 36.16139991703676,
+            "client_full_request_tps": 37.85804761820135,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 4,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 1757,
+              "total_tokens": 4916,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1253
+              }
+            },
+            "wall_seconds": 46.54855849995511,
+            "client_full_request_tps": 37.74552975688161,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 2,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2045,
+              "total_tokens": 5204,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 1513
+              }
+            },
+            "wall_seconds": 50.62377983296756,
+            "client_full_request_tps": 40.39603535625843,
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "request_id": 3,
+            "usage": {
+              "prompt_tokens": 3159,
+              "completion_tokens": 2978,
+              "total_tokens": 6137,
+              "prompt_tokens_details": {
+                "cached_tokens": 1056
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 2345
+              }
+            },
+            "wall_seconds": 66.85843329195632,
+            "client_full_request_tps": 44.54187532327774,
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "max_sampled_ready_residents": 4
+      },
+      "equal_reasoning_and_content_outputs": false
+    }
+  ],
+  "profile": {
+    "thinking": "xhigh",
+    "sampling": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "repetition_penalty": 1.0,
+      "reasoning_effort": "xhigh",
+      "preserve_thinking": true
+    },
+    "coding_cap": 131072,
+    "control_cap": 131072,
+    "context": 262144,
+    "fps": 30,
+    "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+    "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+    "resolution": [
+      3840,
+      2160
+    ],
+    "video_crf": 16,
+    "terminal_C1": {
+      "columns": 110,
+      "rows": 48
+    },
+    "terminal_C4": {
+      "columns": 100,
+      "rows": 30
+    }
+  },
+  "frontend_scope": "Matched controls precede UI map correction: common high footer label, verified actual HTTPxhigh. Finalvideos showxhigh. No isolated causal recorder attribution atT1."
+}

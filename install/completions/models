@@ -1,0 +1,41 @@
+#!/bin/sh
+# Print local completion candidates; the optional prefix is literal text.
+set -eu
+
+completion_dir=$(CDPATH= cd -P "$(dirname "$0")" && pwd -P)
+root=$(CDPATH= cd -P "$completion_dir/../.." && pwd -P)
+if [ -f "$root/release.json" ]; then
+    data_dir="$HOME/Library/Application Support/Splash"
+    models_dir="$data_dir/models"
+else
+    data_dir="$root/build/runtime"
+    models_dir="$root/install/models"
+fi
+# Refreshed in the background by `splash serve`; read as a union with the
+# bundled catalog so a missing or stale cache can only fail to add entries.
+cache_file="$data_dir/catalog/official-models.txt"
+
+{
+    for catalog in "$completion_dir/official-models.txt" "$cache_file"; do
+        [ -r "$catalog" ] || continue
+        cat "$catalog"
+        printf '\n'
+    done
+    for manifest in "$models_dir"/*/*/manifest.json; do
+        [ -f "$manifest" ] || continue
+        directory=${manifest%/manifest.json}
+        repository=${directory##*/}
+        owner_directory=${directory%/*}
+        printf '%s/%s\n' "${owner_directory##*/}" "$repository"
+    done
+} | SPLASH_COMPLETION_PREFIX=${1-} LC_ALL=C awk '
+    BEGIN {
+        prefix = ENVIRON["SPLASH_COMPLETION_PREFIX"]
+        component = "^[A-Za-z0-9_]([A-Za-z0-9._-]*[A-Za-z0-9_])?$"
+    }
+    split($0, parts, "/") == 2 &&
+        parts[1] ~ component && parts[2] ~ component &&
+        length(parts[2]) <= 96 && parts[2] !~ /\.git$/ &&
+        !index($0, "..") && !index($0, "--") &&
+        index($0, prefix) == 1 { print }
+' | LC_ALL=C sort -u

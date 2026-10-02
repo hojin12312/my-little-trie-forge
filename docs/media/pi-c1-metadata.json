@@ -1,0 +1,289 @@
+{
+  "mode": "terminal_event_replay",
+  "not_screen_capture": true,
+  "playback_speed": 1.0,
+  "idleCompression": false,
+  "source_duration_seconds": 39.796932958008256,
+  "media_duration_seconds": 39.916016,
+  "fps": 12,
+  "frames": 479,
+  "resolution": [
+    1020,
+    854
+  ],
+  "video_codec": "H.264 software offline encoding after inference",
+  "sources": [
+    {
+      "path": "public-replay/lane0/recording.cast",
+      "sha256": "6353d4dfb436bbda75528082063ee44604365c87cd52b92ac58d4f3f935510ce",
+      "offset_seconds": 0.0
+    }
+  ],
+  "telemetry": "latest prior 1Hz sample; native confirmed counter delta/native batch-wall delta; same-window accepted/drafted; B is latest actual dispatch, not a whole-window width guarantee",
+  "video_sha256": "2ebbb21a85f054bf973a1c953aaa8657e67bbf48bc602889a434f638473dd503",
+  "renderer_sha256": "74a5f2de045ac7ee58dadfc592d4fa1be833e393674018e3895e10899e3ed641",
+  "privacy_projection": {
+    "lanes": [
+      {
+        "lane": "lane0",
+        "render_projection_sha256": "6353d4dfb436bbda75528082063ee44604365c87cd52b92ac58d4f3f935510ce",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 5,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      }
+    ],
+    "raw_masters_unchanged": true
+  },
+  "Pi_version": "0.87.1",
+  "extensions": 0,
+  "default_tools": [
+    "read",
+    "bash",
+    "edit",
+    "write"
+  ],
+  "audio": false,
+  "camera": false,
+  "model_artifact": {
+    "native_binary_sha256": "0d3d56f7a8133b01d9bcf6ea8414a3e05bfb50ee248aaa8b8695a3db9f06a7bb",
+    "metallib_sha256": "7d8388c89c7a8bdac1cfc065b9daa1e1b02653cb5b7a78020cb9cb4bc0efa3e3",
+    "server_py_sha256": "746fbf6fc7f0a20a2f26dfa675516c2fd02e677640e6b94d642e84ea1df4f4c0",
+    "all_ready_binary_sha256": "413b05a383662ce7b5834aa74155fc4ec19b68fb1d3a066ecc48066b847e1ee7",
+    "all_ready_source_sha256": "ac351ab966d992e7b5ee6a29cdf7b54b4b503dcb6474530f12e92ba188eaab57",
+    "model_manifest_sha256": "e2c7919947a1784b18bf67323de786e500e53d1e47798aede1c38667c388760e",
+    "qualified_static_library_sha256": "788b30bbab4cf053327b115b777827b5aa3253df6ad055719482ee304bcc12ba",
+    "harness_sha256": "036df64250e240dc1ae74eaa9d00f229b9866664f1e8f27b97ed85b22f594008"
+  },
+  "task_outcomes": [
+    {
+      "lane": 0,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 1,
+          "tool_error": true
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.00800013542175293,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03399991989135742,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03600001335144043,
+          "is_error": true
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.034999847412109375,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    }
+  ],
+  "cache_and_ttft_per_model_turn": [
+    {
+      "request_id": 1,
+      "lane": 0,
+      "model_turn": 1,
+      "prompt_tokens": 1134,
+      "completion_tokens": 52,
+      "cached_tokens": 0,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.3830697500379756
+    },
+    {
+      "request_id": 2,
+      "lane": 0,
+      "model_turn": 2,
+      "prompt_tokens": 1823,
+      "completion_tokens": 28,
+      "cached_tokens": 1120,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.875110124994535
+    },
+    {
+      "request_id": 3,
+      "lane": 0,
+      "model_turn": 3,
+      "prompt_tokens": 2186,
+      "completion_tokens": 50,
+      "cached_tokens": 1792,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.6406637500040233
+    },
+    {
+      "request_id": 4,
+      "lane": 0,
+      "model_turn": 4,
+      "prompt_tokens": 2510,
+      "completion_tokens": 187,
+      "cached_tokens": 2176,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.5948545000283048
+    },
+    {
+      "request_id": 5,
+      "lane": 0,
+      "model_turn": 5,
+      "prompt_tokens": 2726,
+      "completion_tokens": 313,
+      "cached_tokens": 2496,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.498002375010401
+    },
+    {
+      "request_id": 6,
+      "lane": 0,
+      "model_turn": 6,
+      "prompt_tokens": 3068,
+      "completion_tokens": 32,
+      "cached_tokens": 2720,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.6032365839928389
+    },
+    {
+      "request_id": 7,
+      "lane": 0,
+      "model_turn": 7,
+      "prompt_tokens": 3254,
+      "completion_tokens": 249,
+      "cached_tokens": 3040,
+      "TTFT_content_seconds": 0.4315269159851596,
+      "TTFT_tool_seconds": null
+    },
+    {
+      "request_id": 8,
+      "lane": 0,
+      "model_turn": 8,
+      "prompt_tokens": 3551,
+      "completion_tokens": 231,
+      "cached_tokens": 3232,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.7388818750041537
+    },
+    {
+      "request_id": 9,
+      "lane": 0,
+      "model_turn": 9,
+      "prompt_tokens": 3811,
+      "completion_tokens": 32,
+      "cached_tokens": 3520,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.5461155839730054
+    },
+    {
+      "request_id": 10,
+      "lane": 0,
+      "model_turn": 10,
+      "prompt_tokens": 4241,
+      "completion_tokens": 75,
+      "cached_tokens": 3808,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.6986872910056263
+    },
+    {
+      "request_id": 11,
+      "lane": 0,
+      "model_turn": 11,
+      "prompt_tokens": 4345,
+      "completion_tokens": 32,
+      "cached_tokens": 4224,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 0.3881864169961773
+    },
+    {
+      "request_id": 12,
+      "lane": 0,
+      "model_turn": 12,
+      "prompt_tokens": 4561,
+      "completion_tokens": 224,
+      "cached_tokens": 4320,
+      "TTFT_content_seconds": 0.4498242500121705,
+      "TTFT_tool_seconds": null
+    }
+  ],
+  "privacy_review": "PASS",
+  "preview": {
+    "continuous_excerpt_seconds": 20,
+    "media_duration_seconds": 20.01,
+    "fps": 8,
+    "speed": 1,
+    "idleCompression": false,
+    "sha256": "a4cd7670e325fb4719d220adb99a091783670a2474f37f1c9e24417584f3014c"
+  }
+}

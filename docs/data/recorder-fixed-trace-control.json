@@ -1,0 +1,52 @@
+{
+  "status": "PASS_IN_SCOPE",
+  "domain": "unpaced fixed-recorded-event JSON serialization/file-write/flush CPU and I/O microcontrol",
+  "not_a_model_or_video_demo": true,
+  "GPU_model_requests": 0,
+  "native_TPS": "N/A",
+  "TTFT": "N/A",
+  "source_casts": [
+    {
+      "lane": 0,
+      "raw_cast_sha256": "d5325e3bb21c2fb4af4ed80c04391d40a243c4c8780ae782309cb55725dfe5ac",
+      "events": 884
+    },
+    {
+      "lane": 1,
+      "raw_cast_sha256": "02b7ba516ac870f22c885e638cf3f7bcf3f81a60a6a034b025846610b8d9dbb4",
+      "events": 773
+    },
+    {
+      "lane": 2,
+      "raw_cast_sha256": "97fd428c854cd1005b95d591553782d67b5e270399d00951faa7f4b5302fbe9b",
+      "events": 921
+    },
+    {
+      "lane": 3,
+      "raw_cast_sha256": "1482a31f00162b7d740e94a61b51e85528276b5bcf76def3164a6da822e1c4d2",
+      "events": 877
+    }
+  ],
+  "pairs": [
+    {
+      "pair": 0,
+      "extra_CPU_ms_per_original_trace": 12.3774,
+      "extra_wall_ms_per_original_trace": 12.882375839399174,
+      "same_consumed_content": true
+    },
+    {
+      "pair": 1,
+      "extra_CPU_ms_per_original_trace": 12.117040000000001,
+      "extra_wall_ms_per_original_trace": 12.387266680598259,
+      "same_consumed_content": true
+    },
+    {
+      "pair": 2,
+      "extra_CPU_ms_per_original_trace": 11.840379999999998,
+      "extra_wall_ms_per_original_trace": 11.907597499666736,
+      "same_consumed_content": true
+    }
+  ],
+  "extra_CPU_ms_median": 12.117040000000001,
+  "scope": "Separates recorder write cost from differing model outputs in two original C4 pairs. Does not estimate a causal native-GPU TPS penalty or replace real Pi OFF/ON pairs."
+}

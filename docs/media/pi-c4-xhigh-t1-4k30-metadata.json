@@ -1,0 +1,1210 @@
+{
+  "mode": "terminal_event_replay",
+  "not_screen_capture": true,
+  "playback_speed": 1.0,
+  "idleCompression": false,
+  "source_duration_seconds": 220.33616033301223,
+  "media_duration_seconds": 220.4,
+  "fps": 30,
+  "frames": 6612,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "font_size": 28,
+  "crf": 16,
+  "video_codec": "H.264 software offline encoding after inference",
+  "sources": [
+    {
+      "path": "public-replay/lane0/recording.cast",
+      "sha256": "b131f13f5a468648968a5f55a6e2b53dc884d223642a6e776569bd1c364a1a7f",
+      "offset_seconds": 0.0
+    },
+    {
+      "path": "public-replay/lane1/recording.cast",
+      "sha256": "17949334f0b1856e573a4d7e7942853161312c127221dc6dddb58b9791726518",
+      "offset_seconds": 0.07496354199247435
+    },
+    {
+      "path": "public-replay/lane2/recording.cast",
+      "sha256": "bba6fe25e4ab40b2b1d2925b93027652e042ffe2fcae18470c2409ed49146ea0",
+      "offset_seconds": 0.15523899998515844
+    },
+    {
+      "path": "public-replay/lane3/recording.cast",
+      "sha256": "58a26fd79be7638a719b2749cc2df4d9ac352570c1ab1f554e4258aee433eee8",
+      "offset_seconds": 0.2359441249864176
+    }
+  ],
+  "telemetry": "latest prior 1Hz sample; native confirmed counter delta/native batch-wall delta; same-window accepted/drafted; B is latest actual dispatch, not a whole-window width guarantee",
+  "video_sha256": "05a359a7418090f2c9c1dea9217b71cadaf43b0c8e418c76e4fc8f85223acc4e",
+  "renderer_sha256": "c84a690875e9f4ff31518bfd246cb8945a683b64857c777ae9b2b954a44ee0ec",
+  "braille_rendering": "capturedU2800–U28FF codepoints drawn as exact2×4dot patterns; no tofu font fallback or invented intermediate animation",
+  "privacy_projection": {
+    "lanes": [
+      {
+        "lane": "lane0",
+        "render_projection_sha256": "b131f13f5a468648968a5f55a6e2b53dc884d223642a6e776569bd1c364a1a7f",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      },
+      {
+        "lane": "lane1",
+        "render_projection_sha256": "17949334f0b1856e573a4d7e7942853161312c127221dc6dddb58b9791726518",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 15,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      },
+      {
+        "lane": "lane2",
+        "render_projection_sha256": "bba6fe25e4ab40b2b1d2925b93027652e042ffe2fcae18470c2409ed49146ea0",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [
+          {
+            "kind": "local account identifier",
+            "occurrences": 25,
+            "replacement": "user_"
+          }
+        ],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      },
+      {
+        "lane": "lane3",
+        "render_projection_sha256": "58a26fd79be7638a719b2749cc2df4d9ac352570c1ab1f554e4258aee433eee8",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      }
+    ],
+    "raw_masters_unchanged": true
+  },
+  "run_profile": {
+    "thinking": "xhigh",
+    "sampling": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "repetition_penalty": 1.0,
+      "reasoning_effort": "xhigh",
+      "preserve_thinking": true
+    },
+    "coding_cap": 131072,
+    "control_cap": 131072,
+    "context": 262144,
+    "fps": 30,
+    "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+    "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+    "resolution": [
+      3840,
+      2160
+    ],
+    "video_crf": 16,
+    "terminal_C1": {
+      "columns": 110,
+      "rows": 48
+    },
+    "terminal_C4": {
+      "columns": 100,
+      "rows": 30
+    }
+  },
+  "actual_http_profile_verified": true,
+  "hideThinkingBlock": false,
+  "reasoning_visible_in_terminal": true,
+  "Pi_version": "0.87.1",
+  "default_tools": [
+    "read",
+    "bash",
+    "edit",
+    "write"
+  ],
+  "extensions": 0,
+  "task_outcomes": [
+    {
+      "lane": 0,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "cp queue_cache.py /tmp/queue_cache.fixed && python3 - <<'EOF'\nimport re\nsrc = open('queue_cache.py').read()\nold = \"\"\"    def complete(self, job, value):\n        if job.cancelled or self.active.get(job.key) is not job:\n            # Job was cancelled, or superseded by a newer job for this key;\n            # its late result must not overwrite the newer job's result.\n            return\n        self.cache.put(job.key, value)\n        del self.active[job.key]\"\"\"\nbuggy = \"\"\"    def complete(self, job, value):\n        self.cache.put(job.key, value)\n        if self.active.get(job.key) is job:\n            del self.active[job.key]\"\"\"\nassert old in src\nopen('queue_cache.py','w').write(src.replace(old, buggy))\nEOF\npython3 -m unittest -v 2>&1 | tail -12\ncp /tmp/queue_cache.fixed queue_cache.py && rm /tmp/queue_cache.fixed",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v && echo --- && cat queue_cache.py",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "cp queue_cache.py /tmp/queue_cache.fixed2 && python3 - <<'EOF'\nsrc = open('queue_cache.py').read()\nold = \"\"\"        if job.cancelled or self.active.get(job.key) is not job:\n            # Job was cancelled, or superseded by a newer job for this key;\n            # its late result must not overwrite the newer job's result.\n            return\"\"\"\nbuggy = \"\"\"        if job.cancelled or self.active.get(job.key) is not job:\n            self.active.pop(job.key, None)\n            return\"\"\"\nassert old in src\nopen('queue_cache.py','w').write(src.replace(old, buggy))\nEOF\npython3 -m unittest test_queue.Tests.test_rejected_old_completion_keeps_newer_job_active -v 2>&1 | tail -8\ncp /tmp/queue_cache.fixed2 queue_cache.py && rm /tmp/queue_cache.fixed2 && python3 -m unittest -v 2>&1 | tail -3",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.012000083923339844,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03900003433227539,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.06700015068054199,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.042999982833862305,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.040000200271606445,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.09500002861022949,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    },
+    {
+      "lane": 1,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "mkdir -p /tmp/refix_check && cp test_queue.py runner.py records.py /tmp/refix_check/ && git show HEAD:queue_cache.py > /tmp/refix_check/queue_cache.py && cd /tmp/refix_check && python3 -m unittest -v 2>&1 | tail -15",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.005000114440917969,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.005000114440917969,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.00800013542175293,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.037999868392944336,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.059999942779541016,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.017999887466430664,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03800010681152344,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    },
+    {
+      "lane": 2,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "T=$(mktemp -d) && cp queue_cache.py test_queue.py runner.py records.py \"$T\"/ && cd \"$T\" && python3 - <<'EOF'\n# restore the buggy complete() in the temp copy\nsrc = open('queue_cache.py').read()\nfixed = \"\"\"    def complete(self, job, value):\n        # Only the job currently active for its key may publish a result;\n        # cancelled or superseded jobs finish but must not overwrite it.\n        if self.active.get(job.key) is job:\n            self.cache.put(job.key, value)\n            del self.active[job.key]\"\"\"\nbuggy = \"\"\"    def complete(self, job, value):\n        self.cache.put(job.key, value)\n        if self.active.get(job.key) is job:\n            del self.active[job.key]\"\"\"\nopen('queue_cache.py','w').write(src.replace(fixed, buggy))\nEOF\npython3 -m unittest -v 2>&1 | tail -15; rm -rf \"$T\"",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "T=$(mktemp -d) && cp queue_cache.py test_queue.py runner.py records.py \"$T\"/ && cd \"$T\" && python3 - <<'EOF'\n# naive variant: rejected completions still wipe the active entry (kills newer job)\nsrc = open('queue_cache.py').read()\nfixed = \"\"\"    def complete(self, job, value):\n        # Only the job currently active for its key may publish a result;\n        # cancelled or superseded jobs finish but must not overwrite it.\n        if self.active.get(job.key) is job:\n            self.cache.put(job.key, value)\n            del self.active[job.key]\"\"\"\nnaive = \"\"\"    def complete(self, job, value):\n        if self.active.get(job.key) is job:\n            self.cache.put(job.key, value)\n        del self.active[job.key]\"\"\"\nopen('queue_cache.py','w').write(src.replace(fixed, naive))\nEOF\npython3 -m unittest -v test_queue.Tests.test_rejected_completion_does_not_remove_active_newer_job 2>&1 | tail -8; rm -rf \"$T\"",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.003999948501586914,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.003999948501586914,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.006999969482421875,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0029997825622558594,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.039999961853027344,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.06700015068054199,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.06599998474121094,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.042999982833862305,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    },
+    {
+      "lane": 3,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 1,
+          "tool_error": true
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.01100015640258789,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003999948501586914,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0019998550415039062,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03699994087219238,
+          "is_error": true
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.037999868392944336,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03900003433227539,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    }
+  ],
+  "reasoning_tokens": 11824,
+  "completion_tokens": 21527,
+  "completion_scope": "reasoning, visible answer and tool-call tokens, not answer-only throughput",
+  "cache_and_ttft_per_model_turn": [
+    {
+      "request_id": 1,
+      "lane": 1,
+      "model_turn": 1,
+      "prompt_tokens": 1177,
+      "completion_tokens": 69,
+      "cached_tokens": 0,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.3937195839826018,
+      "reasoning_tokens": 15,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.8010280840098858,
+      "TTFT_first_nonempty_output_seconds": 1.8010280840098858
+    },
+    {
+      "request_id": 2,
+      "lane": 0,
+      "model_turn": 1,
+      "prompt_tokens": 1177,
+      "completion_tokens": 69,
+      "cached_tokens": 0,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.622626166965347,
+      "reasoning_tokens": 15,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.107779166952241,
+      "TTFT_first_nonempty_output_seconds": 3.107779166952241
+    },
+    {
+      "request_id": 3,
+      "lane": 2,
+      "model_turn": 1,
+      "prompt_tokens": 1177,
+      "completion_tokens": 65,
+      "cached_tokens": 1088,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.4074392080074176,
+      "reasoning_tokens": 11,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.1105927909957245,
+      "TTFT_first_nonempty_output_seconds": 3.1105927909957245
+    },
+    {
+      "request_id": 4,
+      "lane": 3,
+      "model_turn": 1,
+      "prompt_tokens": 1177,
+      "completion_tokens": 70,
+      "cached_tokens": 1088,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.4826814999687485,
+      "reasoning_tokens": 16,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.098394915985409,
+      "TTFT_first_nonempty_output_seconds": 3.098394915985409
+    },
+    {
+      "request_id": 5,
+      "lane": 1,
+      "model_turn": 2,
+      "prompt_tokens": 1881,
+      "completion_tokens": 818,
+      "cached_tokens": 1152,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 23.453035832964815,
+      "reasoning_tokens": 788,
+      "non_reasoning_completion_tokens": 30,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.606132749991957,
+      "TTFT_first_nonempty_output_seconds": 1.606132749991957
+    },
+    {
+      "request_id": 6,
+      "lane": 2,
+      "model_turn": 2,
+      "prompt_tokens": 1877,
+      "completion_tokens": 57,
+      "cached_tokens": 1152,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 4.168419833993539,
+      "reasoning_tokens": 27,
+      "non_reasoning_completion_tokens": 30,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.7151221669628285,
+      "TTFT_first_nonempty_output_seconds": 2.7151221669628285
+    },
+    {
+      "request_id": 7,
+      "lane": 0,
+      "model_turn": 2,
+      "prompt_tokens": 1881,
+      "completion_tokens": 90,
+      "cached_tokens": 1152,
+      "TTFT_content_seconds": 4.269132666988298,
+      "TTFT_tool_seconds": 5.095508333994076,
+      "reasoning_tokens": 31,
+      "non_reasoning_completion_tokens": 59,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.449712499976158,
+      "TTFT_first_nonempty_output_seconds": 3.449712499976158
+    },
+    {
+      "request_id": 8,
+      "lane": 3,
+      "model_turn": 2,
+      "prompt_tokens": 1882,
+      "completion_tokens": 1041,
+      "cached_tokens": 1152,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 29.553991791966837,
+      "reasoning_tokens": 995,
+      "non_reasoning_completion_tokens": 46,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.371957666997332,
+      "TTFT_first_nonempty_output_seconds": 3.371957666997332
+    },
+    {
+      "request_id": 9,
+      "lane": 2,
+      "model_turn": 3,
+      "prompt_tokens": 2268,
+      "completion_tokens": 1500,
+      "cached_tokens": 1856,
+      "TTFT_content_seconds": 32.26670637499774,
+      "TTFT_tool_seconds": 34.606158415961545,
+      "reasoning_tokens": 1190,
+      "non_reasoning_completion_tokens": 310,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.0428519579581916,
+      "TTFT_first_nonempty_output_seconds": 1.0428519579581916
+    },
+    {
+      "request_id": 10,
+      "lane": 0,
+      "model_turn": 3,
+      "prompt_tokens": 2559,
+      "completion_tokens": 2303,
+      "cached_tokens": 1856,
+      "TTFT_content_seconds": 57.10134962503798,
+      "TTFT_tool_seconds": 63.58387783303624,
+      "reasoning_tokens": 1959,
+      "non_reasoning_completion_tokens": 344,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.4272270000074059,
+      "TTFT_first_nonempty_output_seconds": 1.4272270000074059
+    },
+    {
+      "request_id": 11,
+      "lane": 1,
+      "model_turn": 3,
+      "prompt_tokens": 3033,
+      "completion_tokens": 1516,
+      "cached_tokens": 1856,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 26.518684833019506,
+      "reasoning_tokens": 849,
+      "non_reasoning_completion_tokens": 667,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.2525598329957575,
+      "TTFT_first_nonempty_output_seconds": 2.2525598329957575
+    },
+    {
+      "request_id": 12,
+      "lane": 3,
+      "model_turn": 3,
+      "prompt_tokens": 3523,
+      "completion_tokens": 467,
+      "cached_tokens": 1856,
+      "TTFT_content_seconds": 10.59844550001435,
+      "TTFT_tool_seconds": 12.1893549580127,
+      "reasoning_tokens": 261,
+      "non_reasoning_completion_tokens": 206,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.03461462497944,
+      "TTFT_first_nonempty_output_seconds": 3.03461462497944
+    },
+    {
+      "request_id": 13,
+      "lane": 2,
+      "model_turn": 4,
+      "prompt_tokens": 3795,
+      "completion_tokens": 460,
+      "cached_tokens": 2240,
+      "TTFT_content_seconds": 3.12268850003602,
+      "TTFT_tool_seconds": 3.2120830000494607,
+      "reasoning_tokens": 14,
+      "non_reasoning_completion_tokens": 446,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.8418777500046417,
+      "TTFT_first_nonempty_output_seconds": 2.8418777500046417
+    },
+    {
+      "request_id": 14,
+      "lane": 3,
+      "model_turn": 4,
+      "prompt_tokens": 4017,
+      "completion_tokens": 448,
+      "cached_tokens": 3520,
+      "TTFT_content_seconds": 1.4897873749723658,
+      "TTFT_tool_seconds": 1.7633374579600058,
+      "reasoning_tokens": 14,
+      "non_reasoning_completion_tokens": 434,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.2243980829953216,
+      "TTFT_first_nonempty_output_seconds": 1.2243980829953216
+    },
+    {
+      "request_id": 15,
+      "lane": 2,
+      "model_turn": 5,
+      "prompt_tokens": 4282,
+      "completion_tokens": 66,
+      "cached_tokens": 3776,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.61473145801574,
+      "reasoning_tokens": 12,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.348878415999934,
+      "TTFT_first_nonempty_output_seconds": 1.348878415999934
+    },
+    {
+      "request_id": 16,
+      "lane": 2,
+      "model_turn": 6,
+      "prompt_tokens": 5379,
+      "completion_tokens": 54,
+      "cached_tokens": 4256,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.4637233749963343,
+      "reasoning_tokens": 16,
+      "non_reasoning_completion_tokens": 38,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.7968315000180155,
+      "TTFT_first_nonempty_output_seconds": 2.7968315000180155
+    },
+    {
+      "request_id": 17,
+      "lane": 3,
+      "model_turn": 5,
+      "prompt_tokens": 4492,
+      "completion_tokens": 248,
+      "cached_tokens": 4000,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 8.049657916009892,
+      "reasoning_tokens": 214,
+      "non_reasoning_completion_tokens": 34,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.3156312499777414,
+      "TTFT_first_nonempty_output_seconds": 1.3156312499777414
+    },
+    {
+      "request_id": 18,
+      "lane": 2,
+      "model_turn": 7,
+      "prompt_tokens": 5601,
+      "completion_tokens": 472,
+      "cached_tokens": 5376,
+      "TTFT_content_seconds": 9.074187999998685,
+      "TTFT_tool_seconds": 10.768676667008549,
+      "reasoning_tokens": 188,
+      "non_reasoning_completion_tokens": 284,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.8139447920257226,
+      "TTFT_first_nonempty_output_seconds": 0.8139447920257226
+    },
+    {
+      "request_id": 19,
+      "lane": 1,
+      "model_turn": 4,
+      "prompt_tokens": 4593,
+      "completion_tokens": 100,
+      "cached_tokens": 3008,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 6.002890583011322,
+      "reasoning_tokens": 66,
+      "non_reasoning_completion_tokens": 34,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 3.0103244580095634,
+      "TTFT_first_nonempty_output_seconds": 3.0103244580095634
+    },
+    {
+      "request_id": 20,
+      "lane": 3,
+      "model_turn": 6,
+      "prompt_tokens": 5071,
+      "completion_tokens": 265,
+      "cached_tokens": 4480,
+      "TTFT_content_seconds": 4.466918207996059,
+      "TTFT_tool_seconds": 5.3111777500016615,
+      "reasoning_tokens": 101,
+      "non_reasoning_completion_tokens": 164,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.2871298330137506,
+      "TTFT_first_nonempty_output_seconds": 1.2871298330137506
+    },
+    {
+      "request_id": 21,
+      "lane": 1,
+      "model_turn": 5,
+      "prompt_tokens": 4903,
+      "completion_tokens": 238,
+      "cached_tokens": 4576,
+      "TTFT_content_seconds": 5.311209917010274,
+      "TTFT_tool_seconds": 7.851365584006999,
+      "reasoning_tokens": 121,
+      "non_reasoning_completion_tokens": 117,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.9059823340503499,
+      "TTFT_first_nonempty_output_seconds": 0.9059823340503499
+    },
+    {
+      "request_id": 22,
+      "lane": 3,
+      "model_turn": 7,
+      "prompt_tokens": 5363,
+      "completion_tokens": 74,
+      "cached_tokens": 5056,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 5.73359524999978,
+      "reasoning_tokens": 40,
+      "non_reasoning_completion_tokens": 34,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.8680872499826364,
+      "TTFT_first_nonempty_output_seconds": 1.8680872499826364
+    },
+    {
+      "request_id": 23,
+      "lane": 0,
+      "model_turn": 4,
+      "prompt_tokens": 4889,
+      "completion_tokens": 700,
+      "cached_tokens": 2528,
+      "TTFT_content_seconds": 9.346179375017527,
+      "TTFT_tool_seconds": 9.916901834018063,
+      "reasoning_tokens": 141,
+      "non_reasoning_completion_tokens": 559,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 4.451298958971165,
+      "TTFT_first_nonempty_output_seconds": 4.451298958971165
+    },
+    {
+      "request_id": 24,
+      "lane": 2,
+      "model_turn": 8,
+      "prompt_tokens": 6257,
+      "completion_tokens": 543,
+      "cached_tokens": 5600,
+      "TTFT_content_seconds": 3.892224334005732,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 65,
+      "non_reasoning_completion_tokens": 478,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.3542941249907017,
+      "TTFT_first_nonempty_output_seconds": 1.3542941249907017
+    },
+    {
+      "request_id": 25,
+      "lane": 3,
+      "model_turn": 8,
+      "prompt_tokens": 5613,
+      "completion_tokens": 428,
+      "cached_tokens": 5344,
+      "TTFT_content_seconds": 1.5309078329592012,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 14,
+      "non_reasoning_completion_tokens": 414,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.830480707983952,
+      "TTFT_first_nonempty_output_seconds": 0.830480707983952
+    },
+    {
+      "request_id": 26,
+      "lane": 1,
+      "model_turn": 6,
+      "prompt_tokens": 5297,
+      "completion_tokens": 73,
+      "cached_tokens": 4896,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.865889334003441,
+      "reasoning_tokens": 33,
+      "non_reasoning_completion_tokens": 40,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.9390573340351693,
+      "TTFT_first_nonempty_output_seconds": 0.9390573340351693
+    },
+    {
+      "request_id": 27,
+      "lane": 1,
+      "model_turn": 7,
+      "prompt_tokens": 5420,
+      "completion_tokens": 394,
+      "cached_tokens": 5280,
+      "TTFT_content_seconds": 1.1642495829728432,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 19,
+      "non_reasoning_completion_tokens": 375,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.7096415419946425,
+      "TTFT_first_nonempty_output_seconds": 0.7096415419946425
+    },
+    {
+      "request_id": 28,
+      "lane": 0,
+      "model_turn": 5,
+      "prompt_tokens": 5616,
+      "completion_tokens": 155,
+      "cached_tokens": 4864,
+      "TTFT_content_seconds": 6.23864295904059,
+      "TTFT_tool_seconds": 6.332482042023912,
+      "reasoning_tokens": 114,
+      "non_reasoning_completion_tokens": 41,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.5571775840362534,
+      "TTFT_first_nonempty_output_seconds": 1.5571775840362534
+    },
+    {
+      "request_id": 29,
+      "lane": 1,
+      "model_turn": 8,
+      "prompt_tokens": 5860,
+      "completion_tokens": 960,
+      "cached_tokens": 5408,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 23.29009370901622,
+      "reasoning_tokens": 752,
+      "non_reasoning_completion_tokens": 208,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.0701027089962736,
+      "TTFT_first_nonempty_output_seconds": 1.0701027089962736
+    },
+    {
+      "request_id": 30,
+      "lane": 3,
+      "model_turn": 9,
+      "prompt_tokens": 6087,
+      "completion_tokens": 721,
+      "cached_tokens": 5600,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 12.156384416972287,
+      "reasoning_tokens": 396,
+      "non_reasoning_completion_tokens": 325,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.9085950420121662,
+      "TTFT_first_nonempty_output_seconds": 1.9085950420121662
+    },
+    {
+      "request_id": 31,
+      "lane": 2,
+      "model_turn": 9,
+      "prompt_tokens": 6846,
+      "completion_tokens": 1173,
+      "cached_tokens": 6240,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 29.50453924998874,
+      "reasoning_tokens": 951,
+      "non_reasoning_completion_tokens": 222,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.6439128330093808,
+      "TTFT_first_nonempty_output_seconds": 1.6439128330093808
+    },
+    {
+      "request_id": 32,
+      "lane": 0,
+      "model_turn": 6,
+      "prompt_tokens": 5973,
+      "completion_tokens": 418,
+      "cached_tokens": 5600,
+      "TTFT_content_seconds": 5.0065301659633406,
+      "TTFT_tool_seconds": 5.947598750004545,
+      "reasoning_tokens": 138,
+      "non_reasoning_completion_tokens": 280,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.9742892909562215,
+      "TTFT_first_nonempty_output_seconds": 0.9742892909562215
+    },
+    {
+      "request_id": 33,
+      "lane": 0,
+      "model_turn": 7,
+      "prompt_tokens": 6547,
+      "completion_tokens": 120,
+      "cached_tokens": 5952,
+      "TTFT_content_seconds": 2.3479955830262043,
+      "TTFT_tool_seconds": 3.1028122910065576,
+      "reasoning_tokens": 53,
+      "non_reasoning_completion_tokens": 67,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.326127832988277,
+      "TTFT_first_nonempty_output_seconds": 1.326127832988277
+    },
+    {
+      "request_id": 34,
+      "lane": 0,
+      "model_turn": 8,
+      "prompt_tokens": 7260,
+      "completion_tokens": 439,
+      "cached_tokens": 6528,
+      "TTFT_content_seconds": 1.9499129159958102,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 14,
+      "non_reasoning_completion_tokens": 425,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.5886705830344,
+      "TTFT_first_nonempty_output_seconds": 1.5886705830344
+    },
+    {
+      "request_id": 35,
+      "lane": 3,
+      "model_turn": 10,
+      "prompt_tokens": 6835,
+      "completion_tokens": 1623,
+      "cached_tokens": 6080,
+      "TTFT_content_seconds": 25.401154583028983,
+      "TTFT_tool_seconds": 26.98745474999305,
+      "reasoning_tokens": 999,
+      "non_reasoning_completion_tokens": 624,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.6761549160000868,
+      "TTFT_first_nonempty_output_seconds": 1.6761549160000868
+    },
+    {
+      "request_id": 36,
+      "lane": 1,
+      "model_turn": 9,
+      "prompt_tokens": 6847,
+      "completion_tokens": 50,
+      "cached_tokens": 5856,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 2.4456775410217233,
+      "reasoning_tokens": 16,
+      "non_reasoning_completion_tokens": 34,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.9010791660402901,
+      "TTFT_first_nonempty_output_seconds": 1.9010791660402901
+    },
+    {
+      "request_id": 37,
+      "lane": 1,
+      "model_turn": 10,
+      "prompt_tokens": 7139,
+      "completion_tokens": 158,
+      "cached_tokens": 6816,
+      "TTFT_content_seconds": 1.0017439590301365,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 10,
+      "non_reasoning_completion_tokens": 148,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.9122772500268184,
+      "TTFT_first_nonempty_output_seconds": 0.9122772500268184
+    },
+    {
+      "request_id": 38,
+      "lane": 0,
+      "model_turn": 9,
+      "prompt_tokens": 7745,
+      "completion_tokens": 1076,
+      "cached_tokens": 7232,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 21.162598583032377,
+      "reasoning_tokens": 777,
+      "non_reasoning_completion_tokens": 299,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.209744292020332,
+      "TTFT_first_nonempty_output_seconds": 1.209744292020332
+    },
+    {
+      "request_id": 39,
+      "lane": 2,
+      "model_turn": 10,
+      "prompt_tokens": 8046,
+      "completion_tokens": 353,
+      "cached_tokens": 6816,
+      "TTFT_content_seconds": 3.6726505830301903,
+      "TTFT_tool_seconds": 4.216782750037964,
+      "reasoning_tokens": 61,
+      "non_reasoning_completion_tokens": 292,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.3388432080391794,
+      "TTFT_first_nonempty_output_seconds": 2.3388432080391794
+    },
+    {
+      "request_id": 40,
+      "lane": 2,
+      "model_turn": 11,
+      "prompt_tokens": 8462,
+      "completion_tokens": 150,
+      "cached_tokens": 8032,
+      "TTFT_content_seconds": 2.470718708005734,
+      "TTFT_tool_seconds": 3.5604223330155946,
+      "reasoning_tokens": 64,
+      "non_reasoning_completion_tokens": 86,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.1418755410122685,
+      "TTFT_first_nonempty_output_seconds": 1.1418755410122685
+    },
+    {
+      "request_id": 41,
+      "lane": 2,
+      "model_turn": 12,
+      "prompt_tokens": 8810,
+      "completion_tokens": 361,
+      "cached_tokens": 8448,
+      "TTFT_content_seconds": 1.169221459014807,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 14,
+      "non_reasoning_completion_tokens": 347,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.9166292090085335,
+      "TTFT_first_nonempty_output_seconds": 0.9166292090085335
+    },
+    {
+      "request_id": 42,
+      "lane": 3,
+      "model_turn": 11,
+      "prompt_tokens": 8485,
+      "completion_tokens": 102,
+      "cached_tokens": 6816,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 4.493345374998171,
+      "reasoning_tokens": 68,
+      "non_reasoning_completion_tokens": 34,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.9689147080061957,
+      "TTFT_first_nonempty_output_seconds": 2.9689147080061957
+    },
+    {
+      "request_id": 43,
+      "lane": 0,
+      "model_turn": 10,
+      "prompt_tokens": 8848,
+      "completion_tokens": 86,
+      "cached_tokens": 7744,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 3.874093917023856,
+      "reasoning_tokens": 52,
+      "non_reasoning_completion_tokens": 34,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.419935957994312,
+      "TTFT_first_nonempty_output_seconds": 2.419935957994312
+    },
+    {
+      "request_id": 44,
+      "lane": 3,
+      "model_turn": 12,
+      "prompt_tokens": 8795,
+      "completion_tokens": 304,
+      "cached_tokens": 8480,
+      "TTFT_content_seconds": 0.8634555830503814,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 8,
+      "non_reasoning_completion_tokens": 296,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.7924886250402778,
+      "TTFT_first_nonempty_output_seconds": 0.7924886250402778
+    },
+    {
+      "request_id": 45,
+      "lane": 0,
+      "model_turn": 11,
+      "prompt_tokens": 9166,
+      "completion_tokens": 336,
+      "cached_tokens": 8832,
+      "TTFT_content_seconds": 2.2372272919747047,
+      "TTFT_tool_seconds": 2.980341749964282,
+      "reasoning_tokens": 68,
+      "non_reasoning_completion_tokens": 268,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.8375267499941401,
+      "TTFT_first_nonempty_output_seconds": 0.8375267499941401
+    },
+    {
+      "request_id": 46,
+      "lane": 0,
+      "model_turn": 12,
+      "prompt_tokens": 9581,
+      "completion_tokens": 314,
+      "cached_tokens": 9152,
+      "TTFT_content_seconds": 1.8314919580006972,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 54,
+      "non_reasoning_completion_tokens": 260,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.7258782080025412,
+      "TTFT_first_nonempty_output_seconds": 0.7258782080025412
+    }
+  ],
+  "preview": {
+    "duration_seconds": 20.0,
+    "fps": 10,
+    "speed": 1,
+    "idleCompression": false,
+    "sha256": "05a489bac747cce87e75f22823c8dcc7a5b718057170606cda9a07ebe16ccb33"
+  },
+  "privacy_review": "PASS",
+  "reasoning_display_audit": {
+    "status": "PASS",
+    "hideThinkingBlock": false,
+    "scope": "actual assistant-session thinking prefixes matched in raw PTY for every lane"
+  }
+}

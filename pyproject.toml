@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77", "wheel>=0.45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-little-trie-forge"
+version = "0.1.1"
+description = "Model- and silicon-specialized inference engine for Apple Silicon"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = "Apache-2.0"
+license-files = [
+  "LICENSE",
+  "UPSTREAM.md",
+  "THIRD_PARTY_NOTICES.md",
+  "ACKNOWLEDGEMENTS.md",
+  "MODEL_ASSETS.md",
+  "third_party_licenses/tokenizers-0.22.2-LICENSE",
+]
+dynamic = ["dependencies"]
+classifiers = [
+  "Environment :: MacOS X",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/hojin12312/my-little-trie-forge"
+Source = "https://github.com/hojin12312/my-little-trie-forge"
+
+[project.scripts]
+mltf = "install.launcher:main"
+
+[tool.setuptools]
+packages = ["install", "server", "engine"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["install/requirements.txt"]}
+
+[tool.setuptools.package-data]
+install = ["completions/*", "requirements.txt"]
+server = ["chat.html"]
+engine = ["splash", "splash.metallib", "release.json"]

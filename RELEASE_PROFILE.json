@@ -1,0 +1,7 @@
+{
+  "version": "0.1.1", "maximum_physical_width": 4,
+  "target": "q8c", "prefill": "W8A8", "decode_verify": "W8A16",
+  "algorithm": "DFlash2", "kv": "INT8", "numerical": "split2-rounded",
+  "cost_cap": "disabled", "b5_bundle": "unreachable_above_width4",
+  "ssd": "opt-in", "canonical_burst": "opt-in"
+}

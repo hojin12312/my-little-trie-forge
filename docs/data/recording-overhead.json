@@ -1,0 +1,1047 @@
+{
+  "mode": "PTY event recording",
+  "pairs": [
+    {
+      "C": 1,
+      "pair": 0,
+      "OFF_native_decode_tps": 70.18491898892991,
+      "ON_native_decode_tps": 70.38752790284359,
+      "slowdown_pct": -0.28867870310662624,
+      "output_equal": true,
+      "OFF_acceptance": 0.473421926910299,
+      "ON_acceptance": 0.473421926910299,
+      "OFF_B": {
+        "1": 87,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "ON_B": {
+        "1": 87,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "OFF_ttft_seconds": [
+        3.0849352499935776
+      ],
+      "ON_ttft_seconds": [
+        3.088862375007011
+      ],
+      "OFF_PP_native_tps": 1049.5301733314438,
+      "ON_PP_native_tps": 1048.5846751011757,
+      "OFF_confirmed_per_cycle_per_lane": 4.275862068965517,
+      "ON_confirmed_per_cycle_per_lane": 4.275862068965517,
+      "OFF_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 372,
+            "total_tokens": 3495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 8.358365707972553,
+          "client_full_request_tps": 44.506308170408374,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "ON_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 372,
+            "total_tokens": 3495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 8.346362042007968,
+          "client_full_request_tps": 44.57031675928884,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "memory": {
+        "OFF": {
+          "peak_metal_bytes": 33430503424,
+          "sampled_rss_tree_peak_bytes": 1286963200,
+          "sampled_native_footprint_peak_bytes": 1954204384,
+          "sampled_server_footprint_peak_bytes": 581731840,
+          "sampled_demo_tree_rss_peak_bytes": 1521827840,
+          "sampled_recorder_proxy_footprint_peak_bytes": 43205184,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        },
+        "ON": {
+          "peak_metal_bytes": 33430503424,
+          "sampled_rss_tree_peak_bytes": 1283178496,
+          "sampled_native_footprint_peak_bytes": 1954138824,
+          "sampled_server_footprint_peak_bytes": 582338048,
+          "sampled_demo_tree_rss_peak_bytes": 1517338624,
+          "sampled_recorder_proxy_footprint_peak_bytes": 43221568,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        }
+      },
+      "OFF_control_status": "SINGLE_FIXED_REQUEST",
+      "ON_control_status": "SINGLE_FIXED_REQUEST",
+      "OFF_requests": 1,
+      "ON_requests": 1,
+      "fixed_single_request_per_lane": true,
+      "model_inputs_byte_equal": true,
+      "OFF_request_body_hashes": [
+        "71ca0457b76db34d732ce230668284ab7661614e329c5f62ca15ed68e6f76245"
+      ],
+      "ON_request_body_hashes": [
+        "71ca0457b76db34d732ce230668284ab7661614e329c5f62ca15ed68e6f76245"
+      ],
+      "attribution": "paired recorder comparison; output/acceptance/B variation retained",
+      "OFF_result_ref": "demo/AB-C1-pair0-OFF/result.json",
+      "ON_result_ref": "demo/AB-C1-pair0-ON/result.json"
+    },
+    {
+      "C": 1,
+      "pair": 1,
+      "OFF_native_decode_tps": 70.4952694101139,
+      "ON_native_decode_tps": 70.40480146210787,
+      "slowdown_pct": 0.12833194165090545,
+      "output_equal": true,
+      "OFF_acceptance": 0.473421926910299,
+      "ON_acceptance": 0.473421926910299,
+      "OFF_B": {
+        "1": 87,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "ON_B": {
+        "1": 87,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "OFF_ttft_seconds": [
+        3.0855335000087507
+      ],
+      "ON_ttft_seconds": [
+        3.089647334010806
+      ],
+      "OFF_PP_native_tps": 1049.7011770484837,
+      "ON_PP_native_tps": 1048.4087552034375,
+      "OFF_confirmed_per_cycle_per_lane": 4.275862068965517,
+      "ON_confirmed_per_cycle_per_lane": 4.275862068965517,
+      "OFF_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 372,
+            "total_tokens": 3495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 8.336697708000429,
+          "client_full_request_tps": 44.62198499089214,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "ON_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 372,
+            "total_tokens": 3495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 8.345617834012955,
+          "client_full_request_tps": 44.57429125066051,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "memory": {
+        "OFF": {
+          "peak_metal_bytes": 33430503424,
+          "sampled_rss_tree_peak_bytes": 1286930432,
+          "sampled_native_footprint_peak_bytes": 1954122464,
+          "sampled_server_footprint_peak_bytes": 581797376,
+          "sampled_demo_tree_rss_peak_bytes": 1521614848,
+          "sampled_recorder_proxy_footprint_peak_bytes": 43254336,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        },
+        "ON": {
+          "peak_metal_bytes": 33430503424,
+          "sampled_rss_tree_peak_bytes": 1286979584,
+          "sampled_native_footprint_peak_bytes": 1954204408,
+          "sampled_server_footprint_peak_bytes": 581748224,
+          "sampled_demo_tree_rss_peak_bytes": 1520222208,
+          "sampled_recorder_proxy_footprint_peak_bytes": 40256064,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        }
+      },
+      "OFF_control_status": "SINGLE_FIXED_REQUEST",
+      "ON_control_status": "SINGLE_FIXED_REQUEST",
+      "OFF_requests": 1,
+      "ON_requests": 1,
+      "fixed_single_request_per_lane": true,
+      "model_inputs_byte_equal": true,
+      "OFF_request_body_hashes": [
+        "71ca0457b76db34d732ce230668284ab7661614e329c5f62ca15ed68e6f76245"
+      ],
+      "ON_request_body_hashes": [
+        "71ca0457b76db34d732ce230668284ab7661614e329c5f62ca15ed68e6f76245"
+      ],
+      "attribution": "paired recorder comparison; output/acceptance/B variation retained",
+      "OFF_result_ref": "demo/AB-C1-pair1-OFF/result.json",
+      "ON_result_ref": "demo/AB-C1-pair1-ON/result.json"
+    },
+    {
+      "C": 1,
+      "pair": 2,
+      "OFF_native_decode_tps": 70.38967437063961,
+      "ON_native_decode_tps": 70.42468564125573,
+      "slowdown_pct": -0.049739213782640235,
+      "output_equal": true,
+      "OFF_acceptance": 0.473421926910299,
+      "ON_acceptance": 0.473421926910299,
+      "OFF_B": {
+        "1": 87,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "ON_B": {
+        "1": 87,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "OFF_ttft_seconds": [
+        3.0866204160265625
+      ],
+      "ON_ttft_seconds": [
+        3.0828524999669753
+      ],
+      "OFF_PP_native_tps": 1049.2465973504845,
+      "ON_PP_native_tps": 1050.7845852179898,
+      "OFF_confirmed_per_cycle_per_lane": 4.275862068965517,
+      "ON_confirmed_per_cycle_per_lane": 4.275862068965517,
+      "OFF_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 372,
+            "total_tokens": 3495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 8.34537104103947,
+          "client_full_request_tps": 44.575609421155825,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "ON_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 372,
+            "total_tokens": 3495,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 8.337972291978076,
+          "client_full_request_tps": 44.61516385199546,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "memory": {
+        "OFF": {
+          "peak_metal_bytes": 33430503424,
+          "sampled_rss_tree_peak_bytes": 1283948544,
+          "sampled_native_footprint_peak_bytes": 1954351888,
+          "sampled_server_footprint_peak_bytes": 578602496,
+          "sampled_demo_tree_rss_peak_bytes": 1514487808,
+          "sampled_recorder_proxy_footprint_peak_bytes": 40272448,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        },
+        "ON": {
+          "peak_metal_bytes": 33430503424,
+          "sampled_rss_tree_peak_bytes": 1287028736,
+          "sampled_native_footprint_peak_bytes": 1954188024,
+          "sampled_server_footprint_peak_bytes": 581764584,
+          "sampled_demo_tree_rss_peak_bytes": 1521532928,
+          "sampled_recorder_proxy_footprint_peak_bytes": 43270720,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        }
+      },
+      "OFF_control_status": "SINGLE_FIXED_REQUEST",
+      "ON_control_status": "SINGLE_FIXED_REQUEST",
+      "OFF_requests": 1,
+      "ON_requests": 1,
+      "fixed_single_request_per_lane": true,
+      "model_inputs_byte_equal": true,
+      "OFF_request_body_hashes": [
+        "71ca0457b76db34d732ce230668284ab7661614e329c5f62ca15ed68e6f76245"
+      ],
+      "ON_request_body_hashes": [
+        "71ca0457b76db34d732ce230668284ab7661614e329c5f62ca15ed68e6f76245"
+      ],
+      "attribution": "paired recorder comparison; output/acceptance/B variation retained",
+      "OFF_result_ref": "demo/AB-C1-pair2-OFF/result.json",
+      "ON_result_ref": "demo/AB-C1-pair2-ON/result.json"
+    },
+    {
+      "C": 4,
+      "pair": 0,
+      "OFF_native_decode_tps": 196.6875087795573,
+      "ON_native_decode_tps": 200.4633233528819,
+      "slowdown_pct": -1.9197022712593492,
+      "output_equal": false,
+      "OFF_acceptance": 0.4916256157635468,
+      "ON_acceptance": 0.5,
+      "OFF_B": {
+        "1": 18,
+        "2": 4,
+        "3": 19,
+        "4": 89
+      },
+      "ON_B": {
+        "1": 18,
+        "2": 10,
+        "3": 10,
+        "4": 92
+      },
+      "OFF_ttft_seconds": [
+        8.267064707993995,
+        4.422909458051436,
+        10.840572291985154,
+        10.407720000017434
+      ],
+      "ON_ttft_seconds": [
+        8.269148125022184,
+        4.436212249973323,
+        10.833759665954858,
+        10.404704833053984
+      ],
+      "OFF_PP_native_tps": 1051.5159503892712,
+      "ON_PP_native_tps": 1051.7547322630924,
+      "OFF_confirmed_per_cycle_per_lane": 4.405466970387244,
+      "ON_confirmed_per_cycle_per_lane": 4.465596330275229,
+      "OFF_client_rates_and_usage": [
+        {
+          "request_id": 2,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 434,
+            "total_tokens": 3557,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 18.197879166982602,
+          "client_full_request_tps": 23.848932945297808,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.525469541025814,
+          "client_full_request_tps": 26.22216069755529,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 4,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 476,
+            "total_tokens": 3599,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.519704000034835,
+          "client_full_request_tps": 24.385615683472995,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 3,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.917065499990713,
+          "client_full_request_tps": 25.706598193405487,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "ON_client_rates_and_usage": [
+        {
+          "request_id": 2,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 479,
+            "total_tokens": 3602,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 18.3905782920192,
+          "client_full_request_tps": 26.045945505034364,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 480,
+            "total_tokens": 3603,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.016109207994305,
+          "client_full_request_tps": 25.241756594362094,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 4,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 476,
+            "total_tokens": 3599,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.413588832947426,
+          "client_full_request_tps": 24.518908074954442,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 3,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.801677791052498,
+          "client_full_request_tps": 25.85639486727484,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "memory": {
+        "OFF": {
+          "peak_metal_bytes": 34684600320,
+          "sampled_rss_tree_peak_bytes": 3126181888,
+          "sampled_native_footprint_peak_bytes": 4064596024,
+          "sampled_server_footprint_peak_bytes": 584205848,
+          "sampled_demo_tree_rss_peak_bytes": 3862757376,
+          "sampled_recorder_proxy_footprint_peak_bytes": 40403544,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        },
+        "ON": {
+          "peak_metal_bytes": 34684600320,
+          "sampled_rss_tree_peak_bytes": 3123380224,
+          "sampled_native_footprint_peak_bytes": 4064645176,
+          "sampled_server_footprint_peak_bytes": 585778688,
+          "sampled_demo_tree_rss_peak_bytes": 3875586048,
+          "sampled_recorder_proxy_footprint_peak_bytes": 42484312,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        }
+      },
+      "OFF_control_status": "SINGLE_FIXED_REQUEST",
+      "ON_control_status": "SINGLE_FIXED_REQUEST",
+      "OFF_requests": 4,
+      "ON_requests": 4,
+      "fixed_single_request_per_lane": true,
+      "model_inputs_byte_equal": true,
+      "OFF_request_body_hashes": [
+        "02567fc1fba937b354ec0255098ba28597e08809cd5dc8292f622fd7d0171b81",
+        "525a4d5f13dbece3c19f8e3c1e9e2717e50163084c4e8617f5cfe6368d323062",
+        "7ce149952431175dcce206c94a0f0ef09e7eb4e20e215d7eeaea162ee130a4f6",
+        "ab89971145c6524645c3205a0bcfd89cfe0beb33d94edaebbf8191d349dea905"
+      ],
+      "ON_request_body_hashes": [
+        "02567fc1fba937b354ec0255098ba28597e08809cd5dc8292f622fd7d0171b81",
+        "525a4d5f13dbece3c19f8e3c1e9e2717e50163084c4e8617f5cfe6368d323062",
+        "7ce149952431175dcce206c94a0f0ef09e7eb4e20e215d7eeaea162ee130a4f6",
+        "ab89971145c6524645c3205a0bcfd89cfe0beb33d94edaebbf8191d349dea905"
+      ],
+      "attribution": "observed paired system change; output or request-count variation prevents isolated recorder attribution",
+      "OFF_result_ref": "demo/AB-C4-pair0-OFF/result.json",
+      "ON_result_ref": "demo/AB-C4-pair0-ON/result.json"
+    },
+    {
+      "C": 4,
+      "pair": 1,
+      "OFF_native_decode_tps": 200.25750191624596,
+      "ON_native_decode_tps": 200.24688628881088,
+      "slowdown_pct": 0.005300988643863747,
+      "output_equal": true,
+      "OFF_acceptance": 0.5,
+      "ON_acceptance": 0.5,
+      "OFF_B": {
+        "1": 18,
+        "2": 10,
+        "3": 10,
+        "4": 92
+      },
+      "ON_B": {
+        "1": 18,
+        "2": 10,
+        "3": 10,
+        "4": 92
+      },
+      "OFF_ttft_seconds": [
+        8.283889457990881,
+        4.432007292052731,
+        10.840194082993548,
+        10.411661416990682
+      ],
+      "ON_ttft_seconds": [
+        8.27170608297456,
+        4.436582042020746,
+        10.83385533298133,
+        10.408348167024087
+      ],
+      "OFF_PP_native_tps": 1050.0841363022778,
+      "ON_PP_native_tps": 1051.8260232020593,
+      "OFF_confirmed_per_cycle_per_lane": 4.465596330275229,
+      "ON_confirmed_per_cycle_per_lane": 4.465596330275229,
+      "OFF_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 479,
+            "total_tokens": 3602,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 18.40993237501243,
+          "client_full_request_tps": 26.018563797124028,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 2,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 480,
+            "total_tokens": 3603,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.035559792013373,
+          "client_full_request_tps": 25.21596450246714,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 4,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 476,
+            "total_tokens": 3599,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.435150749981403,
+          "client_full_request_tps": 24.49170609085476,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 3,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.824718124989886,
+          "client_full_request_tps": 25.826344504470033,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "ON_client_rates_and_usage": [
+        {
+          "request_id": 2,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 479,
+            "total_tokens": 3602,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 18.39560516702477,
+          "client_full_request_tps": 26.03882805979313,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 480,
+            "total_tokens": 3603,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.02258933399571,
+          "client_full_request_tps": 25.233157882569692,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 4,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 476,
+            "total_tokens": 3599,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.418784792011138,
+          "client_full_request_tps": 24.512347456254098,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 3,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.81172058300581,
+          "client_full_request_tps": 25.843287959511493,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "memory": {
+        "OFF": {
+          "peak_metal_bytes": 34684600320,
+          "sampled_rss_tree_peak_bytes": 3126591488,
+          "sampled_native_footprint_peak_bytes": 4064579640,
+          "sampled_server_footprint_peak_bytes": 584664576,
+          "sampled_demo_tree_rss_peak_bytes": 3879485440,
+          "sampled_recorder_proxy_footprint_peak_bytes": 42156608,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        },
+        "ON": {
+          "peak_metal_bytes": 34684600320,
+          "sampled_rss_tree_peak_bytes": 3111452672,
+          "sampled_native_footprint_peak_bytes": 4064661512,
+          "sampled_server_footprint_peak_bytes": 585106944,
+          "sampled_demo_tree_rss_peak_bytes": 3865313280,
+          "sampled_recorder_proxy_footprint_peak_bytes": 42140248,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        }
+      },
+      "OFF_control_status": "SINGLE_FIXED_REQUEST",
+      "ON_control_status": "SINGLE_FIXED_REQUEST",
+      "OFF_requests": 4,
+      "ON_requests": 4,
+      "fixed_single_request_per_lane": true,
+      "model_inputs_byte_equal": true,
+      "OFF_request_body_hashes": [
+        "02567fc1fba937b354ec0255098ba28597e08809cd5dc8292f622fd7d0171b81",
+        "525a4d5f13dbece3c19f8e3c1e9e2717e50163084c4e8617f5cfe6368d323062",
+        "7ce149952431175dcce206c94a0f0ef09e7eb4e20e215d7eeaea162ee130a4f6",
+        "ab89971145c6524645c3205a0bcfd89cfe0beb33d94edaebbf8191d349dea905"
+      ],
+      "ON_request_body_hashes": [
+        "02567fc1fba937b354ec0255098ba28597e08809cd5dc8292f622fd7d0171b81",
+        "525a4d5f13dbece3c19f8e3c1e9e2717e50163084c4e8617f5cfe6368d323062",
+        "7ce149952431175dcce206c94a0f0ef09e7eb4e20e215d7eeaea162ee130a4f6",
+        "ab89971145c6524645c3205a0bcfd89cfe0beb33d94edaebbf8191d349dea905"
+      ],
+      "attribution": "paired recorder comparison; output/acceptance/B variation retained",
+      "OFF_result_ref": "demo/AB-C4-pair1-OFF/result.json",
+      "ON_result_ref": "demo/AB-C4-pair1-ON/result.json"
+    },
+    {
+      "C": 4,
+      "pair": 2,
+      "OFF_native_decode_tps": 200.14479076551484,
+      "ON_native_decode_tps": 197.524550654502,
+      "slowdown_pct": 1.309172275226811,
+      "output_equal": false,
+      "OFF_acceptance": 0.5,
+      "ON_acceptance": 0.4916256157635468,
+      "OFF_B": {
+        "1": 18,
+        "2": 10,
+        "3": 10,
+        "4": 92
+      },
+      "ON_B": {
+        "1": 18,
+        "2": 4,
+        "3": 19,
+        "4": 89
+      },
+      "OFF_ttft_seconds": [
+        8.277905250026379,
+        4.434346667025238,
+        10.845629125018604,
+        10.416928499995265
+      ],
+      "ON_ttft_seconds": [
+        8.239164416969288,
+        4.433756458980497,
+        10.810253333009314,
+        10.379650832968764
+      ],
+      "OFF_PP_native_tps": 1050.972977645542,
+      "ON_PP_native_tps": 1054.1158294512709,
+      "OFF_confirmed_per_cycle_per_lane": 4.465596330275229,
+      "ON_confirmed_per_cycle_per_lane": 4.405466970387244,
+      "OFF_client_rates_and_usage": [
+        {
+          "request_id": 2,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 479,
+            "total_tokens": 3602,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 18.410567292012274,
+          "client_full_request_tps": 26.017666506551485,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 480,
+            "total_tokens": 3603,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.036705792008433,
+          "client_full_request_tps": 25.21444651424423,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 4,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 476,
+            "total_tokens": 3599,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.43877483299002,
+          "client_full_request_tps": 24.487139960702088,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 3,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.828725499974098,
+          "client_full_request_tps": 25.82112501384261,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "ON_client_rates_and_usage": [
+        {
+          "request_id": 1,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 434,
+            "total_tokens": 3557,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 18.142229833989404,
+          "client_full_request_tps": 23.922086974496516,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 2,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.462296874960884,
+          "client_full_request_tps": 26.307275204434422,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 4,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 476,
+            "total_tokens": 3599,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.458910166984424,
+          "client_full_request_tps": 24.46180160734903,
+          "http_status": 200,
+          "error": null
+        },
+        {
+          "request_id": 3,
+          "usage": {
+            "prompt_tokens": 3123,
+            "completion_tokens": 512,
+            "total_tokens": 3635,
+            "prompt_tokens_details": {
+              "cached_tokens": 1024
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "wall_seconds": 19.855582540971227,
+          "client_full_request_tps": 25.786198865911278,
+          "http_status": 200,
+          "error": null
+        }
+      ],
+      "memory": {
+        "OFF": {
+          "peak_metal_bytes": 34684600320,
+          "sampled_rss_tree_peak_bytes": 3123953664,
+          "sampled_native_footprint_peak_bytes": 4064677920,
+          "sampled_server_footprint_peak_bytes": 581879296,
+          "sampled_demo_tree_rss_peak_bytes": 3875749888,
+          "sampled_recorder_proxy_footprint_peak_bytes": 42123864,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        },
+        "ON": {
+          "peak_metal_bytes": 34684600320,
+          "sampled_rss_tree_peak_bytes": 3127164928,
+          "sampled_native_footprint_peak_bytes": 4064727120,
+          "sampled_server_footprint_peak_bytes": 585041408,
+          "sampled_demo_tree_rss_peak_bytes": 3879059456,
+          "sampled_recorder_proxy_footprint_peak_bytes": 41910872,
+          "pressure_states": [
+            "normal"
+          ],
+          "memory_scope": "native process-lifetime Metal high-water; sampled backend process-tree RSS and per-process footprint are separate nonadditive domains"
+        }
+      },
+      "OFF_control_status": "SINGLE_FIXED_REQUEST",
+      "ON_control_status": "SINGLE_FIXED_REQUEST",
+      "OFF_requests": 4,
+      "ON_requests": 4,
+      "fixed_single_request_per_lane": true,
+      "model_inputs_byte_equal": true,
+      "OFF_request_body_hashes": [
+        "02567fc1fba937b354ec0255098ba28597e08809cd5dc8292f622fd7d0171b81",
+        "525a4d5f13dbece3c19f8e3c1e9e2717e50163084c4e8617f5cfe6368d323062",
+        "7ce149952431175dcce206c94a0f0ef09e7eb4e20e215d7eeaea162ee130a4f6",
+        "ab89971145c6524645c3205a0bcfd89cfe0beb33d94edaebbf8191d349dea905"
+      ],
+      "ON_request_body_hashes": [
+        "02567fc1fba937b354ec0255098ba28597e08809cd5dc8292f622fd7d0171b81",
+        "525a4d5f13dbece3c19f8e3c1e9e2717e50163084c4e8617f5cfe6368d323062",
+        "7ce149952431175dcce206c94a0f0ef09e7eb4e20e215d7eeaea162ee130a4f6",
+        "ab89971145c6524645c3205a0bcfd89cfe0beb33d94edaebbf8191d349dea905"
+      ],
+      "attribution": "observed paired system change; output or request-count variation prevents isolated recorder attribution",
+      "OFF_result_ref": "demo/AB-C4-pair2-OFF/result.json",
+      "ON_result_ref": "demo/AB-C4-pair2-ON/result.json"
+    }
+  ],
+  "control": "same installed Pi TUI, default tools retained, fixed single coding request, fresh backend/workspace/session per arm",
+  "capture_fps": "N/A: terminal event recorder",
+  "dropped_frames": "N/A; verify event byte preservation",
+  "matrix_recording_off": true
+}

@@ -1,0 +1,22 @@
+include README.md README.ko.md LICENSE UPSTREAM.md THIRD_PARTY_NOTICES.md ACKNOWLEDGEMENTS.md MODEL_ASSETS.md
+include Makefile mltf
+include dev/native.mk
+recursive-include runtime *.h *.hpp *.cpp *.mm *.metal
+recursive-include dev/tools build_config.py build_identity.py check_architecture.py
+recursive-include install *.py *.txt *.bash _splash
+recursive-include server *.py *.html
+recursive-include engine *.py
+recursive-include third_party_licenses *
+exclude .splash-private-stage
+prune dev/results
+prune wiki
+
+include dev/Makefile
+recursive-include tests *.py *.cpp
+include SECURITY.md
+include RELEASE_PROFILE.json DEPENDENCY_LICENSE_INVENTORY.json
+
+include BENCHMARKS.md
+recursive-include docs *.md *.json *.csv *.mp4 *.gif *.cast
+recursive-include benchmarks *.py *.mm *.txt *.sh
+exclude docs/data/preview-metrics.json docs/data/preview-source-mapping.json

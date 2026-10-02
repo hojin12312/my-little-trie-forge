@@ -1,0 +1,806 @@
+{
+  "schema_version": 1,
+  "runtime_dependency_lock_sha256": "e67b228e4f8964e355938d9085d22e09235285a3173d988dda5e39fde0723ff1",
+  "runtime_distributions": [
+    {
+      "distribution": "annotated-doc",
+      "version": "0.0.5",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+          "size": 1086
+        }
+      ]
+    },
+    {
+      "distribution": "anyio",
+      "version": "4.14.2",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/anyio-4.14.2.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+          "size": 1081
+        }
+      ]
+    },
+    {
+      "distribution": "attrs",
+      "version": "26.1.0",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/attrs-26.1.0.dist-info/licenses/LICENSE",
+          "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
+          "size": 1109
+        }
+      ]
+    },
+    {
+      "distribution": "certifi",
+      "version": "2026.7.22",
+      "license_expression": "MPL-2.0",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/certifi-2026.7.22.dist-info/licenses/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "size": 989
+        }
+      ]
+    },
+    {
+      "distribution": "cffi",
+      "version": "2.1.1",
+      "license_expression": "MIT-0",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/cffi-2.1.1.dist-info/licenses/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+          "size": 1123
+        }
+      ]
+    },
+    {
+      "distribution": "click",
+      "version": "8.4.2",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/click-8.4.2.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "size": 1475
+        }
+      ]
+    },
+    {
+      "distribution": "cryptography",
+      "version": "50.0.1",
+      "license_expression": "Apache-2.0 OR BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/cryptography-50.0.1.dist-info/licenses/LICENSE",
+          "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+          "size": 197
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/cryptography-50.0.1.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+          "size": 11360
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/cryptography-50.0.1.dist-info/licenses/LICENSE.BSD",
+          "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+          "size": 1532
+        }
+      ]
+    },
+    {
+      "distribution": "filelock",
+      "version": "3.32.3",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/filelock-3.32.3.dist-info/licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+          "size": 1088
+        }
+      ]
+    },
+    {
+      "distribution": "fsspec",
+      "version": "2026.7.0",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/fsspec-2026.7.0.dist-info/licenses/LICENSE",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+          "size": 1513
+        }
+      ]
+    },
+    {
+      "distribution": "h11",
+      "version": "0.16.0",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+          "size": 1124
+        }
+      ]
+    },
+    {
+      "distribution": "hf-xet",
+      "version": "1.6.0",
+      "license_expression": "Apache-2.0",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/hf_xet-1.6.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        }
+      ]
+    },
+    {
+      "distribution": "httpcore",
+      "version": "1.0.9",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+          "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+          "size": 1518
+        }
+      ]
+    },
+    {
+      "distribution": "httpx",
+      "version": "0.28.1",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/httpx-0.28.1.dist-info/licenses/LICENSE.md",
+          "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+          "size": 1508
+        }
+      ]
+    },
+    {
+      "distribution": "huggingface_hub",
+      "version": "1.28.0",
+      "license_expression": "Apache-2.0",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/huggingface_hub-1.28.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        }
+      ]
+    },
+    {
+      "distribution": "idna",
+      "version": "3.19",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/idna-3.19.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "size": 1541
+        }
+      ]
+    },
+    {
+      "distribution": "Jinja2",
+      "version": "3.1.6",
+      "license_expression": null,
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/jinja2-3.1.6.dist-info/licenses/LICENSE.txt",
+          "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+          "size": 1475
+        }
+      ]
+    },
+    {
+      "distribution": "jsonschema",
+      "version": "4.26.0",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/jsonschema-4.26.0.dist-info/licenses/COPYING",
+          "sha256": "4f92a015a13c4d1a040bef018aa13430b4f1bc73b41b16bb846c346766de7439",
+          "size": 1057
+        }
+      ]
+    },
+    {
+      "distribution": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/jsonschema_specifications-2025.9.1.dist-info/licenses/COPYING",
+          "sha256": "42dcd63495f87b4eb7c7757afa379bb55a53f94afd7a5f657d9adf57236e515c",
+          "size": 1057
+        }
+      ]
+    },
+    {
+      "distribution": "llguidance",
+      "version": "1.8.0",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/llguidance-1.8.0.dist-info/licenses/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "size": 1141
+        }
+      ]
+    },
+    {
+      "distribution": "markdown-it-py",
+      "version": "4.2.0",
+      "license_expression": null,
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/markdown_it_py-4.2.0.dist-info/licenses/LICENSE",
+          "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+          "size": 1078
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/markdown_it_py-4.2.0.dist-info/licenses/LICENSE.markdown-it",
+          "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+          "size": 1073
+        }
+      ]
+    },
+    {
+      "distribution": "MarkupSafe",
+      "version": "3.0.3",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/markupsafe-3.0.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+          "size": 1475
+        }
+      ]
+    },
+    {
+      "distribution": "mdurl",
+      "version": "0.1.2",
+      "license_expression": null,
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/mdurl-0.1.2.dist-info/LICENSE",
+          "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955",
+          "size": 2338
+        }
+      ]
+    },
+    {
+      "distribution": "numpy",
+      "version": "2.5.2",
+      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/LICENSE.txt",
+          "sha256": "649a589ab31076e79e9ce62ba24eae9959598124176640dbc95f87bd10f34fcf",
+          "size": 46826
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+          "size": 1018
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98",
+          "size": 690
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af",
+          "size": 20785
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c",
+          "size": 1414
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910",
+          "size": 1514
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9",
+          "size": 1543
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056",
+          "size": 1498
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55",
+          "size": 2266
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+          "size": 1593
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+          "size": 3511
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face",
+          "size": 2745
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156",
+          "size": 2926
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918",
+          "size": 1154
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800",
+          "size": 1509
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f",
+          "size": 1226
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/numpy-2.5.2.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9",
+          "size": 332
+        }
+      ]
+    },
+    {
+      "distribution": "packaging",
+      "version": "26.3",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "size": 197
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "size": 10174
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "size": 1344
+        }
+      ]
+    },
+    {
+      "distribution": "pillow",
+      "version": "12.3.0",
+      "license_expression": "MIT-CMU",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/pillow-12.3.0.dist-info/licenses/LICENSE",
+          "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce",
+          "size": 70307
+        }
+      ]
+    },
+    {
+      "distribution": "pip",
+      "version": "26.2.1",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/AUTHORS.txt",
+          "sha256": "4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2",
+          "size": 12139
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/LICENSE.txt",
+          "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+          "size": 1093
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+          "size": 558
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "size": 989
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+          "size": 14531
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+          "size": 11325
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "size": 1541
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+          "size": 614
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "size": 197
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "size": 10174
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "size": 1344
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+          "size": 1023
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+          "size": 1089
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+          "size": 1331
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+          "size": 1081
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "size": 10142
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+          "size": 751
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+          "size": 1056
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+          "size": 1072
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+          "size": 1072
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+          "size": 1086
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+          "size": 1093
+        }
+      ]
+    },
+    {
+      "distribution": "pycparser",
+      "version": "3.0",
+      "license_expression": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/pycparser-3.0.dist-info/licenses/LICENSE",
+          "sha256": "0c846399369ea76ddd7b5c44fe6d16497415fcf015f5cbb508c24bf98b81c5b1",
+          "size": 1543
+        }
+      ]
+    },
+    {
+      "distribution": "Pygments",
+      "version": "2.21.0",
+      "license_expression": "BSD-2-Clause",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/pygments-2.21.0.dist-info/licenses/AUTHORS",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f",
+          "size": 11048
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pygments-2.21.0.dist-info/licenses/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+          "size": 1331
+        }
+      ]
+    },
+    {
+      "distribution": "pypdfium2",
+      "version": "5.13.0",
+      "license_expression": "BSD-3-Clause, Apache-2.0, dependency licenses",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/LICENSES/Apache-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/LICENSES/BSD-3-Clause.txt",
+          "sha256": "a6d11f0694c0137e9b02924b9d33a159f6c72f220fa4655bb2e1ea3654377d39",
+          "size": 1459
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/LICENSES/CC-BY-4.0.txt",
+          "sha256": "419896aea50c15d6e40c5b4baf4bd346f78223b9a354c7357ad00262afdc08ec",
+          "size": 14527
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/abseil.txt",
+          "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747",
+          "size": 11361
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/agg23.txt",
+          "sha256": "c110d3ea2ad77467ce0dcff7d3337e6c8be8049a5103f4b9bd5fd911a77972e5",
+          "size": 725
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/fast_float.txt",
+          "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+          "size": 1079
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/freetype.txt",
+          "sha256": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8",
+          "size": 6741
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/icu.txt",
+          "sha256": "e55522d81edc687a341a4411e0776e54ca654e90147f354a90458aaced4116af",
+          "size": 27718
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/lcms.txt",
+          "sha256": "7312b68c5b25e9bf2b828706fb4e29588f22705112f411fd42e1f7d84c3d139a",
+          "size": 1353
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/libjpeg_turbo.ijg",
+          "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+          "size": 12799
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/libjpeg_turbo.md",
+          "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430",
+          "size": 5620
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/libopenjpeg.txt",
+          "sha256": "c5ab0890a737c2dfa7ba675036554f6d17741d98629b0c2a145354d00617e6b2",
+          "size": 1794
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/libpng.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size": 5345
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/libtiff.txt",
+          "sha256": "92b72ba97e6c2749c2a94bc0ef646b47080217f1e772a482b33cf5a5f98a6506",
+          "size": 1139
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/llvm-libc.txt",
+          "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+          "size": 15140
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/pdfium-binaries.txt",
+          "sha256": "ba26c1263131696b86c10496b5066b918a20b7161822a80c274d0080105f6c93",
+          "size": 1177
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/pdfium.txt",
+          "sha256": "1fe9dea718fbd75cf149adaf4d8a22a4335604d964ddb76d1b45383dec8668c9",
+          "size": 12896
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/simdutf.txt",
+          "sha256": "fc8dbc04e03ad4efc08a647ffe7f995b811a95bc04c0e85a56d5277c6593fa5f",
+          "size": 1059
+        },
+        {
+          "path": "python/lib/python3.13/site-packages/pypdfium2-5.13.0.dist-info/licenses/data/darwin_arm64/BUILD_LICENSES/zlib.txt",
+          "sha256": "33fd641c9f3b0e0be64bc78fea9e94807674cdd70c48477599226cb8956565fe",
+          "size": 1332
+        }
+      ]
+    },
+    {
+      "distribution": "PyYAML",
+      "version": "6.0.3",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/pyyaml-6.0.3.dist-info/licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+          "size": 1101
+        }
+      ]
+    },
+    {
+      "distribution": "referencing",
+      "version": "0.37.0",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/referencing-0.37.0.dist-info/licenses/COPYING",
+          "sha256": "42dcd63495f87b4eb7c7757afa379bb55a53f94afd7a5f657d9adf57236e515c",
+          "size": 1057
+        }
+      ]
+    },
+    {
+      "distribution": "regex",
+      "version": "2026.7.19",
+      "license_expression": "Apache-2.0 AND CNRI-Python",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/regex-2026.7.19.dist-info/licenses/LICENSE.txt",
+          "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+          "size": 11584
+        }
+      ]
+    },
+    {
+      "distribution": "rich",
+      "version": "15.0.0",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/rich-15.0.0.dist-info/licenses/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+          "size": 1056
+        }
+      ]
+    },
+    {
+      "distribution": "rpds-py",
+      "version": "2026.6.3",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/rpds_py-2026.6.3.dist-info/licenses/LICENSE",
+          "sha256": "314e4e91be3baa93c0fb4bccc9e4e97cd643eb839b065af921782c2175fe9909",
+          "size": 1057
+        }
+      ]
+    },
+    {
+      "distribution": "safetensors",
+      "version": "0.8.0",
+      "license_expression": null,
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/safetensors-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        }
+      ]
+    },
+    {
+      "distribution": "shellingham",
+      "version": "1.5.4",
+      "license_expression": "ISC License",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/shellingham-1.5.4.dist-info/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+          "size": 751
+        }
+      ]
+    },
+    {
+      "distribution": "tokenizers",
+      "version": "0.22.2",
+      "license_expression": null,
+      "license_texts": [
+        {
+          "path": "third_party_licenses/tokenizers-0.22.2-LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        }
+      ]
+    },
+    {
+      "distribution": "tqdm",
+      "version": "4.70.0",
+      "license_expression": "MPL-2.0 AND MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/tqdm-4.70.0.dist-info/licenses/LICENCE",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de",
+          "size": 1985
+        }
+      ]
+    },
+    {
+      "distribution": "transformers",
+      "version": "5.15.1",
+      "license_expression": "Apache 2.0 License",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/transformers-5.15.1.dist-info/licenses/LICENSE",
+          "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+          "size": 11418
+        }
+      ]
+    },
+    {
+      "distribution": "typer",
+      "version": "0.27.1",
+      "license_expression": "MIT",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/typer-0.27.1.dist-info/licenses/LICENSE",
+          "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49",
+          "size": 1086
+        }
+      ]
+    },
+    {
+      "distribution": "typing_extensions",
+      "version": "4.16.0",
+      "license_expression": "PSF-2.0",
+      "license_texts": [
+        {
+          "path": "python/lib/python3.13/site-packages/typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "size": 13936
+        }
+      ]
+    }
+  ],
+  "native": "Apple system frameworks Foundation/Metal/IOKit; no private dependency",
+  "python": "bundled standalone CPython3.13.15; Python license in runtime archive",
+  "project": "Apache-2.0; Splash incorporated134807b8; oMLX algorithm adaptation; embedded judgments MIT; inherited MLX design reference"
+}

@@ -1,0 +1,12 @@
+build/
+.venv/
+.venv.install.lock
+install/models/
+install/download-token
+.DS_Store
+__pycache__/
+.ruff_cache/
+dist/
+*.log
+
+*.egg-info/

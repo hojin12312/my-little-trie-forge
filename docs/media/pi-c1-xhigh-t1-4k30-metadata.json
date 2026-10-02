@@ -1,0 +1,373 @@
+{
+  "mode": "terminal_event_replay",
+  "not_screen_capture": true,
+  "playback_speed": 1.0,
+  "idleCompression": false,
+  "source_duration_seconds": 95.36568758299109,
+  "media_duration_seconds": 95.4,
+  "fps": 30,
+  "frames": 2862,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "font_size": 36,
+  "crf": 16,
+  "video_codec": "H.264 software offline encoding after inference",
+  "sources": [
+    {
+      "path": "public-replay/lane0/recording.cast",
+      "sha256": "3cbd4129d66a7205ff9821a69dd0b13ff17ae9f6ce8de4205858acb4595fbf0e",
+      "offset_seconds": 0.0
+    }
+  ],
+  "telemetry": "latest prior 1Hz sample; native confirmed counter delta/native batch-wall delta; same-window accepted/drafted; B is latest actual dispatch, not a whole-window width guarantee",
+  "video_sha256": "14f8c28f1058d496436ef5ec889cdd2b44dad3c253a83e2f39402ffbf96d628a",
+  "renderer_sha256": "c84a690875e9f4ff31518bfd246cb8945a683b64857c777ae9b2b954a44ee0ec",
+  "braille_rendering": "capturedU2800–U28FF codepoints drawn as exact2×4dot patterns; no tofu font fallback or invented intermediate animation",
+  "privacy_projection": {
+    "lanes": [
+      {
+        "lane": "lane0",
+        "render_projection_sha256": "3cbd4129d66a7205ff9821a69dd0b13ff17ae9f6ce8de4205858acb4595fbf0e",
+        "timestamps_event_order_and_character_counts_preserved": true,
+        "redactions": [],
+        "scope": "display-only privacy projection; original raw master remains unchanged/private; no task output, failures, waits or model statistics removed"
+      }
+    ],
+    "raw_masters_unchanged": true
+  },
+  "run_profile": {
+    "thinking": "xhigh",
+    "sampling": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "repetition_penalty": 1.0,
+      "reasoning_effort": "xhigh",
+      "preserve_thinking": true
+    },
+    "coding_cap": 131072,
+    "control_cap": 131072,
+    "context": 262144,
+    "fps": 30,
+    "reference": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "PICS_comparison": "local Pi provider record has maxTokens131072/context262144 and preserve_thinking; no PICS model remeasurement or remote settings mutation",
+    "scope": "MLTF PiC1/C4realuse demos and3recorderpairs/C only; existing24cellT0/OFFbenchmark immutable",
+    "resolution": [
+      3840,
+      2160
+    ],
+    "video_crf": 16,
+    "terminal_C1": {
+      "columns": 110,
+      "rows": 48
+    },
+    "terminal_C4": {
+      "columns": 100,
+      "rows": 30
+    }
+  },
+  "actual_http_profile_verified": true,
+  "hideThinkingBlock": false,
+  "reasoning_visible_in_terminal": true,
+  "Pi_version": "0.87.1",
+  "default_tools": [
+    "read",
+    "bash",
+    "edit",
+    "write"
+  ],
+  "extensions": 0,
+  "task_outcomes": [
+    {
+      "lane": 0,
+      "independent_behavior_exit_code": 0,
+      "model_test_exit_code": 0,
+      "post_take_test_exit_code": 0,
+      "changed": true,
+      "actual_tool_workflow_observed": true,
+      "tools_used": [
+        "bash",
+        "edit",
+        "read"
+      ],
+      "recorded_test_runs": [
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        },
+        {
+          "command": "python3 -m unittest -v 2>&1",
+          "exit_code": 0,
+          "tool_error": false
+        }
+      ],
+      "observed_tool_intervals": [
+        {
+          "tool": "read",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.009999990463256836,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.003000020980834961,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.002000093460083008,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03800010681152344,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.021000146865844727,
+          "is_error": false
+        },
+        {
+          "tool": "edit",
+          "seconds": 0.0009999275207519531,
+          "is_error": false
+        },
+        {
+          "tool": "read",
+          "seconds": 0.0010001659393310547,
+          "is_error": false
+        },
+        {
+          "tool": "bash",
+          "seconds": 0.03600001335144043,
+          "is_error": false
+        }
+      ],
+      "tool_time_scope": "persisted completed assistant tool-call message to matching completed tool result; includes agent dispatch/queue/tool work, excludes preceding model generation; overlapping intervals are not additive"
+    }
+  ],
+  "reasoning_tokens": 2646,
+  "completion_tokens": 4597,
+  "completion_scope": "reasoning, visible answer and tool-call tokens, not answer-only throughput",
+  "cache_and_ttft_per_model_turn": [
+    {
+      "request_id": 1,
+      "lane": 0,
+      "model_turn": 1,
+      "prompt_tokens": 1177,
+      "completion_tokens": 68,
+      "cached_tokens": 0,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.6187857080367394,
+      "reasoning_tokens": 14,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.370964833011385,
+      "TTFT_first_nonempty_output_seconds": 1.370964833011385
+    },
+    {
+      "request_id": 2,
+      "lane": 0,
+      "model_turn": 2,
+      "prompt_tokens": 1880,
+      "completion_tokens": 1541,
+      "cached_tokens": 1152,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 23.999007583013736,
+      "reasoning_tokens": 1497,
+      "non_reasoning_completion_tokens": 44,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.8271402079844847,
+      "TTFT_first_nonempty_output_seconds": 0.8271402079844847
+    },
+    {
+      "request_id": 3,
+      "lane": 0,
+      "model_turn": 3,
+      "prompt_tokens": 4020,
+      "completion_tokens": 336,
+      "cached_tokens": 1856,
+      "TTFT_content_seconds": 4.346105583012104,
+      "TTFT_tool_seconds": 5.293311375018675,
+      "reasoning_tokens": 135,
+      "non_reasoning_completion_tokens": 201,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 2.268445875030011,
+      "TTFT_first_nonempty_output_seconds": 2.268445875030011
+    },
+    {
+      "request_id": 4,
+      "lane": 0,
+      "model_turn": 4,
+      "prompt_tokens": 4383,
+      "completion_tokens": 468,
+      "cached_tokens": 4000,
+      "TTFT_content_seconds": 0.8160029170103371,
+      "TTFT_tool_seconds": 0.9423115830286406,
+      "reasoning_tokens": 22,
+      "non_reasoning_completion_tokens": 446,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.5617859580088407,
+      "TTFT_first_nonempty_output_seconds": 0.5617859580088407
+    },
+    {
+      "request_id": 5,
+      "lane": 0,
+      "model_turn": 5,
+      "prompt_tokens": 4878,
+      "completion_tokens": 137,
+      "cached_tokens": 4352,
+      "TTFT_content_seconds": 2.003910041996278,
+      "TTFT_tool_seconds": 2.6526892919791862,
+      "reasoning_tokens": 55,
+      "non_reasoning_completion_tokens": 82,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.7739914999692701,
+      "TTFT_first_nonempty_output_seconds": 0.7739914999692701
+    },
+    {
+      "request_id": 6,
+      "lane": 0,
+      "model_turn": 6,
+      "prompt_tokens": 6051,
+      "completion_tokens": 63,
+      "cached_tokens": 4864,
+      "TTFT_content_seconds": 1.758126708038617,
+      "TTFT_tool_seconds": 1.8868441249942407,
+      "reasoning_tokens": 15,
+      "non_reasoning_completion_tokens": 48,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.499982875015121,
+      "TTFT_first_nonempty_output_seconds": 1.499982875015121
+    },
+    {
+      "request_id": 7,
+      "lane": 0,
+      "model_turn": 7,
+      "prompt_tokens": 6292,
+      "completion_tokens": 225,
+      "cached_tokens": 6048,
+      "TTFT_content_seconds": 4.066696416004561,
+      "TTFT_tool_seconds": 4.392347957997117,
+      "reasoning_tokens": 171,
+      "non_reasoning_completion_tokens": 54,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.4783325000316836,
+      "TTFT_first_nonempty_output_seconds": 0.4783325000316836
+    },
+    {
+      "request_id": 8,
+      "lane": 0,
+      "model_turn": 8,
+      "prompt_tokens": 6751,
+      "completion_tokens": 539,
+      "cached_tokens": 6272,
+      "TTFT_content_seconds": 3.5131965830223635,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 136,
+      "non_reasoning_completion_tokens": 403,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.7092292080051266,
+      "TTFT_first_nonempty_output_seconds": 0.7092292080051266
+    },
+    {
+      "request_id": 9,
+      "lane": 0,
+      "model_turn": 9,
+      "prompt_tokens": 7336,
+      "completion_tokens": 807,
+      "cached_tokens": 6720,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 10.743756584008224,
+      "reasoning_tokens": 565,
+      "non_reasoning_completion_tokens": 242,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.0229505840106867,
+      "TTFT_first_nonempty_output_seconds": 1.0229505840106867
+    },
+    {
+      "request_id": 10,
+      "lane": 0,
+      "model_turn": 10,
+      "prompt_tokens": 8170,
+      "completion_tokens": 41,
+      "cached_tokens": 7328,
+      "TTFT_content_seconds": null,
+      "TTFT_tool_seconds": 1.5577580829849467,
+      "reasoning_tokens": 13,
+      "non_reasoning_completion_tokens": 28,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.230071957979817,
+      "TTFT_first_nonempty_output_seconds": 1.230071957979817
+    },
+    {
+      "request_id": 11,
+      "lane": 0,
+      "model_turn": 11,
+      "prompt_tokens": 9026,
+      "completion_tokens": 58,
+      "cached_tokens": 8160,
+      "TTFT_content_seconds": 1.3087379999924451,
+      "TTFT_tool_seconds": 1.4387983329943381,
+      "reasoning_tokens": 11,
+      "non_reasoning_completion_tokens": 47,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 1.2413594169775024,
+      "TTFT_first_nonempty_output_seconds": 1.2413594169775024
+    },
+    {
+      "request_id": 12,
+      "lane": 0,
+      "model_turn": 12,
+      "prompt_tokens": 9294,
+      "completion_tokens": 314,
+      "cached_tokens": 9024,
+      "TTFT_content_seconds": 0.7096757920226082,
+      "TTFT_tool_seconds": null,
+      "reasoning_tokens": 12,
+      "non_reasoning_completion_tokens": 302,
+      "completion_scope": "reasoning + visible content + tool-call tokens; not answer-only throughput",
+      "TTFT_reasoning_seconds": 0.5133588329772465,
+      "TTFT_first_nonempty_output_seconds": 0.5133588329772465
+    }
+  ],
+  "preview": {
+    "duration_seconds": 20.0,
+    "fps": 10,
+    "speed": 1,
+    "idleCompression": false,
+    "sha256": "4dc9dd414ccfe94e5c918c2a7a12ef36b122f742773d183272d17f83ff1d1d61"
+  },
+  "privacy_review": "PASS",
+  "reasoning_display_audit": {
+    "status": "PASS",
+    "hideThinkingBlock": false,
+    "scope": "actual assistant-session thinking prefixes matched in raw PTY for every lane"
+  }
+}

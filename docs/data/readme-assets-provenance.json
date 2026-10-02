@@ -1,0 +1,15 @@
+{
+  "benchmark_source": "docs/data/measured-metrics.json",
+  "benchmark_source_sha256": "7d01a00923518bf97b27534918ba878380a299c390ca4986268a76ea5eb20905",
+  "no_new_measurements": true,
+  "memory": "maximum fresh-process lifetime Metal allocation high-water incl warmup; S/D separate; not additive to RSS",
+  "logo_skill": "https://github.com/kaankiziltug/logo-design-skill",
+  "logo_skill_commit": "0ecf52e9a4b3ac92b714f7cc6e3148ab8c774134",
+  "logo_concept": "Shared Forge: one common root branches into two paths, resting on a forge base. Original filled geometry, no font dependency.",
+  "logo_type": "original SVG; no image generation",
+  "concepts": [
+    "shared-forge",
+    "modular-f",
+    "folded-m"
+  ]
+}

@@ -1,0 +1,4319 @@
+{
+  "schema_version": 1,
+  "data_kind": "measured_result",
+  "near_max": {
+    "input_tokens": 261568,
+    "headroom_tokens": 64,
+    "output_cap": 512,
+    "logical_limit": 262144,
+    "page_formula": "floor((input+output+targetVerifyRows)/32)+2 <=8192; verify via bench planner"
+  },
+  "artifact_identity": {
+    "native_binary_sha256": "0d3d56f7a8133b01d9bcf6ea8414a3e05bfb50ee248aaa8b8695a3db9f06a7bb",
+    "metallib_sha256": "7d8388c89c7a8bdac1cfc065b9daa1e1b02653cb5b7a78020cb9cb4bc0efa3e3",
+    "server_py_sha256": "746fbf6fc7f0a20a2f26dfa675516c2fd02e677640e6b94d642e84ea1df4f4c0",
+    "all_ready_binary_sha256": "413b05a383662ce7b5834aa74155fc4ec19b68fb1d3a066ecc48066b847e1ee7",
+    "all_ready_source_sha256": "ac351ab966d992e7b5ee6a29cdf7b54b4b503dcb6474530f12e92ba188eaab57",
+    "model_manifest_sha256": "e2c7919947a1784b18bf67323de786e500e53d1e47798aede1c38667c388760e",
+    "qualified_static_library_sha256": "788b30bbab4cf053327b115b777827b5aa3253df6ad055719482ee304bcc12ba",
+    "harness_sha256": "036df64250e240dc1ae74eaa9d00f229b9866664f1e8f27b97ed85b22f594008"
+  },
+  "method_sha256": "fc050bec6100d0c812afcc6da903b783718031e5ad31008af0392dfcd59531ac",
+  "corpus_sha256": "b40f856220f73c0badd6cc933ffb82499f7d5022ae1564818d08234f6a644d31",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "top_k": 1,
+    "thinking": false
+  },
+  "recording_on": false,
+  "accounted_cells": 24,
+  "cells": [
+    {
+      "cell_id": "2Ki-C1",
+      "context_label": "2Ki",
+      "input_tokens": 2048,
+      "C": 1,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 5,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 5,
+        "required_n": 5,
+        "prefill_native_tps": {
+          "median": 1033.823933117843,
+          "min": 1028.8235533229881,
+          "max": 1035.3873191595314,
+          "n": 5
+        },
+        "prefill_elapsed_tps": {
+          "median": 1024.2217440219881,
+          "min": 1019.4496863321052,
+          "max": 1026.0459355830767,
+          "n": 5
+        },
+        "peak_metal_bytes": 33430503424,
+        "peak_metal_range_bytes": [
+          33430503424,
+          33430503424
+        ],
+        "actual_outputs": [
+          [
+            386
+          ],
+          [
+            512
+          ],
+          [
+            512
+          ],
+          [
+            386
+          ],
+          [
+            512
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 2.0943959999713115,
+          "min": 2.091670499998145,
+          "max": 2.1095574159990065,
+          "n": 5
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "2Ki-C1-r0-bugfix-S",
+            "per_request": [
+              2.0921115409582853
+            ],
+            "median": 2.0921115409582853,
+            "max": 2.0921115409582853
+          },
+          {
+            "run_id": "2Ki-C1-r1-feature-S",
+            "per_request": [
+              2.0943959999713115
+            ],
+            "median": 2.0943959999713115,
+            "max": 2.0943959999713115
+          },
+          {
+            "run_id": "2Ki-C1-r2-refactor-S",
+            "per_request": [
+              2.091670499998145
+            ],
+            "median": 2.091670499998145,
+            "max": 2.091670499998145
+          },
+          {
+            "run_id": "2Ki-C1-r3-bugfix-S",
+            "per_request": [
+              2.0979220420122147
+            ],
+            "median": 2.0979220420122147,
+            "max": 2.0979220420122147
+          },
+          {
+            "run_id": "2Ki-C1-r4-feature-S",
+            "per_request": [
+              2.1095574159990065
+            ],
+            "median": 2.1095574159990065,
+            "max": 2.1095574159990065
+          }
+        ],
+        "full_wave_tps": {
+          "median": 54.8757278451619,
+          "min": 53.77493701677206,
+          "max": 64.57580088885078,
+          "n": 5
+        },
+        "natural_decode_native_tps": {
+          "median": 75.51210554224483,
+          "min": 70.54810748519067,
+          "max": 87.29887112695883,
+          "n": 5
+        },
+        "physical_b_counts": {
+          "1": 480,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 30435.944,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1437286400,
+        "native_footprint_sampled_peak_bytes": 1952172888
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 5,
+        "required_n": 5,
+        "prefill_native_tps": {
+          "median": 962.3688747444368,
+          "min": 953.6005211516248,
+          "max": 971.0487329824883,
+          "n": 5
+        },
+        "prefill_elapsed_tps": {
+          "median": 962.0200917250586,
+          "min": 953.2412219992692,
+          "max": 970.671298490733,
+          "n": 5
+        },
+        "peak_metal_bytes": 33429782528,
+        "peak_metal_range_bytes": [
+          33429782528,
+          33429782528
+        ],
+        "actual_outputs": [
+          [
+            386
+          ],
+          [
+            512
+          ],
+          [
+            512
+          ],
+          [
+            386
+          ],
+          [
+            512
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 71.7099831310417,
+          "min": 68.1709556314266,
+          "max": 84.62861961627813,
+          "n": 5
+        },
+        "elapsed_decode_tps": {
+          "median": 71.32461837142517,
+          "min": 67.8067922546943,
+          "max": 84.19264283258258,
+          "n": 5
+        },
+        "accepted_draft_tokens": 1809,
+        "drafted_denominator_tokens": 3325,
+        "acceptance_pct": 54.40601503759398,
+        "confirmed_tokens_per_cycle_per_lane": 4.808421052631579,
+        "observed_physical_b": 1,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 655278080,
+        "native_footprint_sampled_peak_bytes": 2788068208
+      }
+    },
+    {
+      "cell_id": "2Ki-C2",
+      "context_label": "2Ki",
+      "input_tokens": 2048,
+      "C": 2,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 1041.9873612677236,
+          "min": 994.1722836747379,
+          "max": 1072.6582591576137,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 955.4796853266272,
+          "min": 871.7720384206366,
+          "max": 998.2759267805183,
+          "n": 3
+        },
+        "peak_metal_bytes": 33430503424,
+        "peak_metal_range_bytes": [
+          33430503424,
+          33430503424
+        ],
+        "actual_outputs": [
+          [
+            386,
+            418
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            493
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 3.3515167085279245,
+          "min": 2.319826999970246,
+          "max": 4.817219541990198,
+          "n": 6
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "2Ki-C2-r0-bugfix-S",
+            "per_request": [
+              4.214382584032137,
+              2.488650833023712
+            ],
+            "median": 3.3515167085279245,
+            "max": 4.214382584032137
+          },
+          {
+            "run_id": "2Ki-C2-r1-feature-S",
+            "per_request": [
+              4.817219541990198,
+              2.3774016670067795
+            ],
+            "median": 3.597310604498489,
+            "max": 4.817219541990198
+          },
+          {
+            "run_id": "2Ki-C2-r2-refactor-S",
+            "per_request": [
+              4.400241624971386,
+              2.319826999970246
+            ],
+            "median": 3.360034312470816,
+            "max": 4.400241624971386
+          }
+        ],
+        "full_wave_tps": {
+          "median": 85.29957563737936,
+          "min": 81.51398724822717,
+          "max": 96.28586036049587,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 146.45003705781573,
+          "min": 123.21854165680047,
+          "max": 157.60143052707727,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 26,
+          "2": 277,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 1666.136,
+          "2": 18511.071,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 1980710912,
+        "native_footprint_sampled_peak_bytes": 2635353232
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 1058.128695661073,
+          "min": 929.6192971648301,
+          "max": 1065.950827665939,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 1037.2881035250864,
+          "min": 913.3616746373395,
+          "max": 1044.735008242593,
+          "n": 3
+        },
+        "peak_metal_bytes": 33429782528,
+        "peak_metal_range_bytes": [
+          33429782528,
+          33429782528
+        ],
+        "actual_outputs": [
+          [
+            386,
+            418
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            493
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 147.11506240653767,
+          "min": 137.15325097710505,
+          "max": 162.08384246417282,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 146.33535279936308,
+          "min": 136.4203714597641,
+          "max": 161.2495452490989,
+          "n": 3
+        },
+        "accepted_draft_tokens": 2201,
+        "drafted_denominator_tokens": 3962,
+        "acceptance_pct": 55.552751135790004,
+        "confirmed_tokens_per_cycle_per_lane": 4.8886925795053005,
+        "observed_physical_b": 2,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 744718336,
+        "native_footprint_sampled_peak_bytes": 2788150200
+      }
+    },
+    {
+      "cell_id": "2Ki-C3",
+      "context_label": "2Ki",
+      "input_tokens": 2048,
+      "C": 3,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 992.6505045248138,
+          "min": 985.9389498264151,
+          "max": 997.7144644799977,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 871.7881191636002,
+          "min": 858.1517361423836,
+          "max": 876.0470430459095,
+          "n": 3
+        },
+        "peak_metal_bytes": 33804845056,
+        "peak_metal_range_bytes": [
+          33804845056,
+          33804845056
+        ],
+        "actual_outputs": [
+          [
+            386,
+            418,
+            418
+          ],
+          [
+            512,
+            512,
+            512
+          ],
+          [
+            512,
+            493,
+            486
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 4.822741000039969,
+          "min": 2.5058145839720964,
+          "max": 7.2975749999750406,
+          "n": 9
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "2Ki-C3-r0-bugfix-S",
+            "per_request": [
+              4.822741000039969,
+              2.5058145839720964,
+              7.1533862089854665
+            ],
+            "median": 4.822741000039969,
+            "max": 7.1533862089854665
+          },
+          {
+            "run_id": "2Ki-C3-r1-feature-S",
+            "per_request": [
+              4.8489540409646,
+              7.185950874991249,
+              2.5075899999937974
+            ],
+            "median": 4.8489540409646,
+            "max": 7.185950874991249
+          },
+          {
+            "run_id": "2Ki-C3-r2-refactor-S",
+            "per_request": [
+              4.640282874985132,
+              7.2975749999750406,
+              2.5124025840195827
+            ],
+            "median": 4.640282874985132,
+            "max": 7.2975749999750406
+          }
+        ],
+        "full_wave_tps": {
+          "median": 91.35925463346254,
+          "min": 89.53354315120174,
+          "max": 96.89444949690575,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 165.78450339966463,
+          "min": 146.9893569571336,
+          "max": 166.70535322222162,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 34,
+          "2": 24,
+          "3": 263,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 2282.06,
+          "2": 1766.733,
+          "3": 22724.846,
+          "4": 0
+        },
+        "max_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 2377711616,
+        "native_footprint_sampled_peak_bytes": 3182120320
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 941.1259581609469,
+          "min": 938.9843921065273,
+          "max": 941.3512133774831,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 919.3270328617001,
+          "min": 917.371764776475,
+          "max": 919.60531849528,
+          "n": 3
+        },
+        "peak_metal_bytes": 33429782528,
+        "peak_metal_range_bytes": [
+          33429782528,
+          33429782528
+        ],
+        "actual_outputs": [
+          [
+            386,
+            418,
+            418
+          ],
+          [
+            512,
+            512,
+            512
+          ],
+          [
+            512,
+            493,
+            486
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 176.09423138598717,
+          "min": 154.72975526878193,
+          "max": 184.6449143864452,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 175.29501553421696,
+          "min": 154.0430412495854,
+          "max": 183.82089919785795,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3270,
+        "drafted_denominator_tokens": 5859,
+        "acceptance_pct": 55.811571940604196,
+        "confirmed_tokens_per_cycle_per_lane": 4.906810035842294,
+        "observed_physical_b": 3,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 1095008256,
+        "native_footprint_sampled_peak_bytes": 2788182968
+      }
+    },
+    {
+      "cell_id": "2Ki-C4",
+      "context_label": "2Ki",
+      "input_tokens": 2048,
+      "C": 4,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 5,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 5,
+        "required_n": 5,
+        "prefill_native_tps": {
+          "median": 992.4191848459303,
+          "min": 977.170017247448,
+          "max": 998.5378821298794,
+          "n": 5
+        },
+        "prefill_elapsed_tps": {
+          "median": 840.7663289520463,
+          "min": 821.8804810025838,
+          "max": 851.3501309419217,
+          "n": 5
+        },
+        "peak_metal_bytes": 34487468032,
+        "peak_metal_range_bytes": [
+          34487468032,
+          34487468032
+        ],
+        "actual_outputs": [
+          [
+            386,
+            418,
+            418,
+            287
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ],
+          [
+            512,
+            493,
+            486,
+            493
+          ],
+          [
+            386,
+            418,
+            418,
+            287
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 5.924769104021834,
+          "min": 2.5098020840086974,
+          "max": 10.121267416980118,
+          "n": 20
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "2Ki-C4-r0-bugfix-S",
+            "per_request": [
+              7.155271083000116,
+              2.513283541018609,
+              9.894976958981715,
+              4.77640800003428
+            ],
+            "median": 5.965839541517198,
+            "max": 9.894976958981715
+          },
+          {
+            "run_id": "2Ki-C4-r1-feature-S",
+            "per_request": [
+              7.022154708043672,
+              9.776264457963407,
+              2.5136539170052856,
+              4.712950292043388
+            ],
+            "median": 5.86755250004353,
+            "max": 9.776264457963407
+          },
+          {
+            "run_id": "2Ki-C4-r2-refactor-S",
+            "per_request": [
+              9.98001162498258,
+              2.512744040985126,
+              7.208386333019007,
+              4.797460542002227
+            ],
+            "median": 6.002923437510617,
+            "max": 9.98001162498258
+          },
+          {
+            "run_id": "2Ki-C4-r3-bugfix-S",
+            "per_request": [
+              4.722808291960973,
+              7.0459485410247,
+              2.5098020840086974,
+              9.809847833996173
+            ],
+            "median": 5.8843784164928365,
+            "max": 9.809847833996173
+          },
+          {
+            "run_id": "2Ki-C4-r4-feature-S",
+            "per_request": [
+              4.827383499999996,
+              7.351608416996896,
+              10.121267416980118,
+              2.5134185409988277
+            ],
+            "median": 6.089495958498446,
+            "max": 10.121267416980118
+          }
+        ],
+        "full_wave_tps": {
+          "median": 100.98916205169662,
+          "min": 92.61648852963576,
+          "max": 110.99185050436301,
+          "n": 5
+        },
+        "natural_decode_native_tps": {
+          "median": 192.30500261583867,
+          "min": 175.26317642231385,
+          "max": 211.96362577388155,
+          "n": 5
+        },
+        "physical_b_counts": {
+          "1": 54,
+          "2": 55,
+          "3": 84,
+          "4": 372
+        },
+        "physical_b_wall_ms": {
+          "1": 3558.2470000000003,
+          "2": 3997.85,
+          "3": 7237.637000000001,
+          "4": 32960.539
+        },
+        "max_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 2769747968,
+        "native_footprint_sampled_peak_bytes": 3865022256
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 5,
+        "required_n": 5,
+        "prefill_native_tps": {
+          "median": 955.0814799084159,
+          "min": 947.4493036202398,
+          "max": 962.2823617541085,
+          "n": 5
+        },
+        "prefill_elapsed_tps": {
+          "median": 930.0230898278031,
+          "min": 922.8423216786155,
+          "max": 936.9064589060185,
+          "n": 5
+        },
+        "peak_metal_bytes": 33702412288,
+        "peak_metal_range_bytes": [
+          33702412288,
+          33702412288
+        ],
+        "actual_outputs": [
+          [
+            386,
+            418,
+            418,
+            287
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ],
+          [
+            512,
+            493,
+            486,
+            493
+          ],
+          [
+            386,
+            418,
+            418,
+            287
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 218.87758114938228,
+          "min": 198.73259090683268,
+          "max": 238.94129431754155,
+          "n": 5
+        },
+        "elapsed_decode_tps": {
+          "median": 217.9339583863603,
+          "min": 197.85638564164154,
+          "max": 237.90946244400962,
+          "n": 5
+        },
+        "accepted_draft_tokens": 6280,
+        "drafted_denominator_tokens": 11788,
+        "acceptance_pct": 53.27451645741432,
+        "confirmed_tokens_per_cycle_per_lane": 4.729216152019003,
+        "observed_physical_b": 4,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 1445183488,
+        "native_footprint_sampled_peak_bytes": 3061206592
+      }
+    },
+    {
+      "cell_id": "8Ki-C1",
+      "context_label": "8Ki",
+      "input_tokens": 8192,
+      "C": 1,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 962.973198671818,
+          "min": 926.3998572895495,
+          "max": 973.0374138190282,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 961.0192434961781,
+          "min": 924.7337608900758,
+          "max": 971.0189025077225,
+          "n": 3
+        },
+        "peak_metal_bytes": 33430503424,
+        "peak_metal_range_bytes": [
+          33430503424,
+          33430503424
+        ],
+        "actual_outputs": [
+          [
+            377
+          ],
+          [
+            512
+          ],
+          [
+            392
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 8.638038333971053,
+          "min": 8.548209333966952,
+          "max": 8.971964999975171,
+          "n": 3
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "8Ki-C1-r0-bugfix-S",
+            "per_request": [
+              8.971964999975171
+            ],
+            "median": 8.971964999975171,
+            "max": 8.971964999975171
+          },
+          {
+            "run_id": "8Ki-C1-r1-feature-S",
+            "per_request": [
+              8.548209333966952
+            ],
+            "median": 8.548209333966952,
+            "max": 8.548209333966952
+          },
+          {
+            "run_id": "8Ki-C1-r2-refactor-S",
+            "per_request": [
+              8.638038333971053
+            ],
+            "median": 8.638038333971053,
+            "max": 8.638038333971053
+          }
+        ],
+        "full_wave_tps": {
+          "median": 28.46296262296905,
+          "min": 26.116937687913563,
+          "max": 30.886264078633964,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 68.50431354509058,
+          "min": 63.56758482562995,
+          "max": 75.73130890397266,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 275,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 18733.913,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1282801664,
+        "native_footprint_sampled_peak_bytes": 2225015520
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 923.3268203502748,
+          "min": 920.6244774651163,
+          "max": 923.9973068199065,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 923.1179838280192,
+          "min": 920.4182491521698,
+          "max": 923.7870817629004,
+          "n": 3
+        },
+        "peak_metal_bytes": 33429782528,
+        "peak_metal_range_bytes": [
+          33429782528,
+          33429782528
+        ],
+        "actual_outputs": [
+          [
+            377
+          ],
+          [
+            512
+          ],
+          [
+            392
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 68.91299774280162,
+          "min": 63.62690352607279,
+          "max": 75.45525074220238,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 68.55414665877508,
+          "min": 63.29782278785096,
+          "max": 75.06607418858239,
+          "n": 3
+        },
+        "accepted_draft_tokens": 998,
+        "drafted_denominator_tokens": 1904,
+        "acceptance_pct": 52.41596638655462,
+        "confirmed_tokens_per_cycle_per_lane": 4.669117647058823,
+        "observed_physical_b": 1,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 654802944,
+        "native_footprint_sampled_peak_bytes": 2787969904
+      }
+    },
+    {
+      "cell_id": "8Ki-C2",
+      "context_label": "8Ki",
+      "input_tokens": 8192,
+      "C": 2,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 875.969856192033,
+          "min": 872.587822595742,
+          "max": 882.0835288017745,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 777.3793613651968,
+          "min": 774.6881979303848,
+          "max": 782.4988104194009,
+          "n": 3
+        },
+        "peak_metal_bytes": 33667481600,
+        "peak_metal_range_bytes": [
+          33667481600,
+          33667481600
+        ],
+        "actual_outputs": [
+          [
+            377,
+            400
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            392,
+            392
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 15.230075853993185,
+          "min": 9.258807917009108,
+          "max": 21.28374258300755,
+          "n": 6
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "8Ki-C2-r0-bugfix-S",
+            "per_request": [
+              9.258807917009108,
+              21.072813333012164
+            ],
+            "median": 15.165810625010636,
+            "max": 21.072813333012164
+          },
+          {
+            "run_id": "8Ki-C2-r1-feature-S",
+            "per_request": [
+              21.209388540999498,
+              9.32178937504068
+            ],
+            "median": 15.26558895802009,
+            "max": 21.209388540999498
+          },
+          {
+            "run_id": "8Ki-C2-r2-refactor-S",
+            "per_request": [
+              9.387338374974206,
+              21.28374258300755
+            ],
+            "median": 15.335540478990879,
+            "max": 21.28374258300755
+          }
+        ],
+        "full_wave_tps": {
+          "median": 29.26292154722199,
+          "min": 28.617411281487616,
+          "max": 34.22977124566463,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 92.81886644400993,
+          "min": 92.37722353268482,
+          "max": 99.8411572651296,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 195,
+          "2": 179,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 13875.838,
+          "2": 13420.043,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 1836793856,
+        "native_footprint_sampled_peak_bytes": 3044461664
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 880.0156897816859,
+          "min": 874.0401253027316,
+          "max": 880.8430441078331,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 876.2264473713201,
+          "min": 870.327744196166,
+          "max": 877.0477450883109,
+          "n": 3
+        },
+        "peak_metal_bytes": 33429782528,
+        "peak_metal_range_bytes": [
+          33429782528,
+          33429782528
+        ],
+        "actual_outputs": [
+          [
+            377,
+            400
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            392,
+            392
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 125.7763451738191,
+          "min": 115.59220391318725,
+          "max": 137.07164469176317,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 125.1681472839193,
+          "min": 115.02790363055803,
+          "max": 136.4138950039062,
+          "n": 3
+        },
+        "accepted_draft_tokens": 2003,
+        "drafted_denominator_tokens": 3808,
+        "acceptance_pct": 52.59978991596639,
+        "confirmed_tokens_per_cycle_per_lane": 4.681985294117647,
+        "observed_physical_b": 2,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 744947712,
+        "native_footprint_sampled_peak_bytes": 2788084616
+      }
+    },
+    {
+      "cell_id": "8Ki-C3",
+      "context_label": "8Ki",
+      "input_tokens": 8192,
+      "C": 3,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 877.9252724783046,
+          "min": 871.8793422015199,
+          "max": 883.6604371112,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 748.3315549693602,
+          "min": 744.2681269527783,
+          "max": 752.5111108379372,
+          "n": 3
+        },
+        "peak_metal_bytes": 34486419456,
+        "peak_metal_range_bytes": [
+          34486419456,
+          34486419456
+        ],
+        "actual_outputs": [
+          [
+            377,
+            400,
+            402
+          ],
+          [
+            512,
+            512,
+            512
+          ],
+          [
+            392,
+            392,
+            392
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 21.0729256659979,
+          "min": 9.06153737497516,
+          "max": 33.168751707999036,
+          "n": 9
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "8Ki-C3-r0-bugfix-S",
+            "per_request": [
+              32.8040074169985,
+              20.955571790982503,
+              9.06153737497516
+            ],
+            "median": 20.955571790982503,
+            "max": 32.8040074169985
+          },
+          {
+            "run_id": "8Ki-C3-r1-feature-S",
+            "per_request": [
+              9.112431499990635,
+              21.0729256659979,
+              32.98400304099778
+            ],
+            "median": 21.0729256659979,
+            "max": 32.98400304099778
+          },
+          {
+            "run_id": "8Ki-C3-r2-refactor-S",
+            "per_request": [
+              9.21751491696341,
+              33.168751707999036,
+              21.229679208016023
+            ],
+            "median": 21.229679208016023,
+            "max": 33.168751707999036
+          }
+        ],
+        "full_wave_tps": {
+          "median": 30.300918316496542,
+          "min": 30.293832626920487,
+          "max": 36.00997237133966,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 108.36031253132448,
+          "min": 106.43797646962766,
+          "max": 112.97861397553928,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 192,
+          "2": 193,
+          "3": 84,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 13539.377,
+          "2": 14511.302,
+          "3": 7669.678,
+          "4": 0
+        },
+        "max_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 2339274752,
+        "native_footprint_sampled_peak_bytes": 3864006136
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 898.6230619966544,
+          "min": 889.7456004312207,
+          "max": 901.2385290948778,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 893.4290756161421,
+          "min": 884.675426726225,
+          "max": 896.040480323686,
+          "n": 3
+        },
+        "peak_metal_bytes": 33897447424,
+        "peak_metal_range_bytes": [
+          33897447424,
+          33897447424
+        ],
+        "actual_outputs": [
+          [
+            377,
+            400,
+            402
+          ],
+          [
+            512,
+            512,
+            512
+          ],
+          [
+            392,
+            392,
+            392
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 157.341374700494,
+          "min": 141.60457823354355,
+          "max": 170.43768628273864,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 156.67849151266353,
+          "min": 141.01040648910393,
+          "max": 169.7244960663087,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3011,
+        "drafted_denominator_tokens": 5691,
+        "acceptance_pct": 52.90810050957653,
+        "confirmed_tokens_per_cycle_per_lane": 4.703567035670357,
+        "observed_physical_b": 3,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 1095237632,
+        "native_footprint_sampled_peak_bytes": 3256405376
+      }
+    },
+    {
+      "cell_id": "8Ki-C4",
+      "context_label": "8Ki",
+      "input_tokens": 8192,
+      "C": 4,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 877.7673214346838,
+          "min": 876.5825276648287,
+          "max": 889.5820157512788,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 730.0822378561622,
+          "min": 725.9915590625085,
+          "max": 740.2538012389202,
+          "n": 3
+        },
+        "peak_metal_bytes": 35305357312,
+        "peak_metal_range_bytes": [
+          35109273600,
+          35305357312
+        ],
+        "actual_outputs": [
+          [
+            377,
+            400,
+            402,
+            372
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ],
+          [
+            392,
+            392,
+            392,
+            392
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 26.744622979516862,
+          "min": 8.8595002090442,
+          "max": 45.30483216699213,
+          "n": 12
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "8Ki-C4-r0-bugfix-S",
+            "per_request": [
+              20.634480334003456,
+              44.40157216700027,
+              32.54140637500677,
+              8.8595002090442
+            ],
+            "median": 26.587943354505114,
+            "max": 44.40157216700027
+          },
+          {
+            "run_id": "8Ki-C4-r1-feature-S",
+            "per_request": [
+              20.853955375030637,
+              32.92463541700272,
+              8.992647374980152,
+              45.30483216699213
+            ],
+            "median": 26.889295396016678,
+            "max": 45.30483216699213
+          },
+          {
+            "run_id": "8Ki-C4-r2-refactor-S",
+            "per_request": [
+              9.079659457958769,
+              33.00193799997214,
+              20.94783958402695,
+              45.032629832974635
+            ],
+            "median": 26.974888791999547,
+            "max": 45.032629832974635
+          }
+        ],
+        "full_wave_tps": {
+          "median": 30.974417468113604,
+          "min": 30.63645524699557,
+          "max": 37.52449510219418,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 120.91639624803955,
+          "min": 114.65716319496013,
+          "max": 120.95897519063456,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 190,
+          "2": 236,
+          "3": 112,
+          "4": 24
+        },
+        "physical_b_wall_ms": {
+          "1": 13319.751,
+          "2": 17652.02,
+          "3": 10177.153,
+          "4": 2278.755
+        },
+        "max_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 2810347520,
+        "native_footprint_sampled_peak_bytes": 4683517888
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 907.9787978683347,
+          "min": 904.1787884746258,
+          "max": 912.3965285889564,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 902.0515996224482,
+          "min": 898.3195218452439,
+          "max": 906.4208317342977,
+          "n": 3
+        },
+        "peak_metal_bytes": 34520301568,
+        "peak_metal_range_bytes": [
+          34520301568,
+          34520301568
+        ],
+        "actual_outputs": [
+          [
+            377,
+            400,
+            402,
+            372
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ],
+          [
+            392,
+            392,
+            392,
+            392
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 205.06369900728632,
+          "min": 183.79922828069198,
+          "max": 218.4813190117174,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 204.21289457318076,
+          "min": 183.05140955649398,
+          "max": 217.5751353330754,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3906,
+        "drafted_denominator_tokens": 7280,
+        "acceptance_pct": 53.65384615384615,
+        "confirmed_tokens_per_cycle_per_lane": 4.755769230769231,
+        "observed_physical_b": 4,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 1445707776,
+        "native_footprint_sampled_peak_bytes": 3879636544
+      }
+    },
+    {
+      "cell_id": "32Ki-C1",
+      "context_label": "32Ki",
+      "input_tokens": 32768,
+      "C": 1,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 774.6634820627912,
+          "min": 773.7614679080191,
+          "max": 776.2431641882037,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 773.7924835823475,
+          "min": 772.9576902381879,
+          "max": 775.4408089215377,
+          "n": 3
+        },
+        "peak_metal_bytes": 33666433024,
+        "peak_metal_range_bytes": [
+          33666433024,
+          33666433024
+        ],
+        "actual_outputs": [
+          [
+            512
+          ],
+          [
+            498
+          ],
+          [
+            512
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 42.49313550000079,
+          "min": 42.403793624951504,
+          "max": 42.54036254098173,
+          "n": 3
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "32Ki-C1-r0-bugfix-S",
+            "per_request": [
+              42.54036254098173
+            ],
+            "median": 42.54036254098173,
+            "max": 42.54036254098173
+          },
+          {
+            "run_id": "32Ki-C1-r1-feature-S",
+            "per_request": [
+              42.49313550000079
+            ],
+            "median": 42.49313550000079,
+            "max": 42.49313550000079
+          },
+          {
+            "run_id": "32Ki-C1-r2-refactor-S",
+            "per_request": [
+              42.403793624951504
+            ],
+            "median": 42.403793624951504,
+            "max": 42.403793624951504
+          }
+        ],
+        "full_wave_tps": {
+          "median": 10.143369017539014,
+          "min": 9.63085180335738,
+          "max": 10.29880506983639,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 64.2339483904513,
+          "min": 53.87020749624192,
+          "max": 69.68010632931636,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 330,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 24563.162,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1306296320,
+        "native_footprint_sampled_peak_bytes": 3043396296
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 772.6287137700291,
+          "min": 771.9231728340383,
+          "max": 772.6670531152946,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 772.5040311918691,
+          "min": 771.8006713678698,
+          "max": 772.5418307533613,
+          "n": 3
+        },
+        "peak_metal_bytes": 33469628416,
+        "peak_metal_range_bytes": [
+          33469628416,
+          33469628416
+        ],
+        "actual_outputs": [
+          [
+            512
+          ],
+          [
+            498
+          ],
+          [
+            512
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 63.929150971014174,
+          "min": 53.52744133359507,
+          "max": 69.35996001758758,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 63.62131248070406,
+          "min": 53.27911065936557,
+          "max": 69.02561909222872,
+          "n": 3
+        },
+        "accepted_draft_tokens": 1176,
+        "drafted_denominator_tokens": 2289,
+        "acceptance_pct": 51.37614678899083,
+        "confirmed_tokens_per_cycle_per_lane": 4.5963302752293576,
+        "observed_physical_b": 1,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 500858880,
+        "native_footprint_sampled_peak_bytes": 2828929880
+      }
+    },
+    {
+      "cell_id": "32Ki-C2",
+      "context_label": "32Ki",
+      "input_tokens": 32768,
+      "C": 2,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 742.7515563726398,
+          "min": 729.4000773324129,
+          "max": 744.9057160766362,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 682.8751285261737,
+          "min": 659.4662921665725,
+          "max": 693.5041939619307,
+          "n": 3
+        },
+        "peak_metal_bytes": 35303260160,
+        "peak_metal_range_bytes": [
+          35303260160,
+          35303260160
+        ],
+        "actual_outputs": [
+          [
+            512,
+            423
+          ],
+          [
+            498,
+            512
+          ],
+          [
+            512,
+            512
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 68.91346743801842,
+          "min": 42.891998082981445,
+          "max": 99.55674212501617,
+          "n": 6
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "32Ki-C2-r0-bugfix-S",
+            "per_request": [
+              94.67565170902526,
+              43.15128316701157
+            ],
+            "median": 68.91346743801842,
+            "max": 94.67565170902526
+          },
+          {
+            "run_id": "32Ki-C2-r1-feature-S",
+            "per_request": [
+              42.92769483401207,
+              99.55674212501617
+            ],
+            "median": 71.24221847951412,
+            "max": 99.55674212501617
+          },
+          {
+            "run_id": "32Ki-C2-r2-refactor-S",
+            "per_request": [
+              96.1380227089976,
+              42.891998082981445
+            ],
+            "median": 69.51501039598952,
+            "max": 96.1380227089976
+          }
+        ],
+        "full_wave_tps": {
+          "median": 9.268960638239195,
+          "min": 9.107658068164127,
+          "max": 9.895979719433022,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 65.06065653717474,
+          "min": 53.83300754281185,
+          "max": 68.58088080786708,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 640,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 48064.199,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1734590464,
+        "native_footprint_sampled_peak_bytes": 4681108648
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 767.6202053216318,
+          "min": 766.5524289814383,
+          "max": 771.7120427058542,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 766.8297571332342,
+          "min": 765.7585588940706,
+          "max": 770.9057787651439,
+          "n": 3
+        },
+        "peak_metal_bytes": 34910371840,
+        "peak_metal_range_bytes": [
+          34910371840,
+          34910371840
+        ],
+        "actual_outputs": [
+          [
+            512,
+            423
+          ],
+          [
+            498,
+            512
+          ],
+          [
+            512,
+            512
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 119.31214647906835,
+          "min": 97.88755093846603,
+          "max": 125.30086887962109,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 118.78801979719418,
+          "min": 97.46647193931793,
+          "max": 124.74766323691034,
+          "n": 3
+        },
+        "accepted_draft_tokens": 2217,
+        "drafted_denominator_tokens": 4256,
+        "acceptance_pct": 52.09116541353384,
+        "confirmed_tokens_per_cycle_per_lane": 4.646381578947368,
+        "observed_physical_b": 2,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 745914368,
+        "native_footprint_sampled_peak_bytes": 4270525536
+      }
+    },
+    {
+      "cell_id": "32Ki-C3",
+      "context_label": "32Ki",
+      "input_tokens": 32768,
+      "C": 3,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 728.3745149714917,
+          "min": 714.0956325858374,
+          "max": 729.2560498309716,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 655.5631021899123,
+          "min": 628.6572027572186,
+          "max": 656.5914284696029,
+          "n": 3
+        },
+        "peak_metal_bytes": 36589862912,
+        "peak_metal_range_bytes": [
+          36589862912,
+          36589862912
+        ],
+        "actual_outputs": [
+          [
+            512,
+            423,
+            399
+          ],
+          [
+            498,
+            512,
+            498
+          ],
+          [
+            512,
+            512,
+            512
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 96.55993933300488,
+          "min": 43.222847042023204,
+          "max": 156.5292223339784,
+          "n": 9
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "32Ki-C3-r0-bugfix-S",
+            "per_request": [
+              96.26893862499855,
+              43.243429749971256,
+              149.90482604096178
+            ],
+            "median": 96.26893862499855,
+            "max": 149.90482604096178
+          },
+          {
+            "run_id": "32Ki-C3-r1-feature-S",
+            "per_request": [
+              99.63545029197121,
+              156.5292223339784,
+              43.25716462498531
+            ],
+            "median": 99.63545029197121,
+            "max": 156.5292223339784
+          },
+          {
+            "run_id": "32Ki-C3-r2-refactor-S",
+            "per_request": [
+              150.12031241698423,
+              96.55993933300488,
+              43.222847042023204
+            ],
+            "median": 96.55993933300488,
+            "max": 150.12031241698423
+          }
+        ],
+        "full_wave_tps": {
+          "median": 9.085325905375512,
+          "min": 8.551784882090915,
+          "max": 9.752710385006964,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 64.79633638133423,
+          "min": 54.159889210185845,
+          "max": 69.00708766001839,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 937,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 70689.661,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 2095153152,
+        "native_footprint_sampled_peak_bytes": 5968547176
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 764.5775160916655,
+          "min": 764.364707576513,
+          "max": 765.5455602645507,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 763.5676599972529,
+          "min": 763.3496276057447,
+          "max": 764.5272814044688,
+          "n": 3
+        },
+        "peak_metal_bytes": 36351115264,
+        "peak_metal_range_bytes": [
+          36351115264,
+          36351115264
+        ],
+        "actual_outputs": [
+          [
+            512,
+            423,
+            399
+          ],
+          [
+            498,
+            512,
+            498
+          ],
+          [
+            512,
+            512,
+            512
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 140.7330356514799,
+          "min": 117.45217591576753,
+          "max": 148.92008425647364,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 140.21404770837236,
+          "min": 117.01973549353049,
+          "max": 148.37214603815494,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3251,
+        "drafted_denominator_tokens": 6132,
+        "acceptance_pct": 53.016960208741025,
+        "confirmed_tokens_per_cycle_per_lane": 4.711187214611872,
+        "observed_physical_b": 3,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 1096286208,
+        "native_footprint_sampled_peak_bytes": 5711629672
+      }
+    },
+    {
+      "cell_id": "32Ki-C4",
+      "context_label": "32Ki",
+      "input_tokens": 32768,
+      "C": 4,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 722.4668483255848,
+          "min": 708.9149969110287,
+          "max": 739.3065740117827,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 640.9035268906126,
+          "min": 615.8372264854137,
+          "max": 660.0404092457406,
+          "n": 3
+        },
+        "peak_metal_bytes": 37876465664,
+        "peak_metal_range_bytes": [
+          37876465664,
+          37876465664
+        ],
+        "actual_outputs": [
+          [
+            512,
+            423,
+            434,
+            452
+          ],
+          [
+            498,
+            512,
+            498,
+            498
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 125.14139162498759,
+          "min": 42.01978612499079,
+          "max": 213.01577408303274,
+          "n": 12
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "32Ki-C4-r0-bugfix-S",
+            "per_request": [
+              42.01978612499079,
+              96.73865941696567,
+              149.18751083296956,
+              198.7830585000338
+            ],
+            "median": 122.96308512496762,
+            "max": 198.7830585000338
+          },
+          {
+            "run_id": "32Ki-C4-r1-feature-S",
+            "per_request": [
+              43.10142191598425,
+              213.01577408303274,
+              158.15416470798664,
+              101.09527241700562
+            ],
+            "median": 129.62471856249613,
+            "max": 213.01577408303274
+          },
+          {
+            "run_id": "32Ki-C4-r2-refactor-S",
+            "per_request": [
+              97.92360891704448,
+              43.08338612498483,
+              204.67746804200578,
+              152.6094277089578
+            ],
+            "median": 125.26651831300114,
+            "max": 204.67746804200578
+          }
+        ],
+        "full_wave_tps": {
+          "median": 9.017502852252171,
+          "min": 8.848471908366728,
+          "max": 9.654732137191344,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 65.19721400181683,
+          "min": 54.32340295587652,
+          "max": 67.9459807078973,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 1263,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 94999.216,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 2291761152,
+        "native_footprint_sampled_peak_bytes": 7255641544
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 779.8346974842527,
+          "min": 764.7716881010408,
+          "max": 787.2893939590922,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 778.6549292737359,
+          "min": 763.6498446112736,
+          "max": 786.0853709358746,
+          "n": 3
+        },
+        "peak_metal_bytes": 37791858688,
+        "peak_metal_range_bytes": [
+          37791858688,
+          37791858688
+        ],
+        "actual_outputs": [
+          [
+            512,
+            423,
+            399,
+            452
+          ],
+          [
+            498,
+            512,
+            498,
+            498
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 174.16003776851034,
+          "min": 148.28920022372586,
+          "max": 183.78990332291227,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 173.5438246844446,
+          "min": 147.7712422094889,
+          "max": 183.1597940244508,
+          "n": 3
+        },
+        "accepted_draft_tokens": 4293,
+        "drafted_denominator_tokens": 8176,
+        "acceptance_pct": 52.50733855185909,
+        "confirmed_tokens_per_cycle_per_lane": 4.675513698630137,
+        "observed_physical_b": 4,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 1446707200,
+        "native_footprint_sampled_peak_bytes": 7153274480
+      }
+    },
+    {
+      "cell_id": "64Ki-C1",
+      "context_label": "64Ki",
+      "input_tokens": 65536,
+      "C": 1,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 669.2172783389823,
+          "min": 668.46636520316,
+          "max": 670.996705661321,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 668.685804757494,
+          "min": 667.8914808831797,
+          "max": 670.450966254928,
+          "n": 3
+        },
+        "peak_metal_bytes": 34756952064,
+        "peak_metal_range_bytes": [
+          34756952064,
+          34756952064
+        ],
+        "actual_outputs": [
+          [
+            414
+          ],
+          [
+            464
+          ],
+          [
+            370
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 98.18543329200475,
+          "min": 97.92581870802678,
+          "max": 98.30517737497576,
+          "n": 3
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "64Ki-C1-r0-bugfix-S",
+            "per_request": [
+              97.92581870802678
+            ],
+            "median": 97.92581870802678,
+            "max": 97.92581870802678
+          },
+          {
+            "run_id": "64Ki-C1-r1-feature-S",
+            "per_request": [
+              98.30517737497576
+            ],
+            "median": 98.30517737497576,
+            "max": 98.30517737497576
+          },
+          {
+            "run_id": "64Ki-C1-r2-refactor-S",
+            "per_request": [
+              98.18543329200475
+            ],
+            "median": 98.18543329200475,
+            "max": 98.18543329200475
+          }
+        ],
+        "full_wave_tps": {
+          "median": 3.9904820112247905,
+          "min": 3.5743815419108036,
+          "max": 4.335247769951204,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 68.79686019341075,
+          "min": 52.970280909507316,
+          "max": 70.53577496993793,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 255,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 20007.136,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1319714816,
+        "native_footprint_sampled_peak_bytes": 4134996656
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 671.0291674231307,
+          "min": 669.9880874645906,
+          "max": 672.3570865775064,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 670.9368956113098,
+          "min": 669.8952492332476,
+          "max": 672.2650741922846,
+          "n": 3
+        },
+        "peak_metal_bytes": 34560147456,
+        "peak_metal_range_bytes": [
+          34560147456,
+          34560147456
+        ],
+        "actual_outputs": [
+          [
+            414
+          ],
+          [
+            464
+          ],
+          [
+            370
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 68.39689140397738,
+          "min": 53.06941452251688,
+          "max": 70.94559735600527,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 68.08103988361762,
+          "min": 52.83085700636535,
+          "max": 70.6203678683425,
+          "n": 3
+        },
+        "accepted_draft_tokens": 985,
+        "drafted_denominator_tokens": 1764,
+        "acceptance_pct": 55.839002267573704,
+        "confirmed_tokens_per_cycle_per_lane": 4.908730158730159,
+        "observed_physical_b": 1,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 501006336,
+        "native_footprint_sampled_peak_bytes": 3921038168
+      }
+    },
+    {
+      "cell_id": "64Ki-C2",
+      "context_label": "64Ki",
+      "input_tokens": 65536,
+      "C": 2,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 662.2907026568845,
+          "min": 660.571207280535,
+          "max": 666.3007726239168,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 642.7832388698565,
+          "min": 632.8713989837245,
+          "max": 647.3586183460936,
+          "n": 3
+        },
+        "peak_metal_bytes": 37484298240,
+        "peak_metal_range_bytes": [
+          37484298240,
+          37484298240
+        ],
+        "actual_outputs": [
+          [
+            414,
+            354
+          ],
+          [
+            464,
+            437
+          ],
+          [
+            370,
+            424
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 150.53588870802196,
+          "min": 97.77583349996712,
+          "max": 207.324647750007,
+          "n": 6
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "64Ki-C2-r0-bugfix-S",
+            "per_request": [
+              204.10335387499072,
+              98.39560970803723
+            ],
+            "median": 151.24948179151397,
+            "max": 204.10335387499072
+          },
+          {
+            "run_id": "64Ki-C2-r1-feature-S",
+            "per_request": [
+              207.324647750007,
+              97.78095808299258
+            ],
+            "median": 152.5528029164998,
+            "max": 207.324647750007
+          },
+          {
+            "run_id": "64Ki-C2-r2-refactor-S",
+            "per_request": [
+              97.77583349996712,
+              202.6761677080067
+            ],
+            "median": 150.2260006039869,
+            "max": 202.6761677080067
+          }
+        ],
+        "full_wave_tps": {
+          "median": 3.789311592545829,
+          "min": 3.6581539977698787,
+          "max": 4.170932597249072,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 63.94874497459009,
+          "min": 52.5307995030092,
+          "max": 65.87565789957357,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 521,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 41226.357,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1750335488,
+        "native_footprint_sampled_peak_bytes": 6863752288
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 672.0509528674046,
+          "min": 671.6003398612676,
+          "max": 673.4627517225213,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 671.7003858803828,
+          "min": 671.2492409084506,
+          "max": 673.1082820483009,
+          "n": 3
+        },
+        "peak_metal_bytes": 37091409920,
+        "peak_metal_range_bytes": [
+          37091409920,
+          37091409920
+        ],
+        "actual_outputs": [
+          [
+            414,
+            354
+          ],
+          [
+            464,
+            437
+          ],
+          [
+            370,
+            424
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 114.73411884953393,
+          "min": 91.08933341945168,
+          "max": 116.62835550166754,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 114.27147484184583,
+          "min": 90.67897583729783,
+          "max": 116.15761778705998,
+          "n": 3
+        },
+        "accepted_draft_tokens": 1846,
+        "drafted_denominator_tokens": 3416,
+        "acceptance_pct": 54.039812646370024,
+        "confirmed_tokens_per_cycle_per_lane": 4.782786885245901,
+        "observed_physical_b": 2,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 747503616,
+        "native_footprint_sampled_peak_bytes": 6453726376
+      }
+    },
+    {
+      "cell_id": "64Ki-C3",
+      "context_label": "64Ki",
+      "input_tokens": 65536,
+      "C": 3,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 658.8040823665112,
+          "min": 653.0213353447513,
+          "max": 660.3091289539587,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 631.6774420209135,
+          "min": 616.7789743270865,
+          "max": 632.3733407818149,
+          "n": 3
+        },
+        "peak_metal_bytes": 39861420032,
+        "peak_metal_range_bytes": [
+          39861420032,
+          39861420032
+        ],
+        "actual_outputs": [
+          [
+            414,
+            354,
+            423
+          ],
+          [
+            464,
+            437,
+            512
+          ],
+          [
+            370,
+            424,
+            382
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 205.47126995801227,
+          "min": 97.81917829095619,
+          "max": 318.9965930839535,
+          "n": 9
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "64Ki-C3-r0-bugfix-S",
+            "per_request": [
+              311.1381766250124,
+              98.21351458301069,
+              204.3128240830265
+            ],
+            "median": 204.3128240830265,
+            "max": 311.1381766250124
+          },
+          {
+            "run_id": "64Ki-C3-r1-feature-S",
+            "per_request": [
+              97.88165308296448,
+              210.68784154200694,
+              318.9965930839535
+            ],
+            "median": 210.68784154200694,
+            "max": 318.9965930839535
+          },
+          {
+            "run_id": "64Ki-C3-r2-refactor-S",
+            "per_request": [
+              311.48859116696985,
+              97.81917829095619,
+              205.47126995801227
+            ],
+            "median": 205.47126995801227,
+            "max": 311.48859116696985
+          }
+        ],
+        "full_wave_tps": {
+          "median": 3.757307203892613,
+          "min": 3.7116593059971477,
+          "max": 4.303420909773022,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 63.543146665441114,
+          "min": 53.04988990657342,
+          "max": 66.20953211551503,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 795,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 63130.768,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 2120974336,
+        "native_footprint_sampled_peak_bytes": 9241988408
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 671.5330789914681,
+          "min": 671.5119400145064,
+          "max": 671.743047235768,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 671.0961808057993,
+          "min": 671.0755706690612,
+          "max": 671.3047103230758,
+          "n": 3
+        },
+        "peak_metal_bytes": 39622672384,
+        "peak_metal_range_bytes": [
+          39622672384,
+          39622672384
+        ],
+        "actual_outputs": [
+          [
+            414,
+            354,
+            423
+          ],
+          [
+            464,
+            437,
+            450
+          ],
+          [
+            370,
+            424,
+            382
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 135.24407361585935,
+          "min": 108.42606176564708,
+          "max": 135.43936669187397,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 134.79347866183565,
+          "min": 108.06975479080904,
+          "max": 134.98764791884247,
+          "n": 3
+        },
+        "accepted_draft_tokens": 2775,
+        "drafted_denominator_tokens": 5061,
+        "acceptance_pct": 54.83106105512745,
+        "confirmed_tokens_per_cycle_per_lane": 4.838174273858921,
+        "observed_physical_b": 3,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 1097695232,
+        "native_footprint_sampled_peak_bytes": 8985644392
+      }
+    },
+    {
+      "cell_id": "64Ki-C4",
+      "context_label": "64Ki",
+      "input_tokens": 65536,
+      "C": 4,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 655.2168416722631,
+          "min": 649.3445807316554,
+          "max": 658.6543527803583,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 622.948824541692,
+          "min": 609.2493328398385,
+          "max": 630.4674370197206,
+          "n": 3
+        },
+        "peak_metal_bytes": 42238541824,
+        "peak_metal_range_bytes": [
+          42238541824,
+          42238541824
+        ],
+        "actual_outputs": [
+          [
+            423,
+            354,
+            354,
+            354
+          ],
+          [
+            456,
+            437,
+            450,
+            512
+          ],
+          [
+            381,
+            424,
+            382,
+            424
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 260.60181047950755,
+          "min": 98.17354041698854,
+          "max": 430.5060748750111,
+          "n": 12
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "64Ki-C4-r0-bugfix-S",
+            "per_request": [
+              416.01470075000543,
+              205.20276600000216,
+              311.119535750011,
+              98.50823874998605
+            ],
+            "median": 258.16115087500657,
+            "max": 416.01470075000543
+          },
+          {
+            "run_id": "64Ki-C4-r1-feature-S",
+            "per_request": [
+              430.5060748750111,
+              210.08408520900412,
+              98.17354041698854,
+              319.0171314170002
+            ],
+            "median": 264.55060831300216,
+            "max": 430.5060748750111
+          },
+          {
+            "run_id": "64Ki-C4-r2-refactor-S",
+            "per_request": [
+              421.0143760830397,
+              205.98588433297118,
+              98.40737024997361,
+              314.0641274579684
+            ],
+            "median": 260.0250058954698,
+            "max": 421.0143760830397
+          }
+        ],
+        "full_wave_tps": {
+          "median": 3.772421602424691,
+          "min": 3.5161161293780125,
+          "max": 4.217612937040843,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 61.34585522543889,
+          "min": 52.525680156851635,
+          "max": 62.76584669852014,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 1071,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 85236.363,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 2332803072,
+        "native_footprint_sampled_peak_bytes": 11620552136
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 669.4132291392871,
+          "min": 668.8089504488858,
+          "max": 672.1944892883483,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 668.9358470403072,
+          "min": 668.3305782884717,
+          "max": 671.7152216179121,
+          "n": 3
+        },
+        "peak_metal_bytes": 42153934848,
+        "peak_metal_range_bytes": [
+          42153934848,
+          42153934848
+        ],
+        "actual_outputs": [
+          [
+            414,
+            354,
+            423,
+            354
+          ],
+          [
+            464,
+            437,
+            450,
+            492
+          ],
+          [
+            370,
+            424,
+            382,
+            383
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 157.41290915572813,
+          "min": 130.6591551838573,
+          "max": 162.06956344336066,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 156.93900903926215,
+          "min": 130.2629140817307,
+          "max": 161.5783623348719,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3676,
+        "drafted_denominator_tokens": 6748,
+        "acceptance_pct": 54.475400118553644,
+        "confirmed_tokens_per_cycle_per_lane": 4.813278008298755,
+        "observed_physical_b": 4,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 1448214528,
+        "native_footprint_sampled_peak_bytes": 11517955696
+      }
+    },
+    {
+      "cell_id": "128Ki-C1",
+      "context_label": "128Ki",
+      "input_tokens": 131072,
+      "C": 1,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 546.038384083821,
+          "min": 542.0551784877051,
+          "max": 546.3046567499596,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 545.6855437760977,
+          "min": 541.7114421449247,
+          "max": 545.957996647835,
+          "n": 3
+        },
+        "peak_metal_bytes": 36937990144,
+        "peak_metal_range_bytes": [
+          36937990144,
+          36937990144
+        ],
+        "actual_outputs": [
+          [
+            425
+          ],
+          [
+            393
+          ],
+          [
+            329
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 240.43432487500831,
+          "min": 240.31545616697986,
+          "max": 242.1978261669865,
+          "n": 3
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "128Ki-C1-r0-bugfix-S",
+            "per_request": [
+              242.1978261669865
+            ],
+            "median": 242.1978261669865,
+            "max": 242.1978261669865
+          },
+          {
+            "run_id": "128Ki-C1-r1-feature-S",
+            "per_request": [
+              240.43432487500831
+            ],
+            "median": 240.43432487500831,
+            "max": 240.43432487500831
+          },
+          {
+            "run_id": "128Ki-C1-r2-refactor-S",
+            "per_request": [
+              240.31545616697986
+            ],
+            "median": 240.31545616697986,
+            "max": 240.31545616697986
+          }
+        ],
+        "full_wave_tps": {
+          "median": 1.586511728112918,
+          "min": 1.338384579799149,
+          "max": 1.6971252418133833,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 53.658111289970265,
+          "min": 51.3986305642268,
+          "max": 59.19094830716942,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 254,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 21151.141,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1369325568,
+        "native_footprint_sampled_peak_bytes": 6317574880
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 547.5906789916356,
+          "min": 546.3869919690246,
+          "max": 548.5618672949666,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 547.5314062039207,
+          "min": 546.32741927904,
+          "max": 548.5014549407493,
+          "n": 3
+        },
+        "peak_metal_bytes": 36741185536,
+        "peak_metal_range_bytes": [
+          36741185536,
+          36741185536
+        ],
+        "actual_outputs": [
+          [
+            425
+          ],
+          [
+            393
+          ],
+          [
+            329
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 53.66861771295643,
+          "min": 51.7994425709648,
+          "max": 59.568947206221026,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 53.435419465568785,
+          "min": 51.57705691558423,
+          "max": 59.30844437735998,
+          "n": 3
+        },
+        "accepted_draft_tokens": 885,
+        "drafted_denominator_tokens": 1757,
+        "acceptance_pct": 50.369948776323284,
+        "confirmed_tokens_per_cycle_per_lane": 4.52589641434263,
+        "observed_physical_b": 1,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 656048128,
+        "native_footprint_sampled_peak_bytes": 6104828736
+      }
+    },
+    {
+      "cell_id": "128Ki-C2",
+      "context_label": "128Ki",
+      "input_tokens": 131072,
+      "C": 2,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 525.949303547522,
+          "min": 511.82907737870806,
+          "max": 528.144057613067,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 525.516687444176,
+          "min": 511.41694672401337,
+          "max": 527.714607147736,
+          "n": 3
+        },
+        "peak_metal_bytes": 41846374400,
+        "peak_metal_range_bytes": [
+          41846374400,
+          41846374400
+        ],
+        "actual_outputs": [
+          [
+            442,
+            354
+          ],
+          [
+            393,
+            453
+          ],
+          [
+            291,
+            289
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 499.0207947494928,
+          "min": 496.8030540419859,
+          "max": 512.9264554160181,
+          "n": 6
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "128Ki-C2-r0-bugfix-S",
+            "per_request": [
+              512.9264554160181,
+              512.6638966660248
+            ],
+            "median": 512.7951760410215,
+            "max": 512.9264554160181
+          },
+          {
+            "run_id": "128Ki-C2-r1-feature-S",
+            "per_request": [
+              498.89259833301185,
+              499.1489911659737
+            ],
+            "median": 499.0207947494928,
+            "max": 499.1489911659737
+          },
+          {
+            "run_id": "128Ki-C2-r2-refactor-S",
+            "per_request": [
+              497.0596194579848,
+              496.8030540419859
+            ],
+            "median": 496.93133674998535,
+            "max": 497.0596194579848
+          }
+        ],
+        "full_wave_tps": {
+          "median": 1.5215530739529717,
+          "min": 1.1525496404948816,
+          "max": 1.6596903776969731,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 78.86247285127912,
+          "min": 76.76282480853683,
+          "max": 91.65354309212509,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 52,
+          "2": 217,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 4520.954,
+          "2": 22904.361,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 1845116928,
+        "native_footprint_sampled_peak_bytes": 11229039736
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 524.8131797995923,
+          "min": 519.9095401287376,
+          "max": 540.6088372308349,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 524.6785534878981,
+          "min": 519.7775393116168,
+          "max": 540.4656272326464,
+          "n": 3
+        },
+        "peak_metal_bytes": 41453486080,
+        "peak_metal_range_bytes": [
+          41453486080,
+          41453486080
+        ],
+        "actual_outputs": [
+          [
+            425,
+            354
+          ],
+          [
+            393,
+            393
+          ],
+          [
+            329,
+            289
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 84.94432723353772,
+          "min": 83.45389048532292,
+          "max": 95.58297120373301,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 84.65239255386001,
+          "min": 83.17287648120195,
+          "max": 95.24741883047801,
+          "n": 3
+        },
+        "accepted_draft_tokens": 1552,
+        "drafted_denominator_tokens": 3024,
+        "acceptance_pct": 51.32275132275132,
+        "confirmed_tokens_per_cycle_per_lane": 4.592592592592593,
+        "observed_physical_b": 2,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 749731840,
+        "native_footprint_sampled_peak_bytes": 10818980936
+      }
+    },
+    {
+      "cell_id": "128Ki-C3",
+      "context_label": "128Ki",
+      "input_tokens": 131072,
+      "C": 3,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 520.1240788624865,
+          "min": 511.8694175127656,
+          "max": 520.8485220607538,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 512.1529636853361,
+          "min": 504.90049033268656,
+          "max": 515.9089439921954,
+          "n": 3
+        },
+        "peak_metal_bytes": 46754758656,
+        "peak_metal_range_bytes": [
+          46754758656,
+          46754758656
+        ],
+        "actual_outputs": [
+          [
+            425,
+            336,
+            357
+          ],
+          [
+            506,
+            453,
+            486
+          ],
+          [
+            291,
+            330,
+            289
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 510.6123240829911,
+          "min": 500.76624541694764,
+          "max": 779.1422877499717,
+          "n": 9
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "128Ki-C3-r0-bugfix-S",
+            "per_request": [
+              510.6123240829911,
+              779.1422877499717,
+              515.4101549999905
+            ],
+            "median": 515.4101549999905,
+            "max": 779.1422877499717
+          },
+          {
+            "run_id": "128Ki-C3-r1-feature-S",
+            "per_request": [
+              768.1103624579846,
+              505.4709444590262,
+              500.76624541694764
+            ],
+            "median": 505.4709444590262,
+            "max": 768.1103624579846
+          },
+          {
+            "run_id": "128Ki-C3-r2-refactor-S",
+            "per_request": [
+              506.73426412499975,
+              762.5136817499879,
+              502.00735237501794
+            ],
+            "median": 506.73426412499975,
+            "max": 762.5136817499879
+          }
+        ],
+        "full_wave_tps": {
+          "median": 1.4233512641663382,
+          "min": 1.1844489713639963,
+          "max": 1.857403791586429,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 68.51326913860647,
+          "min": 68.12056535538436,
+          "max": 72.79704857470023,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 291,
+          "2": 234,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 25067.731,
+          "2": 24935.66,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 2389229568,
+        "native_footprint_sampled_peak_bytes": 16139701848
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 530.5787063025855,
+          "min": 523.6264438927265,
+          "max": 535.5319591823389,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 530.4138311669866,
+          "min": 523.4652477139292,
+          "max": 535.3632101767466,
+          "n": 3
+        },
+        "peak_metal_bytes": 46165786624,
+        "peak_metal_range_bytes": [
+          46165786624,
+          46165786624
+        ],
+        "actual_outputs": [
+          [
+            425,
+            354,
+            336
+          ],
+          [
+            393,
+            393,
+            486
+          ],
+          [
+            329,
+            289,
+            289
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 99.3228678980479,
+          "min": 97.95317418849228,
+          "max": 105.1428149924085,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 99.04057335862252,
+          "min": 97.67297252563908,
+          "max": 104.8430089324579,
+          "n": 3
+        },
+        "accepted_draft_tokens": 2335,
+        "drafted_denominator_tokens": 4515,
+        "acceptance_pct": 51.71650055370986,
+        "confirmed_tokens_per_cycle_per_lane": 4.62015503875969,
+        "observed_physical_b": 3,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 1100595200,
+        "native_footprint_sampled_peak_bytes": 15533247872
+      }
+    },
+    {
+      "cell_id": "128Ki-C4",
+      "context_label": "128Ki",
+      "input_tokens": 131072,
+      "C": 4,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 551.845169568891,
+          "min": 516.9384651088233,
+          "max": 557.9719892235721,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 546.3885662306274,
+          "min": 512.6023959187348,
+          "max": 551.0313557722816,
+          "n": 3
+        },
+        "peak_metal_bytes": 51663142912,
+        "peak_metal_range_bytes": [
+          51663142912,
+          51663142912
+        ],
+        "actual_outputs": [
+          [
+            368,
+            329,
+            336,
+            368
+          ],
+          [
+            393,
+            449,
+            424,
+            512
+          ],
+          [
+            329,
+            289,
+            378,
+            336
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 731.878831271024,
+          "min": 470.84220691700466,
+          "max": 1023.2286694580107,
+          "n": 12
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "128Ki-C4-r0-bugfix-S",
+            "per_request": [
+              959.7111714999774,
+              959.9553343749722,
+              477.20899466599803,
+              481.69605291698826
+            ],
+            "median": 720.7036122084828,
+            "max": 959.9553343749722
+          },
+          {
+            "run_id": "128Ki-C4-r1-feature-S",
+            "per_request": [
+              470.84220691700466,
+              951.8396815839806,
+              475.28859516698867,
+              951.5854488750338
+            ],
+            "median": 713.4370220210112,
+            "max": 951.8396815839806
+          },
+          {
+            "run_id": "128Ki-C4-r2-refactor-S",
+            "per_request": [
+              507.41141229198547,
+              512.1722136670141,
+              1023.2286694580107,
+              1022.9750838329783
+            ],
+            "median": 767.5736487499962,
+            "max": 1023.2286694580107
+          }
+        ],
+        "full_wave_tps": {
+          "median": 1.4488036277571898,
+          "min": 1.2916804395305264,
+          "max": 1.846028649646639,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 83.61619041663442,
+          "min": 79.06547644943268,
+          "max": 88.05510546574935,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 62,
+          "2": 449,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 5466.59,
+          "2": 48861.522,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 2968141824,
+        "native_footprint_sampled_peak_bytes": 21050953664
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 562.8760999032935,
+          "min": 518.843620222935,
+          "max": 565.733958944382,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 562.6735855851331,
+          "min": 518.6738393739238,
+          "max": 565.5299237228485,
+          "n": 3
+        },
+        "peak_metal_bytes": 50878087168,
+        "peak_metal_range_bytes": [
+          50878087168,
+          50878087168
+        ],
+        "actual_outputs": [
+          [
+            425,
+            354,
+            336,
+            366
+          ],
+          [
+            393,
+            393,
+            486,
+            430
+          ],
+          [
+            329,
+            289,
+            289,
+            330
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 122.3010300472933,
+          "min": 121.06069333097106,
+          "max": 124.60946283497377,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 121.99491801595342,
+          "min": 120.74445052705141,
+          "max": 124.27568810188386,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3166,
+        "drafted_denominator_tokens": 6020,
+        "acceptance_pct": 52.59136212624584,
+        "confirmed_tokens_per_cycle_per_lane": 4.681395348837209,
+        "observed_physical_b": 4,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 1451360256,
+        "native_footprint_sampled_peak_bytes": 20247285360
+      }
+    },
+    {
+      "cell_id": "near256Ki-C1",
+      "context_label": "near256Ki",
+      "input_tokens": 261568,
+      "C": 1,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 349.09895565993315,
+          "min": 347.61101380491704,
+          "max": 349.9187547374408,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 348.95987010722297,
+          "min": 347.47427207461936,
+          "max": 349.7777062571362,
+          "n": 3
+        },
+        "peak_metal_bytes": 41163751424,
+        "peak_metal_range_bytes": [
+          41163751424,
+          41163751424
+        ],
+        "actual_outputs": [
+          [
+            360
+          ],
+          [
+            512
+          ],
+          [
+            287
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 749.9304666669923,
+          "min": 748.1725745829754,
+          "max": 753.1297031669528,
+          "n": 3
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "near256Ki-C1-r0-bugfix-S",
+            "per_request": [
+              753.1297031669528
+            ],
+            "median": 753.1297031669528,
+            "max": 753.1297031669528
+          },
+          {
+            "run_id": "near256Ki-C1-r1-feature-S",
+            "per_request": [
+              749.9304666669923
+            ],
+            "median": 749.9304666669923,
+            "max": 749.9304666669923
+          },
+          {
+            "run_id": "near256Ki-C1-r2-refactor-S",
+            "per_request": [
+              748.1725745829754
+            ],
+            "median": 748.1725745829754,
+            "max": 748.1725745829754
+          }
+        ],
+        "full_wave_tps": {
+          "median": 0.47297543438214473,
+          "min": 0.3806062460419104,
+          "max": 0.6711399058599171,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 44.61372853852871,
+          "min": 39.41567390478088,
+          "max": 48.19009229702296,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 268,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 27014.593999999997,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 1444020224,
+        "native_footprint_sampled_peak_bytes": 10546072264
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 350.71603666849666,
+          "min": 350.13655364498743,
+          "max": 363.9170960404575,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 350.6912598164485,
+          "min": 350.1119749945315,
+          "max": 363.8907201278946,
+          "n": 3
+        },
+        "peak_metal_bytes": 40966946816,
+        "peak_metal_range_bytes": [
+          40966946816,
+          40966946816
+        ],
+        "actual_outputs": [
+          [
+            360
+          ],
+          [
+            512
+          ],
+          [
+            287
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 44.20985487966258,
+          "min": 39.54407976718504,
+          "max": 50.285441795684115,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 44.050245178341065,
+          "min": 39.403637279457136,
+          "max": 50.093911752885376,
+          "n": 3
+        },
+        "accepted_draft_tokens": 880,
+        "drafted_denominator_tokens": 1855,
+        "acceptance_pct": 47.43935309973046,
+        "confirmed_tokens_per_cycle_per_lane": 4.320754716981132,
+        "observed_physical_b": 1,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 1,
+        "rss_tree_sampled_peak_bytes": 656506880,
+        "native_footprint_sampled_peak_bytes": 10335423296
+      }
+    },
+    {
+      "cell_id": "near256Ki-C2",
+      "context_label": "near256Ki",
+      "input_tokens": 261568,
+      "C": 2,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 347.1680480017801,
+          "min": 346.2904621214364,
+          "max": 349.9475930507941,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 347.0058249021945,
+          "min": 346.1271738575719,
+          "max": 349.78212874514503,
+          "n": 3
+        },
+        "peak_metal_bytes": 50434211840,
+        "peak_metal_range_bytes": [
+          50434211840,
+          50434211840
+        ],
+        "actual_outputs": [
+          [
+            360,
+            360
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            287,
+            323
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 1507.9028168960358,
+          "min": 1495.7428908749716,
+          "max": 1511.8799721669639,
+          "n": 6
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "near256Ki-C2-r0-bugfix-S",
+            "per_request": [
+              1496.1002734999638,
+              1495.7428908749716
+            ],
+            "median": 1495.9215821874677,
+            "max": 1496.1002734999638
+          },
+          {
+            "run_id": "near256Ki-C2-r1-feature-S",
+            "per_request": [
+              1508.0814140420407,
+              1507.724219750031
+            ],
+            "median": 1507.9028168960358,
+            "max": 1508.0814140420407
+          },
+          {
+            "run_id": "near256Ki-C2-r2-refactor-S",
+            "per_request": [
+              1511.528009667003,
+              1511.8799721669639
+            ],
+            "median": 1511.7039909169835,
+            "max": 1511.8799721669639
+          }
+        ],
+        "full_wave_tps": {
+          "median": 0.47780474211880153,
+          "min": 0.40121786653415803,
+          "max": 0.671348849663743,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 65.57175472767842,
+          "min": 58.941307504821076,
+          "max": 70.23411852583192,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 17,
+          "2": 258,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 1717.993,
+          "2": 35320.793,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 2024718336,
+        "native_footprint_sampled_peak_bytes": 19822087336
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 348.42602818318505,
+          "min": 347.815884678147,
+          "max": 349.98785437851956,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 348.38425666497653,
+          "min": 347.77421850975924,
+          "max": 349.9455017009009,
+          "n": 3
+        },
+        "peak_metal_bytes": 50041323520,
+        "peak_metal_range_bytes": [
+          50041323520,
+          50041323520
+        ],
+        "actual_outputs": [
+          [
+            360,
+            360
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            287,
+            323
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 64.83491532852368,
+          "min": 60.46479633574468,
+          "max": 71.88459989888476,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 64.66060140119532,
+          "min": 60.30110108611008,
+          "max": 71.68913436981843,
+          "n": 3
+        },
+        "accepted_draft_tokens": 1765,
+        "drafted_denominator_tokens": 3612,
+        "acceptance_pct": 48.864894795127356,
+        "confirmed_tokens_per_cycle_per_lane": 4.420542635658915,
+        "observed_physical_b": 2,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 754630656,
+        "native_footprint_sampled_peak_bytes": 19413339208
+      }
+    },
+    {
+      "cell_id": "near256Ki-C3",
+      "context_label": "near256Ki",
+      "input_tokens": 261568,
+      "C": 3,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 385.4957605252294,
+          "min": 384.7612062230865,
+          "max": 388.60396585079064,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 383.7909072955582,
+          "min": 382.6239832341871,
+          "max": 385.4311372165846,
+          "n": 3
+        },
+        "peak_metal_bytes": 59704672256,
+        "peak_metal_range_bytes": [
+          59704672256,
+          59704672256
+        ],
+        "actual_outputs": [
+          [
+            360,
+            360,
+            360
+          ],
+          [
+            512,
+            512,
+            512
+          ],
+          [
+            287,
+            323,
+            320
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 1358.8646612919983,
+          "min": 1341.8128739159438,
+          "max": 2051.4118434590055,
+          "n": 9
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "near256Ki-C3-r0-bugfix-S",
+            "per_request": [
+              1361.017069249996,
+              1356.5484924580087,
+              2051.4118434590055
+            ],
+            "median": 1361.017069249996,
+            "max": 2051.4118434590055
+          },
+          {
+            "run_id": "near256Ki-C3-r1-feature-S",
+            "per_request": [
+              2036.4379980840022,
+              1341.8128739159438,
+              1346.1254510420258
+            ],
+            "median": 1346.1254510420258,
+            "max": 2036.4379980840022
+          },
+          {
+            "run_id": "near256Ki-C3-r2-refactor-S",
+            "per_request": [
+              1358.8646612919983,
+              1354.4632335829665,
+              2045.1827627499588
+            ],
+            "median": 1358.8646612919983,
+            "max": 2045.1827627499588
+          }
+        ],
+        "full_wave_tps": {
+          "median": 0.5245667461326168,
+          "min": 0.45332397702217264,
+          "max": 0.7498275530414339,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 60.41119733938169,
+          "min": 55.50615543858341,
+          "max": 64.3083909357536,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 289,
+          "2": 257,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 27398.128,
+          "2": 32613.523999999998,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 2524086272,
+        "native_footprint_sampled_peak_bytes": 29097463312
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 386.5336297572749,
+          "min": 364.4353687874084,
+          "max": 391.4356791106488,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 386.4742647118014,
+          "min": 364.38244668637884,
+          "max": 391.3746415028541,
+          "n": 3
+        },
+        "peak_metal_bytes": 59115700224,
+        "peak_metal_range_bytes": [
+          59115700224,
+          59115700224
+        ],
+        "actual_outputs": [
+          [
+            360,
+            360,
+            351
+          ],
+          [
+            512,
+            512,
+            512
+          ],
+          [
+            287,
+            323,
+            315
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 78.2951942617484,
+          "min": 74.90355165250499,
+          "max": 82.64263662573892,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 78.10863199203519,
+          "min": 74.72527161989916,
+          "max": 82.46257971424383,
+          "n": 3
+        },
+        "accepted_draft_tokens": 2642,
+        "drafted_denominator_tokens": 5397,
+        "acceptance_pct": 48.953122104873074,
+        "confirmed_tokens_per_cycle_per_lane": 4.426718547341116,
+        "observed_physical_b": 3,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 3,
+        "rss_tree_sampled_peak_bytes": 1105952768,
+        "native_footprint_sampled_peak_bytes": 28491173320
+      }
+    },
+    {
+      "cell_id": "near256Ki-C4",
+      "context_label": "near256Ki",
+      "input_tokens": 261568,
+      "C": 4,
+      "output_cap": 512,
+      "sampling": {
+        "temperature": 0,
+        "thinking": false,
+        "output_cap": 512
+      },
+      "cached_tokens": 0,
+      "peak_scope": "fresh_process_lifetime",
+      "sample_count": 3,
+      "natural_serving": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 386.04968318606456,
+          "min": 377.3474071749017,
+          "max": 389.2006618952674,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 383.32981427171063,
+          "min": 375.5338870057909,
+          "max": 387.78358925173814,
+          "n": 3
+        },
+        "peak_metal_bytes": 68975132672,
+        "peak_metal_range_bytes": [
+          68975132672,
+          68975132672
+        ],
+        "actual_outputs": [
+          [
+            351,
+            360,
+            351,
+            376
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ],
+          [
+            287,
+            315,
+            315,
+            287
+          ]
+        ],
+        "ttft_seconds": {
+          "median": 2047.1288910624862,
+          "min": 1343.941791500023,
+          "max": 2786.7832913330058,
+          "n": 12
+        },
+        "round_cohort_ttft": [
+          {
+            "run_id": "near256Ki-C4-r0-bugfix-S",
+            "per_request": [
+              2786.453558832989,
+              2786.7832913330058,
+              1391.2506122500054,
+              1395.797046166961
+            ],
+            "median": 2091.125302499975,
+            "max": 2786.7832913330058
+          },
+          {
+            "run_id": "near256Ki-C4-r1-feature-S",
+            "per_request": [
+              1358.6272717909887,
+              1354.2228663749993,
+              2729.9371743749944,
+              2729.609303000034
+            ],
+            "median": 2044.1182873955113,
+            "max": 2729.9371743749944
+          },
+          {
+            "run_id": "near256Ki-C4-r2-refactor-S",
+            "per_request": [
+              1348.239397917001,
+              2698.791668958962,
+              1343.941791500023,
+              2698.4607359580114
+            ],
+            "median": 2023.3500669375062,
+            "max": 2698.791668958962
+          }
+        ],
+        "full_wave_tps": {
+          "median": 0.5141011275271743,
+          "min": 0.4449020385562216,
+          "max": 0.7457297372817824,
+          "n": 3
+        },
+        "natural_decode_native_tps": {
+          "median": 63.862306032528956,
+          "min": 59.64195632445282,
+          "max": 74.93247229051786,
+          "n": 3
+        },
+        "physical_b_counts": {
+          "1": 28,
+          "2": 524,
+          "3": 0,
+          "4": 0
+        },
+        "physical_b_wall_ms": {
+          "1": 2908.5150000000003,
+          "2": 70014.728,
+          "3": 0,
+          "4": 0
+        },
+        "max_ready_residents": 2,
+        "rss_tree_sampled_peak_bytes": 3163062272,
+        "native_footprint_sampled_peak_bytes": 38372118392
+      },
+      "all_ready_decode": {
+        "status": "PASS",
+        "n": 3,
+        "required_n": 3,
+        "prefill_native_tps": {
+          "median": 389.3436735792963,
+          "min": 388.257174615025,
+          "max": 390.21008654599007,
+          "n": 3
+        },
+        "prefill_elapsed_tps": {
+          "median": 389.27908040816305,
+          "min": 388.192955591021,
+          "max": 390.14572916295344,
+          "n": 3
+        },
+        "peak_metal_bytes": 68190076928,
+        "peak_metal_range_bytes": [
+          68190076928,
+          68190076928
+        ],
+        "actual_outputs": [
+          [
+            360,
+            360,
+            351,
+            376
+          ],
+          [
+            512,
+            512,
+            512,
+            512
+          ],
+          [
+            287,
+            323,
+            315,
+            308
+          ]
+        ],
+        "native_decode_tps": {
+          "median": 88.71606898648312,
+          "min": 84.59303846866977,
+          "max": 99.04457723788688,
+          "n": 3
+        },
+        "elapsed_decode_tps": {
+          "median": 88.53801956079737,
+          "min": 84.42473532369142,
+          "max": 98.84528842759185,
+          "n": 3
+        },
+        "accepted_draft_tokens": 3517,
+        "drafted_denominator_tokens": 7056,
+        "acceptance_pct": 49.84410430839002,
+        "confirmed_tokens_per_cycle_per_lane": 4.489087301587301,
+        "observed_physical_b": 4,
+        "all_ready_verified": true,
+        "acceptance_definition": "shipping accepted retained draft tokens / all seven proposed tokens per active lane per full-width cycle; anchor/bonus excluded, no inactive rows, boundary completion cycle excluded",
+        "observed_ready_residents": 4,
+        "rss_tree_sampled_peak_bytes": 1457618944,
+        "native_footprint_sampled_peak_bytes": 37569171032
+      }
+    }
+  ]
+}

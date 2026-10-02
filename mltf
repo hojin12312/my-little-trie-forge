@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+
+for python in "$ROOT/.venv/bin/python" python3.13 python3 python3.12 python3.14; do
+    if (test -x "$python" 2>/dev/null || command -v "$python" >/dev/null 2>&1) \
+        && "$python" -c 'import sys; raise SystemExit(not ((3, 12) <= sys.version_info[:2] < (3, 15)))' \
+            >/dev/null 2>&1; then
+        exec "$python" -u "$ROOT/install/launcher.py" "$@"
+    fi
+done
+
+echo "MLTF needs Python 3.12, 3.13, or 3.14." >&2
+echo "Install Python, then run ./mltf serve --model <owner/repo>." >&2
+exit 1
