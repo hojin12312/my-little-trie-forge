@@ -184,6 +184,8 @@ def serve(args):
             "--max-context",
             "auto" if args.max_context is None else str(args.max_context),
         ]
+        if args.max_concurrent_requests is not None:
+            command.extend(["--max-concurrent-requests", str(args.max_concurrent_requests)])
         if args.kv_format != "int8":
             command.extend(("--kv-format", args.kv_format))
         for name in args.served_model_name:
@@ -198,6 +200,14 @@ def serve(args):
             command.extend(["--max-image-pixels", str(args.max_image_pixels)])
         if args.no_webui:
             command.append("--no-webui")
+        if (version := paths.installed_version()) is not None:
+            command.extend(["--installed-version", version])
+        if args.no_update_check:
+            command.append("--no-update-check")
+        else:
+            command.extend(["--update-cache", str(paths.UPDATE_CACHE)])
+            if (channel := paths.install_channel()) is not None:
+                command.extend(["--install-channel", channel])
         for host in args.allowed_host:
             command.extend(["--allowed-host", host])
         environment = dict(
@@ -285,6 +295,16 @@ def _parse_port(value):
     return port
 
 
+def _parse_request_limit(value):
+    try:
+        parsed = int(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError("must be an integer from 1 to 4") from None
+    if not 1 <= parsed <= 4:
+        raise argparse.ArgumentTypeError("must be an integer from 1 to 4")
+    return parsed
+
+
 def _parse_max_memory(value):
     normalized = value.strip().upper()
     if normalized == "AUTO":
@@ -331,9 +351,12 @@ def _parse_max_context(value):
 
 
 def _version():
+    version = paths.installed_version()
     if not paths.PACKAGED:
-        return "MLTF (source checkout)"
-    return "MLTF " + str(json.loads(paths.RELEASE.read_text())["version"])
+        return f"MLTF {version} (source checkout)" if version else "MLTF (source checkout)"
+    if version is None:
+        raise LauncherError("cannot read the installed MLTF version")
+    return f"MLTF {version}"
 
 
 def _parse_served_model_name(value):
@@ -463,6 +486,13 @@ def parse_args(argv=None):
         help="target KV cache storage (default: int8); bf16 uses more memory",
     )
     server.add_argument(
+        "--max-concurrent-requests",
+        type=_parse_request_limit,
+        default=None,
+        help="active generation request limit 1-4; excess requests wait FIFO "
+        "(default: automatic; does not change physical batch width B)",
+    )
+    server.add_argument(
         "--max-memory",
         type=_parse_max_memory,
         help="Metal budget ceiling, e.g. 28G (default: auto)",
@@ -510,6 +540,12 @@ def parse_args(argv=None):
         help="SSD free-space floor (requires --ssd-root)",
     )
     server.add_argument("--no-webui", action="store_true", help="disable the chat page")
+    server.add_argument(
+        "--no-update-check",
+        action="store_true",
+        help="do not check GitHub for a newer release (also MLTF_NO_UPDATE_CHECK=1); "
+        "the check is cached, non-blocking and notification-only",
+    )
     for name in clients.INSTALL_URLS:
         commands.add_parser(name, help=f"connect {name} to the running server")
     args = parser.parse_args(argv)

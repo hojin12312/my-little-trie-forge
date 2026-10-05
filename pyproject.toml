@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "my-little-trie-forge"
-version = "0.1.1"
+version = "0.1.2"
 description = "Model- and silicon-specialized inference engine for Apple Silicon"
 readme = "README.md"
 requires-python = ">=3.12,<3.15"

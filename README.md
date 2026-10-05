@@ -134,8 +134,12 @@ mltf serve --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memor
 
 Default address: `127.0.0.1:8000`; SSD caching is OFF. See [installation instructions](docs/INSTALL.md) for memory/SSD limits and model preparation requirements.
 
+`--max-concurrent-requests` 1–4 optionally caps active generation requests; extra requests wait FIFO within the existing safety limits. Omitting it keeps automatic concurrency, and it does not change physical batch width. See [active request limit](docs/MAX_CONCURRENT_REQUESTS.md).
 
-Python installation: `pip install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.1/my_little_trie_forge-0.1.1-py3-none-macosx_26_0_arm64.whl` or `uv tool install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.1/my_little_trie_forge-0.1.1-py3-none-macosx_26_0_arm64.whl`. See [prepare-q8c](MODEL_ASSETS.md) for source conversion.
+MLTF checks GitHub Releases at most once every 24 hours for a newer stable release and, only when one exists, prints one line at startup and shows a small notice in `/status` and the Web UI. The check is cached, runs in the background after the server is Ready and never delays or affects inference; failures stay silent. It never downloads or installs anything and sends no telemetry. Disable it with `mltf serve --no-update-check` or `MLTF_NO_UPDATE_CHECK=1`. See [update notification](docs/INSTALL.md#update-notification).
+
+
+Python installation: `pip install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.2/my_little_trie_forge-0.1.2-py3-none-macosx_26_0_arm64.whl` or `uv tool install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.2/my_little_trie_forge-0.1.2-py3-none-macosx_26_0_arm64.whl`. See [prepare-q8c](MODEL_ASSETS.md) for source conversion.
 
 ## Support
 

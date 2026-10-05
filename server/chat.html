@@ -89,6 +89,11 @@
   #send { width: 34px; height: 34px; flex: none; border-radius: 50%; color: var(--bg); background: var(--text); font-size: 17px }
   #send:disabled { color: var(--muted); background: var(--hover) }
   #mobile-header, #scrim { display: none }
+  #update-notice { position: fixed; top: 10px; right: 14px; z-index: 11; display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 28px); padding: 6px 8px 6px 14px; border: 1px solid var(--border); border-radius: 18px; background: var(--composer); box-shadow: var(--shadow); color: var(--muted); font-size: 13px }
+  #update-notice[hidden] { display: none }
+  #update-notice a { color: var(--text); font-weight: 600 }
+  #update-dismiss { width: 24px; height: 24px; border-radius: 50%; color: var(--muted); font-size: 16px; line-height: 1 }
+  #update-dismiss:hover { color: var(--text); background: var(--hover) }
 
   @media (max-width: 720px) {
     :root { --sidebar: 0px }
@@ -133,6 +138,7 @@
   <div class="brand">MLTF</div>
   <button id="mobile-new" type="button" aria-label="New chat"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-6"/><path d="m15 4 5 5M14 10l6-6"/></svg></button>
 </header>
+<div id="update-notice" role="status" hidden><span id="update-text"></span><a id="update-link" target="_blank" rel="noopener noreferrer">View release</a><button id="update-dismiss" type="button" aria-label="Dismiss">&times;</button></div>
 <main><div id="chat"></div></main>
 <form id="form">
   <button id="attach" type="button" aria-label="Add images" title="Add images">
@@ -583,8 +589,32 @@
   $('#mobile-new').addEventListener('click', newChat);
   $('#menu').addEventListener('click', () => document.body.classList.add('menu-open'));
   $('#scrim').addEventListener('click', () => document.body.classList.remove('menu-open'));
+  const releasePrefix = 'https://github.com/hojin12312/my-little-trie-forge/releases/';
+  function showUpdate(update) {
+    const notice = $('#update-notice');
+    const ok = update && update.status === 'update_available' && update.update_available === true
+      && /^\d+\.\d+\.\d+$/.test(update.latest_version || '')
+      && typeof update.release_url === 'string' && update.release_url.startsWith(releasePrefix);
+    notice.hidden = !ok;
+    if (!ok) return;
+    $('#update-text').textContent = `MLTF ${update.latest_version} is available.`;
+    $('#update-link').href = update.release_url;
+  }
+  async function checkUpdate(attempt = 0) {
+    try {
+      const response = await fetch('/status', {headers: apiKey.value ? {Authorization: `Bearer ${apiKey.value}`} : {}});
+      if (!response.ok) return;
+      const {update} = await response.json();
+      showUpdate(update);
+      if (update?.status === 'checking' && attempt < 5) setTimeout(() => checkUpdate(attempt + 1), 3000);
+    }
+    catch {}
+  }
+  $('#update-dismiss').addEventListener('click', () => { $('#update-notice').hidden = true; });
+  apiKey.addEventListener('change', () => checkUpdate());
   renderChat();
   renderRecents();
   updateComposer();
+  checkUpdate();
 </script>
 </html>

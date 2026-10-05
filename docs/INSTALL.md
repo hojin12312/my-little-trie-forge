@@ -12,7 +12,7 @@ Code packages contain no weights. Read [MODEL_ASSETS.md](../MODEL_ASSETS.md) and
 
 ```sh
 brew install hojin12312/mltf/mltf
-# Alternatively: pip install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.1/my_little_trie_forge-0.1.1-py3-none-macosx_26_0_arm64.whl
+# Alternatively: pip install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.2/my_little_trie_forge-0.1.2-py3-none-macosx_26_0_arm64.whl
 mltf download --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --accept-model-licenses
 mltf serve --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memory 96G
 ```
@@ -20,6 +20,20 @@ mltf serve --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memor
 The downloader verifies the manifest and SHA-256. Review the model card and terms before consenting. Source conversion uses `prepare-q8c` from [MODEL_ASSETS.md](../MODEL_ASSETS.md).
 
 README256K/96G matches the validated target-machine profile. 32K/48G is a separate conservative profile and the prior soak scope. Signing is ad-hoc; Developer ID/notarization is not included.
+
+## Update notification
+
+MLTF performs an automatic update check (notification only; it is not an automatic updater). After the server is Ready, a background daemon thread asks the public GitHub Releases API (`hojin12312/my-little-trie-forge`, latest published, non-draft, non-prerelease release) whether a newer stable version exists. The request is one unauthenticated HTTPS GET with a fixed `User-Agent`; it carries no model name, prompt, path, hostname, hardware or usage data, and no telemetry is sent.
+
+- Non-blocking: the server never waits for GitHub. DNS, TLS, rate-limit (403/429), 404, 5xx, invalid JSON, timeout and offline conditions are all non-fatal, do not change `/status` health, and leave model loading, readiness, the HTTP API and the Web UI unaffected. The state reads `checking` for at most 8 seconds, then `unavailable` with a short `reason`.
+- Cached: the result is stored in `update/update-check.json` under the MLTF data directory (source checkouts: `build/runtime/update/`) and reused for 24 hours. Failed attempts back off for one hour. A missing, corrupt, old-schema or future-dated cache is ignored and rewritten atomically. A stale cache is never shown as a fresh result.
+- Version comparison is numeric (`0.1.10` is newer than `0.1.9`). An installed version newer than the latest release (a development or local build) is reported as `up_to_date`; no downgrade is suggested. The installed version comes from the packaged `release.json`, or from `pyproject.toml` in a source checkout.
+- Only a newer version prints one startup line, for example `A new MLTF version is available: 0.1.3 (installed: 0.1.2). See: <release URL>`. Installations inside a Homebrew Cellar keg name `brew upgrade hojin12312/mltf/mltf`; other installations get only the release link because the installation method cannot be identified reliably. The link is always built from the validated release tag.
+- `/status` gains an `update` object with `status` (`unknown`, `checking`, `up_to_date`, `update_available`, `unavailable`, `disabled`), `installed_version`, `latest_version`, `update_available`, `checked_at` (Unix seconds), `release_url` and, when relevant, `reason`. Existing fields are unchanged. The Web UI reads `/status` and shows a small dismissible notice with a "View release" link (new tab) only for `update_available`; the browser never contacts GitHub.
+- Opt out with `mltf serve --no-update-check` or `MLTF_NO_UPDATE_CHECK=1` (`1`, `true`, `yes` or `on`). Either one disables the check: no network call is made, the cache is not read, `/status` reports `disabled`, and nothing is printed. Direct `server/server.py` runs check only when started by the launcher with the installed version.
+
+Upgrading remains manual: stop running MLTF servers, then upgrade through the channel you installed from (for Homebrew, `brew upgrade hojin12312/mltf/mltf`; otherwise follow the release page). Model data and caches are kept.
+
 
 ## Memory and SSD cache
 

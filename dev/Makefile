@@ -1,4 +1,4 @@
-RELEASE_VERSION := 0.1.1
+RELEASE_VERSION := 0.1.2
 .PHONY: check public-smoke package package-bottle package-check
 check: public-smoke
 public-smoke: install-environment all

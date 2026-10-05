@@ -58,6 +58,7 @@ SERVER_FILES = (
     "schema_validation.py",
     "crash_trace.py",
     "chat.html",
+    "update_check.py",
 )
 NOTICE_FILES = (
     "LICENSE",

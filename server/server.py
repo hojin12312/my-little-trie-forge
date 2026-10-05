@@ -23,7 +23,7 @@ from transformers import AutoTokenizer
 
 if __package__:
     from . import images as image_input
-    from . import json_codec, judgments
+    from . import json_codec, judgments, update_check
     from . import runtime as engine_runtime
     from .api_shapes import (
         anthropic_response,
@@ -65,6 +65,7 @@ else:
     import images as image_input
     import json_codec
     import judgments
+    import update_check
     from api_shapes import (
         anthropic_response,
         anthropic_stop,
@@ -444,6 +445,7 @@ class FrontendHandler(BaseHTTPRequestHandler):
         body = None
         self._body_reservation = None
         submitted = False
+        active_acquired = False
         # Route on the URL path so standard protocol query parameters do not
         # turn a supported endpoint into an unknown one.
         path = self.path.partition("?")[0]
@@ -505,6 +507,11 @@ class FrontendHandler(BaseHTTPRequestHandler):
                         [judgments.detail(["timeout"], error.message)]
                     ) from error
                 raise
+            if not prompt_only and self.server.generation_admission is not None:
+                self.server.generation_admission.acquire(
+                    deadline, self._client_disconnected
+                )
+                active_acquired = True
             if path == "/tokenize":
                 self._json(200, {"tokens": self.app.tokenize(body, deadline=deadline)})
                 return
@@ -646,7 +653,11 @@ class FrontendHandler(BaseHTTPRequestHandler):
             if self._body_reservation is not None:
                 self._body_reservation.release()
                 self._body_reservation = None
-            admission.release()
+            try:
+                if active_acquired:
+                    self.server.generation_admission.release()
+            finally:
+                admission.release()
             self.app.latencies.observe("http_request", time.monotonic() - started_at)
 
     def _judgment_complete(self, job, row):
@@ -1608,6 +1619,70 @@ class HttpAdmission:
             return {"active": self.active, "capacity": self.capacity}
 
 
+MAX_ACTIVE_REQUEST_LIMIT = 4
+
+
+class WaitingAdmission:
+    """FIFO logical request gate, independent of native physical batch width."""
+
+    def __init__(self, capacity):
+        if (
+            isinstance(capacity, bool)
+            or not isinstance(capacity, int)
+            or not 1 <= capacity <= MAX_ACTIVE_REQUEST_LIMIT
+        ):
+            raise ValueError(
+                f"active request limit must be an integer from 1 to "
+                f"{MAX_ACTIVE_REQUEST_LIMIT}"
+            )
+        self.capacity = capacity
+        self.active = 0
+        self.waiters = []
+        self.closed = False
+        self.changed = threading.Condition()
+
+    def acquire(self, deadline, disconnected):
+        ticket = object()
+        with self.changed:
+            self.waiters.append(ticket)
+            try:
+                while True:
+                    if self.closed:
+                        raise APIError(503, "server is stopping", "server_stopping")
+                    if disconnected():
+                        raise ConnectionResetError("queued client disconnected")
+                    remaining = deadline - time.monotonic()
+                    if remaining <= 0:
+                        raise TimeoutError("request expired while waiting for capacity")
+                    if self.waiters[0] is ticket and self.active < self.capacity:
+                        self.waiters.pop(0)
+                        self.active += 1
+                        self.changed.notify_all()
+                        return
+                    self.changed.wait(min(0.1, remaining))
+            except BaseException:
+                self.waiters.remove(ticket)
+                self.changed.notify_all()
+                raise
+
+    def release(self):
+        with self.changed:
+            if self.active <= 0:
+                raise RuntimeError("active request released without acquisition")
+            self.active -= 1
+            self.changed.notify_all()
+
+    def close(self):
+        with self.changed:
+            self.closed = True
+            self.changed.notify_all()
+
+    def stats(self):
+        with self.changed:
+            return {"active": self.active, "waiting": len(self.waiters),
+                    "capacity": self.capacity}
+
+
 class RequestBodyReservation:
     """Account input bytes until preparation and any retained input are released."""
 
@@ -1675,6 +1750,7 @@ class FrontendServer(ThreadingHTTPServer):
         api_key=None,
         webui=True,
         max_request_bytes=DEFAULT_MAX_REQUEST_BYTES,
+        max_concurrent_requests=None,
     ):
         if not is_finite_number(io_timeout) or io_timeout <= 0:
             raise ValueError("io_timeout must be positive and finite")
@@ -1696,8 +1772,13 @@ class FrontendServer(ThreadingHTTPServer):
             for host in (*allowed_hosts, address[0], "localhost", "127.0.0.1", "::1")
             if host not in ("0.0.0.0", "::")
         }
+        self.update_checker = None
         self.instance_id = secrets.token_hex(12)
         self.started_at = time.time()
+        self.generation_admission = (
+            WaitingAdmission(max_concurrent_requests)
+            if max_concurrent_requests is not None else None
+        )
         self.requests = HttpAdmission(request_capacity)
         self.token_counts = HttpAdmission(request_capacity)
         self.connections = HttpAdmission(
@@ -1723,6 +1804,13 @@ class FrontendServer(ThreadingHTTPServer):
             "token_counts": self.token_counts.stats(),
             "connections": self.connections.stats(),
         }
+        if self.generation_admission is not None:
+            status["http"]["generation_requests"] = self.generation_admission.stats()
+        status["update"] = (
+            self.update_checker.snapshot()
+            if self.update_checker is not None
+            else update_check.disabled_snapshot()
+        )
         return status
 
     def process_request(self, request, client_address):
@@ -1759,6 +1847,8 @@ class FrontendServer(ThreadingHTTPServer):
             self.connections.release()
 
     def server_close(self):
+        if self.generation_admission is not None:
+            self.generation_admission.close()
         super().server_close()
         self.connections.idle.wait(min(2.0, self.io_timeout))
 
@@ -1839,6 +1929,20 @@ def _parse_model_id(value):
     return value
 
 
+def _parse_request_limit(value):
+    try:
+        parsed = int(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(
+            f"must be an integer from 1 to {MAX_ACTIVE_REQUEST_LIMIT}"
+        ) from None
+    if not 1 <= parsed <= MAX_ACTIVE_REQUEST_LIMIT:
+        raise argparse.ArgumentTypeError(
+            f"must be an integer from 1 to {MAX_ACTIVE_REQUEST_LIMIT}"
+        )
+    return parsed
+
+
 def parse_args(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("target")
@@ -1863,6 +1967,13 @@ def parse_args(argv=None):
     parser.add_argument("--max-context", type=_parse_max_context, default=None)
     parser.add_argument("--max-memory", type=_parse_max_memory, default=None)
     parser.add_argument(
+        "--max-concurrent-requests",
+        type=_parse_request_limit,
+        default=None,
+        help="active generation request limit 1-4; excess requests wait FIFO "
+        "(default: automatic; does not change physical batch width B)",
+    )
+    parser.add_argument(
         "--kv-format",
         choices=("int8", "bf16"),
         default="int8",
@@ -1886,6 +1997,14 @@ def parse_args(argv=None):
     parser.add_argument("--allowed-host", action="append", default=[])
     parser.add_argument("--api-key", default=os.environ.get("SPLASH_API_KEY"))
     parser.add_argument("--no-webui", action="store_true")
+    parser.add_argument(
+        "--no-update-check",
+        action="store_true",
+        help="do not check GitHub for a newer release (also MLTF_NO_UPDATE_CHECK=1)",
+    )
+    parser.add_argument("--installed-version", help=argparse.SUPPRESS)
+    parser.add_argument("--update-cache", type=Path, help=argparse.SUPPRESS)
+    parser.add_argument("--install-channel", choices=("homebrew",), help=argparse.SUPPRESS)
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--binary", default=str(ROOT / "build" / "splash"))
     args = parser.parse_args(argv)
@@ -1973,6 +2092,7 @@ def main():
             api_key=args.api_key,
             webui=not args.no_webui,
             max_request_bytes=args.max_request_size,
+            max_concurrent_requests=args.max_concurrent_requests,
         )
         server.server_bind()
         thinking_codec = ThinkingCodec(load_thinking_key())
@@ -2023,6 +2143,13 @@ def main():
             default_reasoning_effort=args.default_reasoning_effort,
         )
         server.app = app
+        server.update_checker = update_check.UpdateChecker(
+            args.installed_version,
+            args.update_cache,
+            enabled=not (args.no_update_check or update_check.disabled_by_environment()),
+            install_channel=args.install_channel,
+            announce=print_status,
+        )
         server.server_activate()
         address = f"http://{args.host}:{server.server_port}"
         context = (
@@ -2030,7 +2157,16 @@ def main():
             if effective_context % 1024 == 0
             else f"{effective_context:,}"
         )
-        print_status(f"Ready · {args.model} · context {context} · {address}")
+        request_limit = (
+            str(args.max_concurrent_requests)
+            if args.max_concurrent_requests is not None
+            else "automatic"
+        )
+        print_status(
+            f"Ready · {args.model} · context {context} · "
+            f"request limit {request_limit} · {address}"
+        )
+        server.update_checker.start()
         server.serve_forever()
     except (engine_runtime.EngineUnhealthy, ThinkingKeyError) as error:
         print_status(f"Error · {error}", error=True)

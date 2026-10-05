@@ -135,8 +135,12 @@ mltf serve --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memor
 
 기본 주소는 `127.0.0.1:8000`이며 SSD 캐시는 꺼져 있습니다. 메모리·SSD 한도와 모델 준비 요구사항은 [설치 문서](docs/INSTALL.ko.md)에 있습니다.
 
+`--max-concurrent-requests` 1–4로 활성 생성 요청 수를 제한할 수 있으며, 초과 요청은 기존 안전 한도 안에서 FIFO로 대기합니다. 미지정 시 기존 자동 동시성을 유지하며 물리 배치 폭은 바뀌지 않습니다. [활성 요청 상한](docs/MAX_CONCURRENT_REQUESTS.md)을 참고하세요.
 
-Python 설치: `pip install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.1/my_little_trie_forge-0.1.1-py3-none-macosx_26_0_arm64.whl` 또는 `uv tool install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.1/my_little_trie_forge-0.1.1-py3-none-macosx_26_0_arm64.whl`. 직접 변환하려면 [prepare-q8c 안내](MODEL_ASSETS.md)를 따르세요.
+MLTF는 24시간에 한 번 이하로 GitHub Releases에서 새 안정 릴리스를 확인하고, 있을 때만 시작 시 한 줄을 출력하며 `/status`와 Web UI에 작은 알림을 표시합니다. 이 확인은 캐시되며 서버가 Ready가 된 뒤 백그라운드에서 실행되어 추론을 지연하거나 방해하지 않고, 실패해도 조용히 넘어갑니다. 아무것도 자동으로 다운로드·설치하지 않으며 텔레메트리를 보내지 않습니다. `mltf serve --no-update-check` 또는 `MLTF_NO_UPDATE_CHECK=1`로 끌 수 있습니다. [업데이트 알림](docs/INSTALL.ko.md#업데이트-알림)을 참고하세요.
+
+
+Python 설치: `pip install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.2/my_little_trie_forge-0.1.2-py3-none-macosx_26_0_arm64.whl` 또는 `uv tool install https://github.com/hojin12312/my-little-trie-forge/releases/download/v0.1.2/my_little_trie_forge-0.1.2-py3-none-macosx_26_0_arm64.whl`. 직접 변환하려면 [prepare-q8c 안내](MODEL_ASSETS.md)를 따르세요.
 
 ## 지원 범위
 
