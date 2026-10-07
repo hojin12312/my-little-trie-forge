@@ -26,6 +26,7 @@ INSTALL_FILES = (
     "clients.py",
     "paths.py",
     "models.py",
+    "service.py",
     "prepare_q8c.py",
     "convert_qwen38_q8.py",
     "catalog.py",
