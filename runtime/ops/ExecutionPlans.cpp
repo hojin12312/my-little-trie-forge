@@ -303,13 +303,21 @@ MoeWorkspace ExecutionPlans::moeDecodeWorkspacePerLane(MoeShape shape) const {
   return bound;
 }
 
-uint64_t ExecutionPlans::gateUpWorkspace(LinearMatrix matrix) const {
+uint64_t ExecutionPlans::gateUpWorkspace(LinearMatrix matrix,
+                                         bool quantized8) const {
   uint64_t bound = 0;
   for (uint32_t lanes = 1; lanes <= kMaximumLanes; ++lanes) {
     const LinearWorkload workload{matrix, decodeRowsForLanes(lanes),
                                   LinearPhase::Decode, LinearEpilogue::GateUp};
     bound = std::max({bound, baselineLinear_.plan(workload).gateScratchBytes(),
                       linear_.plan(workload).gateScratchBytes()});
+    // The Q8 operator splits gate/up into two dispatches from M24 on every
+    // device, while the Apple9 Q4 policy selects one-pass simdgroup tiles
+    // that need no scratch. Bound the operator that encodes the matrix.
+    if (quantized8)
+      bound = std::max({bound,
+                        baselineLinearQ8_.plan(workload).gateScratchBytes(),
+                        linearQ8_.plan(workload).gateScratchBytes()});
   }
   return bound;
 }

@@ -125,7 +125,9 @@ public:
       MoeShape shape, uint32_t maximumRows) const;
   [[nodiscard]] MoeWorkspace moeDecodeWorkspacePerLane(MoeShape shape) const;
   // This scratch is one whole-command buffer, not a per-lane arena field.
-  [[nodiscard]] uint64_t gateUpWorkspace(LinearMatrix matrix) const;
+  // quantized8 adds the dense Q8 operator's bound for a matrix it encodes.
+  [[nodiscard]] uint64_t gateUpWorkspace(LinearMatrix matrix,
+                                        bool quantized8 = false) const;
 
 private:
   Q4Linear linear_;
