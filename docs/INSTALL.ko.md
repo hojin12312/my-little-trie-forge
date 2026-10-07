@@ -1,6 +1,6 @@
 # 설치
 
-[English](INSTALL.md) · [README](../README.ko.md)
+[English](INSTALL.md) · [中文](INSTALL.zh.md) · [README](../README.ko.md)
 
 기준 검증 기기는 M5 Max GPU40코어/128GiB, macOS27.0(26A428)입니다. Native 최소 환경은 필요한 GPU 기능을 갖춘 macOS26.4이며 Python3.13을 사용합니다. 다른 GPU/RAM 구성의 성능을 인증하지 않습니다.
 
@@ -20,6 +20,26 @@ mltf serve --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memor
 모델 다운로드는 manifest와 SHA-256을 검증합니다. 모델 카드를 먼저 읽고 이용 조건에 동의하세요. 직접 변환은 [MODEL_ASSETS.md](../MODEL_ASSETS.md)의 `prepare-q8c`를 사용합니다.
 
 README의 256K/96G는 검증한 목표 머신의 프로필입니다. 32K/48G는 별도의 보수적인 프로필이며 이전 soak 검증 범위입니다. 서명은 ad-hoc이며 Developer ID와 notarization은 포함하지 않습니다.
+
+## 로그인 시 자동 실행 (macOS)
+
+`mltf service`는 `mltf serve`를 사용자별 LaunchAgent로 등록합니다. 터미널을 열어 두지 않아도 로그인할 때 서버가 시작되어 계속 실행됩니다. 엔진이 Metal을 쓰려면 그래픽 로그인 세션이 필요하므로 시스템 데몬이 아니라 LaunchAgent를 사용합니다.
+
+```sh
+mltf service install -- --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memory 96G
+mltf service status
+mltf service stop        # 지금 중지합니다. 다음 로그인 때는 다시 시작됩니다
+mltf service start
+mltf service restart
+mltf service uninstall   # 로그인 시 시작도 함께 제거합니다
+```
+
+- `--` 뒤의 인자는 `mltf serve`에 그대로 전달되고 같은 파서로 검증되므로, 잘못된 인자는 설치 시점에 오류가 납니다. 로그인 서비스는 `SPLASH_PORT`를 볼 수 없으므로 포트는 항상 명시적으로 기록됩니다. 포트마다 별도의 서비스입니다. 나머지 동작은 설치된 서비스를 스스로 찾으므로 포트를 기억할 필요가 없습니다. `mltf service status`는 설치된 모든 서비스를 나열하고, `start`, `stop`, `restart`, `uninstall`은 하나뿐이면 그 서비스를 대상으로 하며 여러 개이면 `--port`를 요구합니다(`--port`나 `SPLASH_PORT`가 항상 우선합니다).
+- 서비스는 `PATH`의 `mltf`(소스 checkout에서는 `./mltf`)를 실행하며 경로를 준 그대로 유지합니다. 그래서 Homebrew의 `bin/mltf`는 업그레이드 후에도 유효합니다. 다른 실행 파일은 `--executable PATH`로 지정합니다. 실행 중인 다른 서버와 마찬가지로 업그레이드 전에 서비스를 중지하세요.
+- 로그인 서비스는 현재 디렉터리에서 시작하지 않으므로 상대 경로 `--model-path`는 거부됩니다. `MLTF_DATA_ROOT`는 전달되지만 `SPLASH_API_KEY`는 전달되지 않습니다. API key가 필요하면 `--api-key`를 직접 지정하세요. 이 경우 plist에 저장되며 본인만 읽을 수 있습니다.
+- 충돌 후 자동 재시작은 없으므로, 메모리 압박으로 실패하는 서버가 반복해서 재시작되지 않습니다. `mltf service start`로 다시 시작합니다.
+- 모델은 먼저 준비하세요(`mltf download`). 로그인 서비스에는 모델 준비 과정을 보여 줄 터미널이 없습니다.
+- 라벨은 `io.github.hojin12312.mltf.serve-<port>`, plist는 `~/Library/LaunchAgents/<label>.plist`, 출력은 `~/Library/Logs/mltf-<port>.log`이며 로그는 순환(rotate)되지 않습니다. `mltf service status`가 상태와 이 경로를 출력합니다. 포트가 열려 있다고 Ready인 것은 아닙니다. 로그를 확인하세요.
 
 ## 업데이트 알림
 

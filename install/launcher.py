@@ -13,13 +13,14 @@ import urllib.error
 import urllib.request
 
 try:
-    from . import catalog, clients, paths
+    from . import catalog, clients, paths, service
     from . import models as model_artifacts
 except ImportError:  # Executed directly by the source or packaged entry point.
     import catalog
     import clients
     import models as model_artifacts
     import paths
+    import service
 
 ROOT = paths.ROOT
 RUNTIME_DIR = paths.RUNTIME
@@ -546,6 +547,38 @@ def parse_args(argv=None):
         help="do not check GitHub for a newer release (also MLTF_NO_UPDATE_CHECK=1); "
         "the check is cached, non-blocking and notification-only",
     )
+    service_parser = commands.add_parser(
+        "service",
+        help="run the server as a login service (macOS launchd)",
+        description=(
+            "Install `mltf serve` as a per-user LaunchAgent that starts at login, "
+            "and manage it."
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "Examples:\n"
+            "  mltf service install -- --model OWNER/REPO --max-context 128K\n"
+            "  mltf service status\n"
+            "  mltf service stop        # stops now; it still starts at next login\n"
+            "  mltf service uninstall   # also removes the login start\n\n"
+            "Everything after -- is passed to `mltf serve` unchanged. A server on\n"
+            "another port is managed with --port. The log is\n"
+            "~/Library/Logs/mltf-<port>.log."
+        ),
+    )
+    service_parser.add_argument("action", choices=service.ACTIONS)
+    service_parser.add_argument(
+        "--port",
+        type=_parse_port,
+        help="port of the service to manage (default: SPLASH_PORT, else the "
+        "installed service); install takes it from the serve arguments",
+    )
+    service_parser.add_argument(
+        "--executable",
+        metavar="PATH",
+        help="install only: the mltf executable to launch "
+        "(default: mltf on PATH, or ./mltf in a source checkout)",
+    )
     for name in clients.INSTALL_URLS:
         commands.add_parser(name, help=f"connect {name} to the running server")
     args = parser.parse_args(argv)
@@ -567,6 +600,25 @@ def parse_args(argv=None):
             parser.error("API key must contain only visible ASCII characters")
     if client_args and args.command == "serve":
         parser.error("arguments after -- are only supported for coding clients")
+    if args.command == "service":
+        if args.action == "install":
+            if not client_args:
+                parser.error("service install needs the serve arguments after --")
+            if args.port is not None:
+                parser.error("service install takes --port from the serve arguments")
+            # Validate with the real serve parser so mistakes fail now, not at login.
+            args.serve = parse_args(["serve", *client_args])
+        else:
+            if client_args:
+                parser.error("arguments after -- are only supported for service install")
+            if args.executable is not None:
+                parser.error("--executable is only supported for service install")
+            # Without --port or SPLASH_PORT the installed service is used.
+            if args.port is None and "SPLASH_PORT" in os.environ:
+                try:
+                    args.port = _parse_port(os.environ["SPLASH_PORT"])
+                except argparse.ArgumentTypeError as error:
+                    parser.error(f"SPLASH_PORT: {error}")
     if args.command == "serve":
         if args.ssd_root is not None and not args.ssd_root.is_absolute():
             parser.error("--ssd-root must be an absolute path")
@@ -611,9 +663,12 @@ def main(argv=None):
     try:
         if args.command == "download":
             return download_model(args)
+        if args.command == "service":
+            return service.run(args)
         return serve(args) if args.command == "serve" else coding_client(args)
     except (
         LauncherError,
+        service.ServiceError,
         clients.ClientError,
         model_artifacts.ModelError,
         OSError,
