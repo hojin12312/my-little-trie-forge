@@ -36,7 +36,7 @@ mltf service restart
 mltf service uninstall   # 同时移除登录自启
 ```
 
-- `--` 之后的所有参数原样传给 `mltf serve`，并用同一个解析器校验，所以写错会在安装时就报错。端口总是被显式记录下来，因为登录服务看不到 `SPLASH_PORT`。其他端口用 `--port` 管理，是独立的服务（`mltf service status --port 8001`）。
+- `--` 之后的所有参数原样传给 `mltf serve`，并用同一个解析器校验，所以写错会在安装时就报错。端口总是被显式记录下来，因为登录服务看不到 `SPLASH_PORT`。每个端口是一个独立的服务。其余操作会自己找到已安装的服务，不需要记端口：`mltf service status` 列出所有已安装的服务，`start`、`stop`、`restart`、`uninstall` 在只有一个服务时直接作用于它，有多个时要求用 `--port` 指定（`--port` 或 `SPLASH_PORT` 始终优先）。
 - 服务从 `PATH` 中启动 `mltf`（源码检出目录中则是 `./mltf`），并保持路径原样，所以 Homebrew 的 `bin/mltf` 在升级后依然有效。可用 `--executable PATH` 指定其他可执行文件。与任何正在运行的服务器一样，升级前请先停止该服务。
 - 相对路径的 `--model-path` 会被拒绝，因为登录服务不是从你当前的目录启动的。`MLTF_DATA_ROOT` 会被带过去，`SPLASH_API_KEY` 不会。需要 API key 时请显式传 `--api-key`：它会存放在 plist 中，该文件只有你本人可读。
 - 崩溃后不会自动重启，因此在内存压力下失败的服务器不会陷入反复重启的循环。用 `mltf service start` 重新启动。

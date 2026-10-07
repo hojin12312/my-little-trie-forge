@@ -41,6 +41,43 @@ def log_path(port):
     return Path.home() / "Library/Logs" / f"mltf-{port}.log"
 
 
+def installed_ports():
+    """Ports of the services whose LaunchAgent plist is installed, ascending."""
+    pattern = re.compile(re.escape(LABEL_PREFIX) + r"(\d{1,5})\.plist")
+    folder = plist_path(0).parent
+    try:
+        names = os.listdir(folder)
+    except OSError:
+        return []
+    ports = {int(m.group(1)) for m in map(pattern.fullmatch, names) if m}
+    return sorted(port for port in ports if 1 <= port <= 65535)
+
+
+def select_ports(args):
+    """The ports an action applies to, as an ordered list.
+
+    An explicit --port or SPLASH_PORT wins. Otherwise the installed services
+    are used, so a service on a custom port needs no port to be remembered.
+    """
+    if args.port is not None:
+        return [args.port]
+    found = installed_ports()
+    if len(found) > 1 and args.action != "status":
+        listed = ", ".join(str(port) for port in found)
+        raise ServiceError(
+            f"several services are installed (ports {listed}); "
+            f"choose one with --port to {args.action} it"
+        )
+    return found
+
+
+def _no_service():
+    return ServiceError(
+        "no mltf service is installed; "
+        "run `mltf service install -- --model OWNER/REPO ...`"
+    )
+
+
 def _target(port):
     return f"gui/{os.getuid()}/{label(port)}"
 
@@ -183,7 +220,11 @@ def install(args):
 
 
 def uninstall(args):
-    port = args.port
+    ports = select_ports(args)
+    if not ports:
+        print("no mltf service is installed")
+        return 0
+    port = ports[0]
     _launchctl("bootout", _target(port), check=False)
     # bootout is asynchronous: return only once launchd has really let go.
     _wait_until(lambda: _state(port) is None, STOP_TIMEOUT, "unloading the service")
@@ -194,54 +235,56 @@ def uninstall(args):
     return 0
 
 
-def _require_installed(port):
+def _select_one(args):
+    """Resolve the single port an action applies to, and its launchd state."""
+    ports = select_ports(args)
+    if not ports:
+        raise _no_service()
+    port = ports[0]
     state = _state(port)
     if state is None:
         raise ServiceError(
             f"service on port {port} is not installed; "
             "run `mltf service install -- --model OWNER/REPO ...`"
         )
-    return state
+    return port, state
 
 
 def start(args):
-    state = _require_installed(args.port)
+    port, state = _select_one(args)
     if _running(state):
-        print(f"{label(args.port)} is already running")
+        print(f"{label(port)} is already running")
         return 0
-    _launchctl("kickstart", _target(args.port))
-    print(f"started {label(args.port)}")
+    _launchctl("kickstart", _target(port))
+    print(f"started {label(port)}")
     return 0
 
 
 def stop(args):
-    state = _require_installed(args.port)
+    port, state = _select_one(args)
     if not _running(state):
-        print(f"{label(args.port)} is not running")
+        print(f"{label(port)} is not running")
         return 0
-    _launchctl("kill", "SIGTERM", _target(args.port))
+    _launchctl("kill", "SIGTERM", _target(port))
     # Wait for the server to drain and exit, so `stop && start` cannot see the
     # old process still running and do nothing.
-    _wait_until(
-        lambda: not _running(_state(args.port)), STOP_TIMEOUT, "stopping the service"
-    )
-    print(f"stopped {label(args.port)}; it starts again at the next login")
+    _wait_until(lambda: not _running(_state(port)), STOP_TIMEOUT, "stopping the service")
+    print(f"stopped {label(port)}; it starts again at the next login")
     return 0
 
 
 def restart(args):
-    _require_installed(args.port)
-    _launchctl("kickstart", "-k", _target(args.port))
-    print(f"restarted {label(args.port)}")
+    port, _ = _select_one(args)
+    _launchctl("kickstart", "-k", _target(port))
+    print(f"restarted {label(port)}")
     return 0
 
 
-def status(args):
-    port = args.port
+def _print_status(port):
     state = _state(port)
     if state is None:
         print(f"{label(port)}: not installed")
-        return 1
+        return False
     print(f"{label(port)}: {state.get('state', 'unknown')}")
     if "pid" in state:
         print(f"pid: {state['pid']}")
@@ -249,7 +292,20 @@ def status(args):
         print(f"last exit code: {state['last exit code']}")
     print(f"plist: {plist_path(port)}")
     print(f"log: {log_path(port)}")
-    return 0
+    return True
+
+
+def status(args):
+    ports = select_ports(args)
+    if not ports:
+        print("no mltf service is installed")
+        return 1
+    results = []
+    for index, port in enumerate(ports):
+        if index:
+            print()
+        results.append(_print_status(port))
+    return 0 if all(results) else 1
 
 
 def run(args):

@@ -34,7 +34,7 @@ mltf service restart
 mltf service uninstall   # also removes the login start
 ```
 
-- Everything after `--` is passed to `mltf serve` unchanged and checked by the same parser, so a mistake fails at install time. The port is always recorded explicitly, because a login service does not see `SPLASH_PORT`. Another port is managed with `--port` and is a separate service (`mltf service status --port 8001`).
+- Everything after `--` is passed to `mltf serve` unchanged and checked by the same parser, so a mistake fails at install time. The port is always recorded explicitly, because a login service does not see `SPLASH_PORT`. Each port is a separate service. The other actions find the installed service by themselves, so you do not need to remember the port: `mltf service status` lists every installed service, and `start`, `stop`, `restart` and `uninstall` act on the only one, or ask for `--port` when there are several (`--port`, or `SPLASH_PORT`, always wins).
 - The service launches `mltf` from `PATH` (`./mltf` in a source checkout) and keeps the path as given, so Homebrew's `bin/mltf` stays valid across upgrades. Choose another executable with `--executable PATH`. As with any running server, stop the service before upgrading.
 - A relative `--model-path` is rejected because a login service does not start in your current directory. `MLTF_DATA_ROOT` is carried over; `SPLASH_API_KEY` is not. Pass `--api-key` explicitly if you need one: it is then stored in the plist, which is readable only by you.
 - There is no automatic restart after a crash, so a server that fails under memory pressure does not loop. `mltf service start` brings it back.

@@ -34,7 +34,7 @@ mltf service restart
 mltf service uninstall   # 로그인 시 시작도 함께 제거합니다
 ```
 
-- `--` 뒤의 인자는 `mltf serve`에 그대로 전달되고 같은 파서로 검증되므로, 잘못된 인자는 설치 시점에 오류가 납니다. 로그인 서비스는 `SPLASH_PORT`를 볼 수 없으므로 포트는 항상 명시적으로 기록됩니다. 다른 포트는 `--port`로 관리하며 별도의 서비스가 됩니다(`mltf service status --port 8001`).
+- `--` 뒤의 인자는 `mltf serve`에 그대로 전달되고 같은 파서로 검증되므로, 잘못된 인자는 설치 시점에 오류가 납니다. 로그인 서비스는 `SPLASH_PORT`를 볼 수 없으므로 포트는 항상 명시적으로 기록됩니다. 포트마다 별도의 서비스입니다. 나머지 동작은 설치된 서비스를 스스로 찾으므로 포트를 기억할 필요가 없습니다. `mltf service status`는 설치된 모든 서비스를 나열하고, `start`, `stop`, `restart`, `uninstall`은 하나뿐이면 그 서비스를 대상으로 하며 여러 개이면 `--port`를 요구합니다(`--port`나 `SPLASH_PORT`가 항상 우선합니다).
 - 서비스는 `PATH`의 `mltf`(소스 checkout에서는 `./mltf`)를 실행하며 경로를 준 그대로 유지합니다. 그래서 Homebrew의 `bin/mltf`는 업그레이드 후에도 유효합니다. 다른 실행 파일은 `--executable PATH`로 지정합니다. 실행 중인 다른 서버와 마찬가지로 업그레이드 전에 서비스를 중지하세요.
 - 로그인 서비스는 현재 디렉터리에서 시작하지 않으므로 상대 경로 `--model-path`는 거부됩니다. `MLTF_DATA_ROOT`는 전달되지만 `SPLASH_API_KEY`는 전달되지 않습니다. API key가 필요하면 `--api-key`를 직접 지정하세요. 이 경우 plist에 저장되며 본인만 읽을 수 있습니다.
 - 충돌 후 자동 재시작은 없으므로, 메모리 압박으로 실패하는 서버가 반복해서 재시작되지 않습니다. `mltf service start`로 다시 시작합니다.

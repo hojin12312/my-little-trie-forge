@@ -570,8 +570,8 @@ def parse_args(argv=None):
     service_parser.add_argument(
         "--port",
         type=_parse_port,
-        help="port of the service to manage (default: SPLASH_PORT or 8000); "
-        "install takes it from the serve arguments",
+        help="port of the service to manage (default: SPLASH_PORT, else the "
+        "installed service); install takes it from the serve arguments",
     )
     service_parser.add_argument(
         "--executable",
@@ -613,9 +613,10 @@ def parse_args(argv=None):
                 parser.error("arguments after -- are only supported for service install")
             if args.executable is not None:
                 parser.error("--executable is only supported for service install")
-            if args.port is None:
+            # Without --port or SPLASH_PORT the installed service is used.
+            if args.port is None and "SPLASH_PORT" in os.environ:
                 try:
-                    args.port = _parse_port(os.environ.get("SPLASH_PORT", str(PORT)))
+                    args.port = _parse_port(os.environ["SPLASH_PORT"])
                 except argparse.ArgumentTypeError as error:
                     parser.error(f"SPLASH_PORT: {error}")
     if args.command == "serve":
