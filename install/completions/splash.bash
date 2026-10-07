@@ -10,7 +10,12 @@ _splash() {
     cur=${COMP_WORDS[COMP_CWORD]}
     prev=${COMP_WORDS[COMP_CWORD-1]}
     if [[ $COMP_CWORD -eq 1 ]]; then
-        COMPREPLY=($(compgen -W 'serve claude codex opencode hermes' -- "$cur"))
+        COMPREPLY=($(compgen -W 'serve service claude codex opencode hermes' -- "$cur"))
+        return 0
+    fi
+    if [[ ${COMP_WORDS[1]} == service ]]; then
+        [[ $COMP_CWORD -eq 2 ]] &&
+            COMPREPLY=($(compgen -W 'install uninstall start stop restart status' -- "$cur"))
         return 0
     fi
     [[ ${COMP_WORDS[1]} == serve ]] || return 0

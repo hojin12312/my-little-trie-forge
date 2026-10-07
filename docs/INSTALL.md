@@ -1,6 +1,6 @@
 # Installation
 
-[한국어](INSTALL.ko.md) · [README](../README.md)
+[한국어](INSTALL.ko.md) · [中文](INSTALL.zh.md) · [README](../README.md)
 
 Reference validation: M5 Max40GPU/128GiB, macOS27.0(26A428). Native minimum: macOS26.4 with required GPU features; Python3.13. Other GPU/RAM configurations are not performance-certified.
 
@@ -20,6 +20,26 @@ mltf serve --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memor
 The downloader verifies the manifest and SHA-256. Review the model card and terms before consenting. Source conversion uses `prepare-q8c` from [MODEL_ASSETS.md](../MODEL_ASSETS.md).
 
 README256K/96G matches the validated target-machine profile. 32K/48G is a separate conservative profile and the prior soak scope. Signing is ad-hoc; Developer ID/notarization is not included.
+
+## Run at login (macOS)
+
+`mltf service` installs `mltf serve` as a per-user LaunchAgent, so the server starts at login and keeps running without a terminal. The engine needs your graphical session for Metal, so this is a LaunchAgent, not a system daemon.
+
+```sh
+mltf service install -- --model Ho-Jin-93/Qwen3.8-27B-MLTF-q8c --max-context 256K --max-memory 96G
+mltf service status
+mltf service stop        # stops now; it still starts at the next login
+mltf service start
+mltf service restart
+mltf service uninstall   # also removes the login start
+```
+
+- Everything after `--` is passed to `mltf serve` unchanged and checked by the same parser, so a mistake fails at install time. The port is always recorded explicitly, because a login service does not see `SPLASH_PORT`. Another port is managed with `--port` and is a separate service (`mltf service status --port 8001`).
+- The service launches `mltf` from `PATH` (`./mltf` in a source checkout) and keeps the path as given, so Homebrew's `bin/mltf` stays valid across upgrades. Choose another executable with `--executable PATH`. As with any running server, stop the service before upgrading.
+- A relative `--model-path` is rejected because a login service does not start in your current directory. `MLTF_DATA_ROOT` is carried over; `SPLASH_API_KEY` is not. Pass `--api-key` explicitly if you need one: it is then stored in the plist, which is readable only by you.
+- There is no automatic restart after a crash, so a server that fails under memory pressure does not loop. `mltf service start` brings it back.
+- Prepare the model first (`mltf download`): a login service has no terminal for model preparation.
+- The label is `io.github.hojin12312.mltf.serve-<port>`, the plist is `~/Library/LaunchAgents/<label>.plist`, and output goes to `~/Library/Logs/mltf-<port>.log`, which is not rotated. `mltf service status` prints the state and these paths. A listening port does not mean Ready: check the log.
 
 ## Update notification
 

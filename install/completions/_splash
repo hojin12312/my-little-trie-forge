@@ -7,8 +7,12 @@ _splash() {
     local word helper
     local -a models
     if (( CURRENT == 2 )); then
-        compadd -- serve claude codex opencode hermes
+        compadd -- serve service claude codex opencode hermes
         return
+    fi
+    if [[ $words[2] == service ]]; then
+        (( CURRENT == 3 )) && compadd -- install uninstall start stop restart status
+        return 0
     fi
     [[ $words[2] == serve ]] || return 0
     for word in "${words[@]:2:$(( CURRENT - 3 ))}"; do
