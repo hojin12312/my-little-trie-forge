@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/media/mltf-app-icon.svg" alt="MLTF" width="144"></p>
 
-[English](README.md) · [전체 벤치마크](docs/BENCHMARKS.ko.md) · [Pi 데모](docs/DEMO.ko.md) · [설치](docs/INSTALL.ko.md)
+[English](README.md) · [中文](README.zh.md) · [전체 벤치마크](docs/BENCHMARKS.ko.md) · [Pi 데모](docs/DEMO.ko.md) · [설치](docs/INSTALL.ko.md)
 
 **8비트 Qwen3.8-27B. 빠른 로컬 코딩. 256Ki 컨텍스트.**
 

@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/media/mltf-app-icon.svg" alt="MLTF" width="144"></p>
 
-[한국어](README.ko.md) · [Full benchmarks](docs/BENCHMARKS.md) · [Pi demo](docs/DEMO.md) · [Install](docs/INSTALL.md)
+[한국어](README.ko.md) · [中文](README.zh.md) · [Full benchmarks](docs/BENCHMARKS.md) · [Pi demo](docs/DEMO.md) · [Install](docs/INSTALL.md)
 
 **8-bit Qwen3.8-27B. Fast local coding. 256Ki context.**
 
